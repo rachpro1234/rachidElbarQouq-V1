@@ -1,0 +1,59 @@
+* HOME
+home__social
+https://www.linkedin.com/
+https://dribbble.com/
+https://github.com/
+
+home__description
+Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code 
+und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.
+
+
+* ABOUT
+about__description
+Frontend-Entwickler mit Erfahrung in der Erstellung von Websites und Webanwendungen. Ich bin auf JavaScript, Bootstrap, Css, und HTML
+spezialisiert. Meine Aufgabe ist es, zu schreiben und zu stylen die Frontend-Komponenten und liefern Qualitätsarbeit.
+
+about__info-name
+Jahre <br> Erfahrung
+Vollendet <br> projekt
+Firmen <br> gearbeitet
+
+
+* SERVICES
+ => service 1
+ - services__modal-service
+ - Verwendung von ReactJs zur Entwicklung von UI-Schnittstellen.
+ - Verwalten des Status der Anwendung mit Redux.
+ - Implementiere die gesamte App mit React-Hooks.
+ - API(s) verbrauchen.
+
+ => service 2
+ - Entwicklung der Benutzeroberfläche.
+ - Erstellen einer responsiven Website mit Bootstrap.
+ - Erstellen von Nutzungsplänen und Flussdiagrammen.
+ - Animieren Sie Ihre Website mit CSS und Bootstrap.
+
+
+
+* PORTFOLIO 1
+portfolio__description
+Eine anpassbare, responsive Website für alle Geräte, mit Kategorien und schaltbare Bewegungen.
+
+
+* PORTFOLIO 2
+project__description
+Eine Bekleidungswebsite, die mit allen Bildschirmtypen interagiert.
+
+* PORTFOLIO 3
+project__description
+Eine Food-Website, die mit allen Bildschirmtypen interagiert reibungslose Bildlaufleiste und viele andere Funktionen.
+
+
+* FOOTER
+footer__social
+https://github.com/
+https://twitter.com/
+https://www.linkedin.com/
+
+
