@@ -203,18 +203,28 @@ let language = {
       "Welcome to the GeeksforGeeks " +
       "Portal! You can choose any language " +
       "using the buttons above!",
-    desc: "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
   },
   es: {
     welcome:
       "¡Bienvenido al portal GeeksforGeeks! " +
       "¡Puedes elegir cualquier idioma usando " +
       "los botones de arriba!",
-      desc: "Enérgico desarrollador frontend experto en escribir código bien diseñado y sitios web responsivos con un enfoque centrado en los dispositivos móviles."
+    desc: "Enérgico desarrollador frontend experto en escribir código bien diseñado y sitios web responsivos con un enfoque centrado en los dispositivos móviles.",
   },
   de: {
     welcome: "GeeksforGeeks ist eine sehr schone platform",
-    desc: "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt."
+  },
+};
+
+let description = {
+  eng: {
+    desc: "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
+  },
+  es: {
+    desc: "Enérgico desarrollador frontend experto en escribir código bien diseñado y sitios web responsivos con un enfoque centrado en los dispositivos móviles.",
+  },
+  de: {
+    desc: "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.",
   },
 };
 
@@ -224,9 +234,9 @@ if (window.location.hash) {
   // depending on the hash value
   if (window.location.hash == "#es") {
     siteContent.textContent = language.es.welcome;
-    profileDesc.textContent = language.es.desc;
+    profileDesc.textContent = description.es.desc;
   } else if (window.location.hash == "#de") {
     siteContent.textContent = language.de.welcome;
-    profileDesc.textContent = language.de.desc;
+    profileDesc.textContent = description.de.desc;
   }
 }
