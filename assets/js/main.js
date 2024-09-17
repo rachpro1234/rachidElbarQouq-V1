@@ -224,9 +224,9 @@ if (window.location.hash) {
   // depending on the hash value
   if (window.location.hash == "#es") {
     siteContent.textContent = language.es.welcome;
-    siteContent.textContent = language.es.desc;
+    profileDesc.textContent = language.es.desc;
   } else if (window.location.hash == "#en") {
-    siteContent.textContent = language.en.welcome;
-    siteContent.textContent = language.en.desc;
+    siteContent.textContent = language.de.welcome;
+    profileDesc.textContent = language.de.desc;
   }
 }
