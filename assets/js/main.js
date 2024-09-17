@@ -227,6 +227,6 @@ themeButton.addEventListener("click" , () => {
             }
             else if (window.location.hash == "#de") {
                 siteContent.textContent =
-                    language.hin.welcome;
+                    language.de.welcome;
             }
         }
