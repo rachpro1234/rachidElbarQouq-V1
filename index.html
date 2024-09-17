@@ -17,7 +17,11 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
 
     <title>Rachid</title>
-    <link rel="shortcut icon" href="./assets/img/rachid.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/img/rachid.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <!--==================== HEADER ====================-->
@@ -35,7 +39,7 @@
             <!-- Item -->
             <li class="nav__item">
               <a href="#about" class="nav__link">
-                <i class="uil uil-user nav__icon"></i> Über 
+                <i class="uil uil-user nav__icon"></i> Über
               </a>
             </li>
             <!-- Item -->
@@ -75,6 +79,11 @@
         </div>
       </nav>
     </header>
+
+    <!-- LANGUAGE CHANGE -->
+    <button onclick="changeLanguage('eng')">Change to English</button>
+    <button onclick="changeLanguage('es')">Change to Spanish</button>
+    <button onclick="changeLanguage('hin')">Change to German</button>
 
     <!--==================== MAIN ====================-->
     <main class="main">
@@ -145,8 +154,9 @@
               <h1 class="home__title">Hallo, Ich bin Rachid</h1>
               <h3 class="home__subtitle">Frontend-Entwickler</h3>
               <p class="home__description">
-                Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code 
-                und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.
+                Energischer Frontend-Entwickler, der sich mit dem Schreiben von
+                gut gestaltetem Code und reaktionsfähigen Websites mit
+                Mobile-First-Ansatz auskennt.
               </p>
               <a href="#contact" class="button button--flex">
                 kontaktiere mich <i class="uil uil-message button__icon"></i>
@@ -177,9 +187,9 @@
           <div class="about__data">
             <p class="about__description">
               Frontend-Entwickler mit Erfahrung in der Erstellung von Websites
-              und Webanwendungen. Ich bin auf JavaScript, Bootstrap, Css, und HTML
-              spezialisiert. Meine Aufgabe ist es, zu schreiben und zu stylen
-              die Frontend-Komponenten und liefern Qualitätsarbeit.
+              und Webanwendungen. Ich bin auf JavaScript, Bootstrap, Css, und
+              HTML spezialisiert. Meine Aufgabe ist es, zu schreiben und zu
+              stylen die Frontend-Komponenten und liefern Qualitätsarbeit.
             </p>
             <div class="about__info">
               <div>
@@ -501,7 +511,10 @@
                   <!-- =============== N 1 ============== -->
                   <li class="services__modal-service">
                     <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Verwendung von ReactJs zur Entwicklung von UI-Schnittstellen.</p>
+                    <p>
+                      Verwendung von ReactJs zur Entwicklung von
+                      UI-Schnittstellen.
+                    </p>
                   </li>
                   <!-- =============== N 2 ============== -->
                   <li class="services__modal-service">
@@ -616,7 +629,8 @@
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Kleider-Website</h3>
                 <p class="portfolio__description">
-                  Eine Bekleidungswebsite, die mit allen Bildschirmtypen interagiert.
+                  Eine Bekleidungswebsite, die mit allen Bildschirmtypen
+                  interagiert.
                 </p>
                 <a
                   href="https://rachpro1234.github.io/clothing-landing-page/#"
@@ -720,45 +734,40 @@
                   required
                 />
               </div>
-          </div>
+            </div>
 
+            <div class="contact__content">
+              <label for="" class="contact__label">Projekt</label>
+              <input
+                type="text"
+                class="contact__input"
+                name="project"
+                required
+              />
+            </div>
 
-          <div class="contact__content">
-            <label for="" class="contact__label">Projekt</label>
-            <input
-              type="text"
-              class="contact__input"
-              name="project"
-              required
-            />
-          </div> 
+            <div class="contact__content">
+              <label for="" class="contact__label">Nachricht</label>
+              <textarea
+                name="message"
+                cols="0"
+                rows="7"
+                class="contact__input"
+                required
+              >
+              </textarea>
+            </div>
 
-          <div class="contact__content">
-            <label for="" class="contact__label">Nachricht</label>
-            <textarea
-              name="message"
-              cols="0"
-              rows="7"
-              class="contact__input"
-              required
-            >
-            </textarea>
-          </div>
-          
-          <div>
-            <button type="submit" class="button button--flex button--submit">
-              Nachricht senden  <i class="uil uil-message button__icon"></i>
-            </button>
-          </div>
-        </form>
-     </div>
-  </section>
-</main>
+            <div>
+              <button type="submit" class="button button--flex button--submit">
+                Nachricht senden <i class="uil uil-message button__icon"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
 
-
-            
-
-          
     <!--==================== FOOTER ====================-->
     <footer class="footer">
       <div class="footer__bg">
@@ -768,21 +777,24 @@
             <span class="footer__subtitle">Frontend entwickler</span>
           </div>
           <ul class="footer__links">
-             <li>
-                 <a href="#services" class="footer__link">Dienstleistungen</a>
-             </li>
+            <li>
+              <a href="#services" class="footer__link">Dienstleistungen</a>
+            </li>
 
-             <li>
-                 <a href="#portfolio" class="footer__link">Portfolio</a>
-             </li>
+            <li>
+              <a href="#portfolio" class="footer__link">Portfolio</a>
+            </li>
 
-             <li>
-                 <a href="#contact" class="footer__link">Kontakt</a>
-             </li>
+            <li>
+              <a href="#contact" class="footer__link">Kontakt</a>
+            </li>
           </ul>
 
           <div class="footer__socials">
-             <a href="https://github.com/rachpro1234?tab=repositories" target="_blank">
+            <a
+              href="https://github.com/rachpro1234?tab=repositories"
+              target="_blank"
+            >
               <i class="uil uil-github footer__social"></i>
             </a>
 
@@ -790,15 +802,16 @@
               <i class="uil uil-twitter-alt footer__social"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/rachid-el-barqouqy-945783262/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/rachid-el-barqouqy-945783262/"
+              target="_blank"
+            >
               <i class="uil uil-linkedin footer__social"></i>
             </a>
-
-          </div>             
+          </div>
         </div>
 
         <p class="footer__copy">&#169; Rachid. All right reserved</p>
-
       </div>
     </footer>
 
@@ -807,14 +820,8 @@
       <i class="uil uil-arrow-up scroll__icon"></i>
     </a>
 
-
-
-
-
     <!--==================== SWIPER JS ====================-->
-    <script src="./assets/js/swiper-bundle.min.js">
-
-    </script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
 
     <!--==================== MAIN JS ====================-->
     <script src="./assets/js/main.js"></script>
