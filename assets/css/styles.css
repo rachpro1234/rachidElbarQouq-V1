@@ -7,7 +7,7 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 220; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --hue-color: 220; /*Purple 250 - Green 142 - Blue 230- Pink 340*/
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -79,10 +79,6 @@ body.dark-theme {
   --body-color: hsl(var(--hue-color), 28%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
 }
-
-
-
-
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -197,6 +193,10 @@ img {
   font-weight: var(--font-medium);
 }
 
+.nav__logo img {
+  border-radius: 50%;
+}
+
 .nav__logo:hover {
   color: var(--first-color);
 }
@@ -236,6 +236,7 @@ img {
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
+  text-transform: capitalize;
 }
 
 .nav__link:hover {
@@ -271,6 +272,24 @@ img {
 /* Change background header */
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.language-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.language-switcher .language-flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.language-switcher .language-flag img {
+  cursor: pointer;
 }
 
 /*==================== HOME ====================*/
@@ -358,15 +377,11 @@ img {
   padding: 1rem;
   border-radius: 0.5rem;
   font-weight: var(--font-medium);
-  transition: .6s;
+  transition: 0.6s;
 }
 
 .button:hover {
-  background-color: transparent;
-  color: var(--first-color);
-  border: 2px solid var(--first-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transform: scale(1.1);
+  opacity: 0.6;
 }
 
 .button__icon {
@@ -418,6 +433,17 @@ img {
 .about__description {
   text-align: center;
   margin-bottom: var(--mb-2-5);
+}
+
+.section__title {
+  font-size: 2.3rem;
+  text-transform: capitalize;
+}
+
+.section__title .dot {
+  color: var(--first-color);
+  font-size: 4rem;
+  margin-left: -10px;
 }
 
 .about__info {
@@ -572,7 +598,7 @@ img {
 
 .qualification__data {
   display: grid;
-  grid-template-columns: 1fr  1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 1.5rem;
 }
 
@@ -582,8 +608,6 @@ img {
   border-left: 4px solid var(--first-color);
   padding-left: 4px;
 }
-
-
 
 .qualification__subtitle {
   display: inline-block;
@@ -619,7 +643,7 @@ img {
   padding: 3.5rem 0.5rem 1.25rem 1.5rem;
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .services__content:hover {
@@ -637,19 +661,22 @@ img {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
+  width: 20px;
 }
 
 .services__button:hover {
   background-color: transparent;
-  outline: 1px solid var(--first-color) ;
-  padding: 5px 10px;
+  outline: 1px solid var(--first-color);
 }
 .services__button {
   cursor: pointer;
   font-size: var(--small-font-size);
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 7px 10px;
 }
 
- .button__icon{
+.button__icon {
   transform: translateX(0.25rem);
 }
 
@@ -667,7 +694,7 @@ img {
   z-index: var(--z-modal);
   opacity: 0;
   visibility: hidden;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .services__modal-content {
@@ -718,7 +745,6 @@ img {
   padding: 0 1.5rem;
 }
 
-
 .portfolio__img {
   width: 265px;
   border-radius: 0.5rem;
@@ -726,27 +752,30 @@ img {
   border: 2px solid #000;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: .6s;
+  transition: 0.6s;
 }
-
 
 .portfolio__title {
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);
 }
 
-
 .portfolio__description {
   margin-bottom: var(--mb-0-75);
+}
+
+.portfolio__description span {
+  color: var(--first-color);
+  font-weight: bold;
 }
 
 .portfolio__button:hover .button__icon {
   transform: translateX(0.25rem);
 }
 
-.swiper-button-prev::after, 
+.swiper-button-prev::after,
 .swiper-button-next::after {
-  content: '';
+  content: "";
 }
 
 .swiper-portfolio-icon {
@@ -770,12 +799,11 @@ img {
   background-color: var(--first-color);
 }
 
-.swiper-button-prev, 
-.swiper-button-next, 
+.swiper-button-prev,
+.swiper-button-next,
 .swiper-pagination-bullets {
   outline: none;
 }
-
 
 /*==================== CONTACT ME ====================*/
 .contact_-container {
@@ -864,21 +892,21 @@ img {
 }
 
 .footer__social:hover {
-  color: var(--first-color-lighter)
- }
+  color: var(--first-color-lighter);
+}
 
- .footer__copy {
+.footer__copy {
   font-size: var(--smaller-font-size);
   text-align: center;
   color: var(--text-color-light);
   margin-top: var(--mb-3);
- }
+}
 
-.footer__title, 
-.footer__subtitle, 
-.footer__link, 
+.footer__title,
+.footer__subtitle,
+.footer__link,
 .footer__social {
- color: #fff;
+  color: #fff;
 }
 
 /*========== SCROLL UP ==========*/
@@ -901,9 +929,6 @@ img {
   font-size: 1.5rem;
   color: #fff;
 }
-
-
-
 
 /* Show scroll */
 .show-scroll {
@@ -928,24 +953,23 @@ img {
 /* For small devices */
 
 @media screen and (max-width: 350px) {
-
   .container {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
-  
+
   .nav__menu {
     padding: 2rem 0.25rem 4rem;
   }
-  
+
   .nav__list {
     column-gap: 0;
   }
-  
+
   .home__content {
     grid-template-columns: 0.25fr 3fr;
   }
-  
+
   .home__blob {
     width: 100px;
   }
@@ -1004,9 +1028,6 @@ img {
     right: 2rem;
   }
 
-
-
-
   @media screen and (min-width: 768px) {
     .container {
       margin-left: auto;
@@ -1021,7 +1042,6 @@ img {
       padding: 6rem 0 2rem;
     }
 
-
     .section__subtitle {
       margin-bottom: 4rem;
     }
@@ -1031,7 +1051,9 @@ img {
       bottom: initial;
     }
 
-    .header, .main, .footer__container {
+    .header,
+    .main,
+    .footer__container {
       padding: 0 1rem;
     }
 
@@ -1040,7 +1062,7 @@ img {
       column-gap: 1rem;
     }
 
-    .nav__icon, 
+    .nav__icon,
     .nav__close,
     .nav__toggle {
       display: none;
@@ -1112,7 +1134,6 @@ img {
       grid-template-columns: 0.57fr;
     }
 
-
     .services__container {
       grid-template-columns: repeat(2, 218px);
       justify-content: space-around;
@@ -1141,7 +1162,6 @@ img {
       text-align: initial;
     }
 
-
     .footer__container {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -1164,10 +1184,12 @@ img {
 }
 /* For large devices */
 @media screen and (min-width: 1024px) {
-  .header, .main, .footer__container {
+  .header,
+  .main,
+  .footer__container {
     padding: 0;
   }
-  
+
   .home__blob {
     width: 320px;
   }
