@@ -3,7 +3,7 @@
 
 ![Screenshot 2024-09-21 234012](https://github.com/user-attachments/assets/e89aafbc-5f6f-43a6-8b27-82e50611867e)
 
-This Portfolio was designed and developed by (rachpro1234) using (vanilla javascript) and hosted on Vercel. I hope you like it.
+This Portfolio was designed and developed by Rachid-ELBarqouqy(https://x.com/rachelbarqouqy) using @vanilla javascript and hosted on Vercel. I hope you like it.
 
 
 💥 FORK IT, BUT PLEASE MENTION ME:exclamation:
