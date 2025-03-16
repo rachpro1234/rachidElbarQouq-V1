@@ -383,18 +383,21 @@ let work = {
     work2: "local freelance",
     work2Place: "self-independent",
     work3: "Frontend developer internship",
+    work4: "Frontend developer Fulll-Time"
   },
   it: {
     work1: "tirocinio di sviluppo web",
     work2: "libero professionista locale",
     work2Place: "auto-indipendente",
     work3: "Stage di sviluppatore frontend",
+    work4: "Frontend developer a tempo pieno", // Italian translation
   },
   de: {
     work1: "Praktikum in der Webentwicklung",
     work2: "lokaler Freiberufler",
     work2Place: "selbständig",
     work3: "Praktikum als Frontend-Entwickler",
+    work4: "Frontend-Entwickler Vollzeit", // German translation
   },
 };
 
@@ -406,7 +409,7 @@ let service = {
     service1: "frontend developer",
     service1Plus: "frontend developer",
     service1Sub: "See more",
-    service1Task1: "Using ReactJs to develop UI interfaces.",
+    service1Task1: "Using ReactJs & NextJs to develop UI interfaces.",
     service1Task2: "Managing the state of the application with Redux",
     service1Task3: "Implement the entire app using React hooks",
     service1Task4: "Consume API(s).",
@@ -425,7 +428,7 @@ let service = {
     service1: "sviluppatore frontend",
     service1Plus: "sviluppatore frontend",
     service1Sub: "Vedi di più",
-    service1Task1: "Utilizzo ReactJs per sviluppare interfacce utente.",
+    service1Task1: "Utilizzo ReactJs & NextJs per sviluppare interfacce utente.",
     service1Task2: "Gestisco lo stato dell'applicazione con Redux",
     service1Task3: "Implemento l'intera app utilizzando hook di React",
     service1Task4: "Consumo API.",
@@ -444,7 +447,7 @@ let service = {
     service1: "Frontend-Entwickler",
     service1Plus: "Frontend-Entwickler",
     service1Sub: "mehr sehen",
-    service1Task1: "Verwende ReactJs, um Benutzeroberflächen zu entwickeln.",
+    service1Task1: "Verwende ReactJs & NextJs, um Benutzeroberflächen zu entwickeln.",
     service1Task2: "Verwalte den Zustand der Anwendung mit Redux",
     service1Task3: "Implementiere die gesamte App mit React Hooks",
     service1Task4: "Verbrauche API.",
@@ -583,6 +586,7 @@ if (window.location.hash) {
     work2.textContent = work.it.work2;
     work2Place.textContent = work.it.work2Place;
     work3.textContent = work.it.work3;
+    work4.textContent = work.it.work4;
     // service section
     serviceTitle.textContent = service.it.serviceTitle;
     serviceSubTitle.textContent = service.it.servicesSubTitle;
@@ -667,6 +671,7 @@ if (window.location.hash) {
     work2.textContent = work.de.work2;
     work2Place.textContent = work.de.work2Place;
     work3.textContent = work.de.work3;
+    work4.textContent = work.de.work4;
     // service section
     serviceTitle.textContent = service.de.serviceTitle;
     serviceSubTitle.textContent = service.de.servicesSubTitle;
