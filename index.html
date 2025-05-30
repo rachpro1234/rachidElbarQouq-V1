@@ -33,6 +33,7 @@
             width="40px"
             height="40px"
             alt="logo"
+            loading="lazy"
           />
         </a>
 
@@ -85,6 +86,7 @@
               onclick="changeLanguage('de')"
               width="20px"
               height="20px"
+            loading="lazy"
             />
 
             <img
@@ -93,6 +95,7 @@
               onclick="changeLanguage('it')"
               width="20px"
               height="20px"
+            loading="lazy"
             />
 
             <img
@@ -101,6 +104,7 @@
               onclick="changeLanguage('eng')"
               width="20px"
               height="20px"
+            loading="lazy"
             />
           </div>
         </section>
@@ -116,8 +120,6 @@
       </nav>
     </header>
 
-
-
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
@@ -130,6 +132,7 @@
                 class="home__social-icon"
                 target="_blank"
                 rel="noopener"
+                title="linkedin"
               >
                 <i class="uil uil-linkedin-alt"></i>
               </a>
@@ -139,6 +142,7 @@
                 class="home__social-icon"
                 target="_blank"
                 rel="noopener"
+                title="dribble"
               >
                 <i class="uil uil-dribbble"></i>
               </a>
@@ -148,6 +152,7 @@
                 class="home__social-icon"
                 target="_blank"
                 rel="noopener"
+                title="github"
               >
                 <i class="uil uil-github-alt"></i>
               </a>
@@ -157,6 +162,7 @@
                 class="home__social-icon"
                 target="_blank"
                 rel="noopener"
+                title="twitter"
               >
                 <i class="uil uil-twitter-alt"></i>
               </a>
@@ -221,7 +227,7 @@
       </section>
 
       <!--==================== ABOUT ====================-->
-      <section class="about section" id="about">
+      <section class="about section fade" id="about">
         <h2 class="section__title" id="aboutme">
           a little about me <span class="dot">.</span>
         </h2>
@@ -231,6 +237,7 @@
             src="./assets/img/background.jpg.jpg"
             alt=""
             class="about__img"
+            loading="lazy"
           />
           <div class="about__data">
             <p class="about__description" id="aboutcontent">
@@ -281,7 +288,7 @@
       </section>
 
       <!--==================== SKILLS ====================-->
-      <section class="skills section" id="skills">
+      <section class="skills section fade" id="skills">
         <h2 class="section__title" id="skill">
           Skills <span class="dot">.</span>
         </h2>
@@ -360,6 +367,16 @@
 
               <div class="skills__data">
                 <div class="skills__title">
+                  <h2 class="skills__name">NextJS</h2>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__react"></span>
+                </div>
+              </div>
+
+              <div class="skills__data">
+                <div class="skills__title">
                   <h2 class="skills__name">Typescript</h2>
                   <span class="skills__number">60%</span>
                 </div>
@@ -373,7 +390,7 @@
       </section>
 
       <!--==================== QUALIFICATION ====================-->
-      <section class="qualification section">
+      <section class="qualification section fade">
         <h2 class="section__title" id="qualification">
           Qualification <span class="dot">.</span>
         </h2>
@@ -559,22 +576,19 @@
                   <h3 class="qualification__title" id="work4">
                     Frontend-developer Full-time
                   </h3>
-                  <span class="qualification__subtitle"
-                    >Nowotch - Agadir</span
-                  >
+                  <span class="qualification__subtitle">Nowotch - Agadir</span>
                   <div class="qualification__calendar">
                     <i class="uil uil-calendar-alt"> 2024 - Present</i>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </section>
 
       <!--==================== SERVICES ====================-->
-      <section class="services section" id="services">
+      <section class="services section fade" id="services">
         <h2 class="section__title" id="serviceTitle">
           Services <span class="dot">.</span>
         </h2>
@@ -684,7 +698,7 @@
       </section>
 
       <!--==================== PORTFOLIO ====================-->
-      <section class="portfolio section" id="portfolio">
+      <section class="portfolio section fade" id="portfolio">
         <h2 class="section__title">Portfolio <span class="dot">.</span></h2>
         <span class="section__subtitle" id="secSubtitle">Latest work</span>
 
@@ -696,6 +710,7 @@
                 src="./assets/img/ur-shop.png"
                 alt=""
                 class="portfolio__img"
+                loading="lazy"
               />
 
               <div class="portfolio__data">
@@ -717,7 +732,7 @@
                   href="https://rachpro1234.github.io/Ur-Shop/"
                   class="button button--flex button--small portfolio__button"
                   target="_blank"
-                rel="noopener"
+                  rel="noopener"
                   >Source code
                   <i class="uil uil-arrow-right button__icon-demo"></i>
                 </a>
@@ -730,6 +745,7 @@
                 src="./assets/img/Rachop.png"
                 alt=""
                 class="portfolio__img"
+                loading="lazy"
               />
 
               <div class="portfolio__data">
@@ -742,7 +758,7 @@
                   href="https://rachop.vercel.app/"
                   class="button button--flex button--small portfolio__button"
                   target="_blank"
-                rel="noopener"
+                  rel="noopener"
                   >Demo <i class="uil uil-arrow-right button__icon"></i>
                 </a>
 
@@ -750,7 +766,7 @@
                   href="https://github.com/rachpro1234/Rachop"
                   class="button button--flex button--small portfolio__button"
                   target="_blank"
-                rel="noopener"
+                  rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
                 </a>
               </div>
@@ -762,6 +778,7 @@
                 src="./assets/img/dice-game.png"
                 alt=""
                 class="portfolio__img"
+                loading="lazy"
               />
 
               <div class="portfolio__data">
@@ -775,7 +792,7 @@
                   href="https://rachpro1234.github.io/Dice-Game/"
                   class="button button--flex button--small portfolio__button"
                   target="_blank"
-                rel="noopener"
+                  rel="noopener"
                   >Demo <i class="uil uil-arrow-right button__icon"></i>
                 </a>
 
@@ -783,9 +800,43 @@
                   href="https://github.com/rachpro1234/Dice-Game"
                   class="button button--flex button--small portfolio__button"
                   target="_blank"
-                rel="noopener"
+                  rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
                 </a>
+              </div>
+            </div>
+
+            <!-- ==================== PORTFOLIO 4 ==================== -->
+            <div class="portfolio__content grid swiper-slide">
+              <img
+                src="./assets/img/vtc-driver.png"
+                alt=""
+                class="portfolio__img"
+                loading="lazy"
+              />
+
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">VTC-driver</h3>
+                <p class="portfolio__description">
+                  A Web Page made logically with <span>JS</span>, that allows
+                  users to calculate a ride from point A to B, then to get the
+                  ride info like the price, distance and duration.
+                </p>
+                <a
+                  href="https://vtc.nowotch.site/"
+                  class="button button--flex button--small portfolio__button"
+                  target="_blank"
+                  rel="noopener"
+                  >Demo<i class="uil uil-arrow-right button__icon"></i>
+                </a>
+
+                <!-- <a
+                  href="https://github.com/rachpro1234/Dice-Game"
+                  class="button button--flex button--small portfolio__button"
+                  target="_blank"
+                  rel="noopener"
+                  >Source code <i class="uil uil-arrow-right button__icon"></i>
+                </a> -->
               </div>
             </div>
           </div>
@@ -804,7 +855,7 @@
       </section>
 
       <!--==================== CONTACT ME ====================-->
-      <section class="contact section" id="contact">
+      <section class="contact section fade" id="contact">
         <h2 class="section__title" id="contactMe">
           Contact me <span class="dot">.</span>
         </h2>
@@ -908,7 +959,7 @@
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer">
+    <footer class="footer fade">
       <div class="footer__bg">
         <div class="footer__container container grid">
           <div>
@@ -942,20 +993,25 @@
               href="https://github.com/rachpro1234?tab=repositories"
               target="_blank"
               rel="noopener"
+              title="Github"
             >
               <i class="uil uil-github footer__social"></i>
             </a>
 
-            <a href="https://twitter.com/rachelbarqouqy" target="_blank"
-            rel="noopener"
+            <a
+              href="https://twitter.com/rachelbarqouqy"
+              target="_blank"
+              rel="noopener"
+              title="x-(Twitter)"
             >
-              <i class="uil uil-twitter-alt footer__social"></i>
+              <i class="uil uil-twitter footer__social"></i>
             </a>
 
             <a
               href="https://www.linkedin.com/in/rachid-el-barqouqy-945783262/"
               target="_blank"
               rel="noopener"
+              title="Linkedin"
             >
               <i class="uil uil-linkedin footer__social"></i>
             </a>
@@ -969,7 +1025,7 @@
     </footer>
 
     <!--==================== SCROLL TOP ====================-->
-    <a href="" class="scrollup" id="scroll-up">
+    <a href="#" class="scrollup" id="scroll-up" title="arrow-up">
       <i class="uil uil-arrow-up scroll__icon"></i>
     </a>
 

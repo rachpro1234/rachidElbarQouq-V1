@@ -147,17 +147,35 @@ window.addEventListener("scroll", scrollHeader);
 /*==================== SHOW SCROLL UP ====================*/
 function scrollUp() {
   const scrollUp = document.getElementById("scroll-up");
+  
 
   if (this.scrollY >= 500) {
     scrollUp.classList.add("show-scroll");
-  } else scrollUp.classList.remove("show-scroll");
+  } else {
+    scrollUp.classList.remove("show-scroll");
+  }
 
 
   scrollUp.scrollTo({ top: 0, behavior: "smooth" });
 }
 window.addEventListener("scroll", scrollUp);
 
+/* ==================== SECTION FADE IN ANIMATION =================== */
+const allSections = document.querySelectorAll(".fade");
 
+
+const fade = function(entries) {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      entry.target.classList.add("inview");
+      io.unobserve(entry.target); // stop observing after it's in view
+    }
+  });
+}
+
+const io = new IntersectionObserver(fade)
+allSections.forEach(section => io.observe(section));
+// io.observe(allSections)
 /*==================== DARK LIGHT THEME ====================*/
 
 const themeButton = document.getElementById("theme-button");

@@ -141,6 +141,19 @@ img {
   padding: 2rem 0 4rem;
 }
 
+/* ============== SECTION ANIMATION =============== */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all .4s ease-in-out;
+}
+
+.fade.inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.3s;
+}
+
 .section__title {
   font-size: var(--h1-font-size);
   color: var(--title-color);
@@ -272,6 +285,7 @@ img {
 /* Change background header */
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid white;
 }
 
 .language-switcher {
@@ -924,6 +938,7 @@ img {
 .scrollup:hover {
   background-color: var(--first-color-alt);
 }
+
 
 .scroll__icon {
   font-size: 1.5rem;

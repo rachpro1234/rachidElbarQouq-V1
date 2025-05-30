@@ -13,3 +13,4 @@ This Portfolio was designed and developed by Rachid-ELBarqouqy(https://x.com/rac
 - Includes a light and dark mode.
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
+- customizable sections and easy to use throughout the project
