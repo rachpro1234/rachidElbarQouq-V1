@@ -1170,7 +1170,7 @@ img {
     }
 
     .portfolio__content {
-      align-items: center;
+      align-items: start;
     }
 
     .project {
