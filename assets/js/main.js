@@ -729,3 +729,6 @@ if (window.location.hash) {
     footerReservedRights.textContent = footer.de.reservedRights;
   }
 }
+
+/* ================ CURRENT DATE ================= */
+let currentDateHolder = document.getElementById("current-date"). textContent = new Date().getFullYear();

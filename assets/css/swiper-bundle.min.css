@@ -19,6 +19,7 @@
 }
 :root {
   --swiper-theme-color: #007aff;
+  --bullet-color: #000;  
 }
 .swiper-container {
   margin-left: auto;
@@ -254,14 +255,21 @@
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
   transform: scale(0.33);
 }
+body.dark-theme {
+  --bullet-color: #eee;  
+}
+
 .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   display: inline-block;
   border-radius: 50%;
-  background: #000;
+  background: var(--bullet-color);
   opacity: 0.2;
 }
+
+
+
 button.swiper-pagination-bullet {
   border: none;
   margin: 0;
