@@ -115,11 +115,37 @@ body {
   color: var(--text-color);
 }
 
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Light.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Italic.ttf') format('truetype');
+  font-weight: 100;
+}
+
 h1,
 h2,
 h3,
 h4 {
   color: var(--title-color);
+  font-family: 'Josefin', sans-serif;
   font-weight: var(--font-semi-bold);
 }
 
@@ -173,7 +199,7 @@ img {
 /*==================== LAYOUT ====================*/
 .container {
   /* max-width: 768px; */
-  max-width: 768px;
+  max-width: 968px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
