@@ -1,5 +1,30 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"); */
+
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Light.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin', sans-serif;
+  src: url('../fonts/josefin-sans/JosefinSans-Italic.ttf') format('truetype');
+  font-weight: 100;
+}
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -7,7 +32,7 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 220; /*Purple 250 - Green 142 - Blue 230- Pink 340*/
+  --hue-color: 142; /*Purple 250 - Green 142 - Blue 230- Pink 340*/
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -24,9 +49,8 @@
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
   /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: 'Josefin', sans-serif;
 
-  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
@@ -40,7 +64,6 @@
   --font-semi-bold: 600;
 
   /*========== Margenes Bottom ==========*/
-  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
   --mb-0-25: 0.25rem;
   --mb-0-5: 0.5rem;
   --mb-0-75: 0.75rem;
@@ -115,31 +138,6 @@ body {
   color: var(--text-color);
 }
 
-@font-face {
-  font-family: 'Josefin', sans-serif;
-  src: url('../fonts/josefin-sans/JosefinSans-Light.ttf') format('truetype');
-  font-weight: 100;
-}
-
-@font-face {
-  font-family: 'Josefin', sans-serif;
-  src: url('../fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: 'Josefin', sans-serif;
-  src: url('../fonts/josefin-sans/JosefinSans-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Josefin', sans-serif;
-  src: url('../fonts/josefin-sans/JosefinSans-Italic.ttf') format('truetype');
-  font-weight: 100;
-}
-
 h1,
 h2,
 h3,
@@ -198,7 +196,6 @@ img {
 
 /*==================== LAYOUT ====================*/
 .container {
-  /* max-width: 768px; */
   max-width: 968px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
@@ -365,7 +362,7 @@ img {
 }
 
 .home__blob-img {
-  width: 170px;
+  width: 167px;
 }
 
 .home__data {
@@ -415,10 +412,11 @@ img {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  padding: .7rem 2rem;
+  border-radius: 1.5rem;
   font-weight: var(--font-medium);
   transition: 0.6s;
+  text-transform: uppercase;
 }
 
 .button:hover {
@@ -518,6 +516,11 @@ img {
   row-gap: 0;
 }
 
+.skills_list {
+  display: grid;
+  grid-template-columns: repeat(1fr, 3);
+}
+
 .skills__header {
   display: flex;
   align-items: center;
@@ -530,6 +533,11 @@ img {
 .skills__arrow {
   font-size: 2rem;
   color: var(--first-color);
+}
+
+/* skills logos */
+.skill-logo {
+  width: 50px;
 }
 
 .skills__icon {
