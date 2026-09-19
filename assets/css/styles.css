@@ -32,7 +32,7 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: 142; /*Purple 250 - Green 142 - Blue 230- Pink 340*/
+  --hue-color: 250; /*Purple 250 - Green 142 - Blue 230- Pink 340*/
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -124,6 +124,7 @@ body.dark-theme {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  outline: 2px solid blue;
 }
 
 html {
@@ -463,7 +464,8 @@ img {
 }
 /*==================== ABOUT ====================*/
 .about__img {
-  width: 200px;
+  width: 100%;
+  object-fit: cover;
   border-radius: 0.5rem;
   justify-self: center;
   align-self: center;
@@ -471,6 +473,7 @@ img {
 
 .about__description {
   text-align: center;
+  line-height: 1.5rem;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -1156,9 +1159,9 @@ img {
       column-gap: 5rem;
     }
 
-    .about__img {
+    /* .about__img {
       width: 350px;
-    }
+    } */
 
     .about__description {
       text-align: initial;

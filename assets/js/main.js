@@ -19,6 +19,34 @@ if (navClose) {
   });
 }
 
+/* =================== NUMBERS INCREMENT ANIMATION =====================*/
+const numEle1 = document.querySelector(".about-num1");
+const numEle2 = document.querySelector(".about-num2");
+
+let target__1 = 3;
+let target__2 = 16;
+
+function animateValue(num, start, end, duration) {
+  let startTimestamp = null;
+
+  let easedOut = (t) => t * (2 - t);
+
+
+  const step = (timestamp) => {
+    if(!startTimestamp) startTimestamp = timestamp;
+    let progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    let easedProgress = easedOut(progress);
+    num.innerHTML = Math.floor(start + easedProgress * (end - start)) + "+";
+    if(progress < 1) {
+      window.requestAnimationFrame(step)
+    }
+  };
+
+  requestAnimationFrame(step)
+};
+
+animateValue(numEle1, 0, target__1, 2000);
+animateValue(numEle2, 0, target__2, 2000);
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll(".nav__link");
 
