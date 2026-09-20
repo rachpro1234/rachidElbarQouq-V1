@@ -20,33 +20,49 @@ if (navClose) {
 }
 
 /* =================== NUMBERS INCREMENT ANIMATION =====================*/
-const numEle1 = document.querySelector(".about-num1");
-const numEle2 = document.querySelector(".about-num2");
+const numEle = document.querySelectorAll(".about-num");
+const numSec = document.querySelector(".about");
+let interval = 4000;
 
-let target__1 = 3;
-let target__2 = 16;
 
-function animateValue(num, start, end, duration) {
+function animateValue (el, start, end, duration) {
   let startTimestamp = null;
-
-  let easedOut = (t) => t * (2 - t);
-
+  const easeEffect = (t) => t * (2 - t);
 
   const step = (timestamp) => {
     if(!startTimestamp) startTimestamp = timestamp;
     let progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    let easedProgress = easedOut(progress);
-    num.innerHTML = Math.floor(start + easedProgress * (end - start)) + "+";
+    let eased = easeEffect(progress);
+    el.innerHTML = Math.floor(start + eased * (end - start)) + "+";
     if(progress < 1) {
-      window.requestAnimationFrame(step)
+      requestAnimationFrame(step);
     }
   };
 
   requestAnimationFrame(step)
-};
+}
 
-animateValue(numEle1, 0, target__1, 2000);
-animateValue(numEle2, 0, target__2, 2000);
+
+const secObserve = new IntersectionObserver((enteries) => {
+  enteries.forEach((entry) => {
+    if(entry.isIntersecting) {
+      console.log("section about is in view");
+      numEle.forEach((valueDisplay) => {
+        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+        animateValue(valueDisplay, 0, endValue, interval);
+      });
+      secObserve.unobserve(entry.target);
+
+      
+       } else {
+        console.log("element is not in View yet");
+       }
+   })
+}, { threshold: 0.5 });
+
+secObserve.observe(numSec);
+
+
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll(".nav__link");
 
@@ -227,14 +243,6 @@ const getCurrentIcon = () => {
   themeButton.classList.contains(iconTheme) ? "uil-moon" : "uil-sun";
 };
 
-// if (selectedTheme) {
-//   document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-//     darkTheme
-//   );
-//   themeButton.classList[selectedIcon === "uil-moon" ? "add" : "remove"](
-//     iconTheme
-//   );
-// }
 
 // on/off the theme manually with the button
 

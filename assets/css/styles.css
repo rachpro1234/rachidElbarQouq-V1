@@ -124,7 +124,6 @@ body.dark-theme {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  outline: 2px solid blue;
 }
 
 html {
@@ -540,7 +539,7 @@ img {
 
 /* skills logos */
 .skill-logo {
-  width: 50px;
+  width: 40px;
 }
 
 .skills__icon {
@@ -563,7 +562,15 @@ img {
 
 .skills__list {
   row-gap: 1.5rem;
+  transition: max-height 0.5s ease, margin-bottom 0.5s ease;
+  margin-bottom: 0;
   padding-left: 2.7rem;
+}
+
+.skill-icons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .skills__title {
@@ -613,12 +620,12 @@ img {
 }
 
 .skills__close .skills__list {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
 }
 
 .skills__open .skills__list {
-  height: max-content;
+  max-height: 500px;
   margin-bottom: var(--mb-2-5);
 }
 
@@ -1063,8 +1070,11 @@ img {
     justify-self: center;
   }
 
+   .skills__container {
+    grid-template-columns: repeat(3, 1fr);
+   }
+
   .about__container,
-  .skills__container,
   .portfolio__content,
   .contact__container,
   .footer__container {
