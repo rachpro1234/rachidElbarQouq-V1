@@ -180,7 +180,7 @@ window.addEventListener("scroll", scrollActive);
 
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
-  const nav = document.getElementById("header");
+  const nav = document.getElementById("nav");
 
   if (this.scrollY >= 80) nav.classList.add("scroll-header");
   else nav.classList.remove("scroll-header");
