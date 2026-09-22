@@ -325,12 +325,44 @@ img {
   color: var(--first-color);
 }
 
+/* animate text  */
+.animatedtext-container {
+  position: relative;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 9px;
+}
+
+.text {
+  color: #dfdcff;
+  font-size: clamp(2rem, 12rem, 5vw);
+  line-height: 1.2;
+  box-sizing: border-box;
+  padding: 5%;
+  width: 100%;
+  text-align: center;
+  perspective: 500px;
+}
+
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
 /* Change background header */
 .scroll-header {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid white;
   padding: 0 1.5rem;
-  background: rgba(255, 255, 255, 0);
+  /* background: rgba(255, 255, 255, 0); */
+  background: rgb(67 36 68 / 78%);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 50px;
@@ -408,6 +440,7 @@ img {
 
 .home__description {
   margin-bottom: var(--mb-2);
+  line-height: 1.5rem;
 }
 
 .home__scroll-button {
@@ -1323,4 +1356,12 @@ img {
   .contact__inputs {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+
+
+#svg-stage {
+  width:60%;
+  max-width:500px;
+  overflow:visible;
 }

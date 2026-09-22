@@ -775,6 +775,61 @@ if (window.location.hash) {
 }
 
 /* ================ CURRENT DATE ================= */
-let currentDateHolder = document.getElementById("current-date"). textContent = new Date().getFullYear();
+let currentDateHolder = document.getElementById("current-date").textContent = new Date().getFullYear();
 
 
+gsap.registerPlugin(SplitText);
+
+let splitChars, splitWords, splitLines, animation;
+
+function playAnimation() {
+  animation && animation.revert();
+  animation = gsap.timeline()
+    .from(splitChars.chars, {
+      x: 150,
+      opacity: 0,
+      duration: 0.7,
+      ease: "power4",
+      stagger: 0.04
+    })
+    .from(splitWords.words, {
+      y: 30,
+      opacity: 0,
+      duration: 0.5,
+      ease: "power2",
+      stagger: 0.08
+    }, "<")
+    .from(splitLines.lines, {
+      rotationX: -100,
+      transformOrigin: "50% 50% -160px",
+      opacity: 0,
+      duration: 0.8, 
+      ease: "power3",
+      stagger: 0.25
+    }, "<")
+}
+
+
+function setup() {
+  splitChars && splitChars.revert();
+  splitWords && splitWords.revert();
+  splitLines && splitLines.revert();
+
+  animation && animation.revert();
+  splitChars = SplitText.create("#role", {type:"chars"});
+  splitWords = SplitText.create("#profileInformation", {type:"words"});
+  splitLines = SplitText.create("#profileDesc", {type:"lines"});
+}
+setup();
+playAnimation();
+window.addEventListener("resize", setup);
+
+
+const tl = gsap
+  .timeline({
+    repeat: -1,
+    defaults:{ duration: 3, ease: 'power1.inOut' }
+  })
+  .set('#svg-stage', { opacity: 1 })
+  .from('path', { drawSVG:'0% 0%' })
+  .to('path', { drawSVG:'100% 100%' })
