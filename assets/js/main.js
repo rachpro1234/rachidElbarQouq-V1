@@ -182,8 +182,16 @@ window.addEventListener("scroll", scrollActive);
 function scrollHeader() {
   const nav = document.getElementById("nav");
 
-  if (this.scrollY >= 80) nav.classList.add("scroll-header");
-  else nav.classList.remove("scroll-header");
+  if(window.innerWidth <= 767) {
+    nav.classList.remove("scroll-header");
+    return;
+  }
+
+  if (this.scrollY >= 80) {
+    nav.classList.add("scroll-header");
+  } else {
+    nav.classList.remove("scroll-header");
+  }
 }
 
 window.addEventListener("scroll", scrollHeader);
@@ -768,3 +776,5 @@ if (window.location.hash) {
 
 /* ================ CURRENT DATE ================= */
 let currentDateHolder = document.getElementById("current-date"). textContent = new Date().getFullYear();
+
+
