@@ -262,6 +262,65 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
+// translation
+// const translations = {
+//   en: {
+//    description:
+//       "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
+//     profileName: "Hello, I'm Rachid",
+//     profileRole: "Frontend developer",
+//     contactBtn: "contact me",
+//     scrollDown: "scroll down",    
+//   },
+//   de: {
+//     description:
+//       "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.",
+//     profileName: "Hallo, Ich bin Rachid",
+//     profileRole: "Frontend-Entwickler",
+//     contactBtn: "Kontaktieren Sie mich",
+//     scrollDown: "Runterscrollen",
+//   },
+//   it: {
+//  description:
+//       "Sviluppatore frontend energico abile nello scrivere codice ben progettato e siti Web reattivi con un approccio mobile-first.",
+//     profileName: "Ciao, sono Rachid",
+//     profileRole: "Sviluppatore frontend",
+//     contactBtn: "contattami",
+//     scrollDown: "scorrere verso il basso",
+//   }
+// }
+
+// function updateLanguageFromHash() { 
+//   const langcode = location.hash.replace("#", '').toLowerCase();
+
+//   if(translations[langcode]) {
+//     document.getElementById("profileInformation").textContent = translations[langcode].profileName;
+//     document.getElementById("role").textContent = translations[langcode].profileRole;
+//     document.getElementById("profileDesc").textContent = translations[langcode].profileDesc;
+//     document.getElementById("contactButton").textContent = translations[langcode].contactBtn;
+//   } else {
+//     document.getElementById("profileInformation").textContent = translations.en.profileName;
+//     document.getElementById("role").textContent = translations.en.profileRole;
+//     document.getElementById("profileDesc").textContent = translations.en.profileDesc;
+//     document.getElementById("contactButton").textContent = translations.en.contactBtn;
+//   }
+
+// }
+
+// function setLanguage(langCode) {
+//   if(translations[langCode]) {
+//      location.hash = langCode;
+//   } else {
+//     console.log("unsupported language", {langCode})
+//   }
+// }
+
+
+// window.addEventListener("hashchange", updateLanguageFromHash);
+
+// updateLanguageFromHash();
+
+
 // Create a function to change
 // the hash value of the page
 function changeLanguage(lang) {
@@ -269,13 +328,15 @@ function changeLanguage(lang) {
   location.reload();
 }
 
+let languageSwitcher = document.getElementById("languageSwitcher");
+
 // Define the language reload anchors
 
 let profileInfos = {
-  eng: {
+  en: {
     description:
       "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
-    profileName: "Hello, I'm Rachid",
+    profileName: "I'm Rachid",
     profileRole: "Frontend developer",
     contactBtn: "contact me",
     scrollDown: "scroll down",
@@ -283,7 +344,7 @@ let profileInfos = {
   it: {
     description:
       "Sviluppatore frontend energico abile nello scrivere codice ben progettato e siti Web reattivi con un approccio mobile-first.",
-    profileName: "Ciao, sono Rachid",
+    profileName: "sono Rachid",
     profileRole: "Sviluppatore frontend",
     contactBtn: "contattami",
     scrollDown: "scorrere verso il basso",
@@ -291,7 +352,7 @@ let profileInfos = {
   de: {
     description:
       "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.",
-    profileName: "Hallo, Ich bin Rachid",
+    profileName: "Ich bin Rachid",
     profileRole: "Frontend-Entwickler",
     contactBtn: "Kontaktieren Sie mich",
     scrollDown: "Runterscrollen",
@@ -299,7 +360,7 @@ let profileInfos = {
 };
 
 let navs = {
-  eng: {
+  en: {
     home: "home",
     about: "about",
     skills: "skills",
@@ -326,7 +387,7 @@ let navs = {
 };
 
 let aboutSection = {
-  eng: {
+  en: {
     aboutMe: "a litte about me",
     aboutDesc: "My introduction",
     aboutContent:
@@ -359,7 +420,7 @@ let aboutSection = {
 };
 
 let skillSection = {
-  eng: {
+  en: {
     skills: "skills",
     skillsTitle: "My technical level",
     frontRole: "frontend developer",
@@ -386,7 +447,7 @@ let skillSection = {
 };
 
 let qualificationSection = {
-  eng: {
+  en: {
     qualification: "qualification",
     qualificationTitle: "My personal path",
     academystudy: "Training",
@@ -407,7 +468,7 @@ let qualificationSection = {
 };
 
 let training = {
-  eng: {
+  en: {
     training1: "Englich studies department",
     training1Place: "Languages & cultures university",
     training2: "Technical basics in Javascript",
@@ -440,7 +501,7 @@ let training = {
 };
 
 let work = {
-  eng: {
+  en: {
     work1: "web development internship",
     work2: "local freelance",
     work2Place: "self-independent",
@@ -464,7 +525,7 @@ let work = {
 };
 
 let service = {
-  eng: {
+  en: {
     serviceTitle: "Services",
     servicesSubTitle: "What I offer",
     // service 1
@@ -525,7 +586,7 @@ let service = {
 };
 
 let portfolio = {
-  eng: {
+  en: {
     subtitle: "Latest work",
   },
   it: {
@@ -537,7 +598,7 @@ let portfolio = {
 };
 
 let contact = {
-  eng: {
+  en: {
     contactme: "contact me",
     getintouch: "Get in touch",
     callme: "call me",
@@ -573,7 +634,7 @@ let contact = {
 };
 
 let footer = {
-  eng: {
+  en: {
     role: "frontend developer",
     services: "services",
     portfolio: "portfolio",
@@ -597,15 +658,17 @@ let footer = {
 };
 
 // Check if a hash value exists in the URL
-if (window.location.hash) {
+// if (window.location.hash) {
   // Set the content of the webpage
   // depending on the hash value
   if (window.location.hash == "#it") {
     // profile infos
+
+    languageSwitcher.value = "it";
     profileDesc.textContent = profileInfos.it.description;
     profileInformation.textContent = profileInfos.it.profileName;
     role.textContent = profileInfos.it.profileRole;
-    contactButton.textContent = profileInfos.it.contactBtn;
+    contactButtonText.textContent = profileInfos.it.contactBtn;
     scrollBtn.textContent = profileInfos.it.scrollDown;
     // navbar items
     homeNav.textContent = navs.it.home;
@@ -687,11 +750,12 @@ if (window.location.hash) {
     footerContact.textContent = footer.it.contact;
     footerReservedRights.textContent = footer.it.reservedRights;
   } else if (window.location.hash == "#de") {
+    languageSwitcher.value = "de";
     // profile infos
     profileDesc.textContent = profileInfos.de.description;
     profileInformation.textContent = profileInfos.de.profileName;
     role.textContent = profileInfos.de.profileRole;
-    contactButton.textContent = profileInfos.de.contactBtn;
+    contactButtonText.textContent = profileInfos.de.contactBtn;
     scrollBtn.textContent = profileInfos.de.scrollDown;
     // navbar items
     homeNav.textContent = navs.de.home;
@@ -771,11 +835,102 @@ if (window.location.hash) {
     footerPortfolio.textContent = footer.de.portfolio;
     footerContact.textContent = footer.de.contact;
     footerReservedRights.textContent = footer.de.reservedRights;
+  } else {
+    languageSwitcher.value = "en";
+    // profile infos
+    profileDesc.textContent = profileInfos.en.description;
+    profileInformation.textContent = profileInfos.en.profileName;
+    role.textContent = profileInfos.en.profileRole;
+    contactButtonText.textContent = profileInfos.en.contactBtn;
+    scrollBtn.textContent = profileInfos.en.scrollDown;
+    // navbar items
+    homeNav.textContent = navs.en.home;
+    aboutNav.textContent = navs.en.about;
+    skillsNav.textContent = navs.en.skills;
+    serviceNav.textContent = navs.en.services;
+    portfolioNav.textContent = navs.en.portfolio;
+    contactNav.textContent = navs.en.contact;
+    // about section
+    aboutme.textContent = aboutSection.en.aboutMe;
+    aboutsub.textContent = aboutSection.en.aboutDesc;
+    aboutcontent.textContent = aboutSection.en.aboutContent;
+    aboutexperience.textContent = aboutSection.en.aboutExperience;
+    aboutproject.textContent = aboutSection.en.aboutProject;
+    aboutcompany.textContent = aboutSection.en.aboutCompany;
+    aboutcv.textContent = aboutSection.en.aboutCv;
+    // skills section
+    skill.textContent = skillSection.en.skills;
+    skilltitle.textContent = skillSection.en.skillsTitle;
+    frontrole.textContent = skillSection.en.frontRole;
+    skillexperience.textContent = skillSection.en.skillsExperience;
+    skillexperience1.textContent = skillSection.en.skillsExperience1;
+    frameworks.textContent = skillSection.en.frameworks;
+    // qualification section
+    qualification.textContent = qualificationSection.en.qualification;
+    qualificationtitle.textContent = qualificationSection.en.qualificationTitle;
+    academy.textContent = qualificationSection.en.academystudy;
+    worktitle.textContent = qualificationSection.en.work;
+    // qualification (training)
+    training1.textContent = training.en.training1;
+    training1Place.textContent = training.en.training1Place;
+    training2.textContent = training.en.training2;
+    training2Place.textContent = training.en.training2Place;
+    training3.textContent = training.en.training3;
+    training3Place.textContent = training.en.training3Place;
+    training4.textContent = training.en.training4;
+    training4Place.textContent = training.en.training4Place;
+    // qualification (work)
+    work1.textContent = work.en.work1;
+    work2.textContent = work.en.work2;
+    work2Place.textContent = work.en.work2Place;
+    work3.textContent = work.en.work3;
+    work4.textContent = work.en.work4;
+    // service section
+    serviceTitle.textContent = service.en.serviceTitle;
+    serviceSubTitle.textContent = service.en.servicesSubTitle;
+    // service 1
+    service1.textContent = service.en.service1;
+    service1Plus.textContent = service.en.service1Plus;
+    service1Sub.textContent = service.en.service1Sub;
+    service1Task1.textContent = service.en.service1Task1;
+    service1Task2.textContent = service.en.service1Task2;
+    service1Task3.textContent = service.en.service1Task3;
+    service1Task4.textContent = service.en.service1Task4;
+    // service 2
+    service2.textContent = service.en.service2;
+    service2Plus.textContent = service.en.service2Plus;
+    service2Sub.textContent = service.en.service2Sub;
+    service2Task1.textContent = service.en.service2Task1;
+    service2Task2.textContent = service.en.service2Task2;
+    service2Task3.textContent = service.en.service2Task3;
+    service2Task4.textContent = service.en.service2Task4;
+    // portfolio
+    secSubtitle.textContent = portfolio.en.subtitle;
+    // contact
+    contactMe.textContent = contact.en.contactme;
+    getInTouch.textContent = contact.en.getintouch;
+    callMe.textContent = contact.en.callme;
+    email.textContent = contact.en.email;
+    myLocation.textContent = contact.en.location;
+    myMessage.textContent = contact.en.message;
+    myProject.textContent = contact.en.project;
+    myName.textContent = contact.en.theName;
+    sendbtn.textContent = contact.en.sendBtn;
+    // footer
+    footerRole.textContent = footer.en.role;
+    footerServices.textContent = footer.en.services;
+    footerPortfolio.textContent = footer.en.portfolio;
+    footerContact.textContent = footer.en.contact;
+    footerReservedRights.textContent = footer.en.reservedRights;
   }
-}
+// }
 
 /* ================ CURRENT DATE ================= */
-let currentDateHolder = document.getElementById("current-date").textContent = new Date().getFullYear();
+function currentDate() {
+  let currentDateHolder = document.getElementById("current-date").textContent = new Date().getFullYear();
+};
+
+window.addEventListener("DOMContentLoaded", currentDate);
 
 
 gsap.registerPlugin(SplitText);

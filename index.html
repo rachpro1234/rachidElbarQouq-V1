@@ -93,36 +93,14 @@
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
         <!-- LANGUAGE CHANGE -->
-        <section class="language-switcher">
-          <div class="language-flag">
-            <img
-              src="./assets/img/germany-flag.png"
-              alt="de"
-              onclick="changeLanguage('de')"
-              width="20px"
-              height="20px"
-              loading="lazy"
-            />
-
-            <img
-              src="./assets/img/italy-flag.png"
-              alt="it"
-              onclick="changeLanguage('it')"
-              width="20px"
-              height="20px"
-              loading="lazy"
-            />
-
-            <img
-              src="./assets/img/Uk-flag.png"
-              alt="uk"
-              onclick="changeLanguage('eng')"
-              width="20px"
-              height="20px"
-              loading="lazy"
-            />
-          </div>
-        </section>
+        <div class="language-switch-wrapper">
+          <i class="ph ph-globe language-switch-icon"></i>
+          <select class="language-switcher" id="languageSwitcher" onchange="changeLanguage(this.value)">
+            <option value="en">en</option>
+            <option value="de">de</option>
+            <option value="it">it</option>
+          </select>
+        </div>
 
         <!-- btn -->
         <div class="nav__btns">
@@ -218,16 +196,12 @@
 
             <!-- home-data -->
             <div class="home__data">
-              <h1 class="home__title" id="profileInformation">
-                Hello, I'm Rachid
-              </h1>
-              <h3 class="home__subtitle" id="role">Frontend Developer</h3>
-              <p class="home__description" id="profileDesc">
-                Energetic frontend developer adept at writing well-designed code
-                and responsive websites with a mobile-first approach
-              </p>
+              <h1 class="home__title" id="profileInformation"></h1>
+              <h3 class="home__subtitle" id="role"></h3>
+              <p class="home__description" id="profileDesc"></p>
               <a href="#contact" class="button button--flex" id="contactButton">
-                contact me <i class="uil uil-message button__icon"></i>
+                <span id="contactButtonText"></span>
+                <i class="uil uil-message button__icon"></i>
               </a>
             </div>
           </div>
@@ -235,7 +209,7 @@
           <div class="home__scroll">
             <a href="#about" class="home__scroll-button button--flex">
               <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-              <span class="home__scroll-name" id="scrollBtn">scroll down</span>
+              <span class="home__scroll-name" id="scrollBtn"></span>
               <i class="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
           </div>

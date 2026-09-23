@@ -14,3 +14,5 @@ This Portfolio was designed and developed by Rachid-ELBarqouqy(https://x.com/rac
 - Developed first with the Mobile First methodology, then for desktop.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 - customizable sections and easy to use throughout the project
+- GSAP smooth animations
+- Phosphor icons throughtout the project
