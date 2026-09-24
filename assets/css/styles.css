@@ -213,7 +213,7 @@ img {
 .header {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   z-index: var(--z-fixed);
   /* background-color: var(--body-color); */
@@ -271,14 +271,18 @@ img {
   
   .nav__menu {
     position: fixed;
-    bottom: -100%;
+    top: -500%;
     left: 0;
     width: 100%;
     background-color: var(--body-color);
     padding: 2rem 1.5rem 4rem;
     box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 1.5rem 0 0;
-    transition: 0.3s;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .header {
+    top: 1rem;
   }
 
   .section__title {
@@ -323,7 +327,7 @@ img {
 }
 /* show menu */
 .show-menu {
-  bottom: 0;
+  top: 0;
 }
 
 /* Active link */
@@ -667,7 +671,7 @@ img {
   border-radius: 0.2rem;
 }
 
-.skills__bar {
+/* .skills__bar {
   background-color: var(--first-color-lighter);
 }
 
@@ -694,7 +698,7 @@ img {
 
 .skills__react {
   width: 60%;
-}
+} */
 
 .skills__close .skills__list {
   max-height: 0;
