@@ -238,6 +238,12 @@ img {
   box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3); */
 }
 
+#svg-stage {
+  width: 5%;
+  max-width:500px;
+  overflow:visible;
+}
+
 .nav__logo,
 .nav__toggle {
   color: var(--title-color);
@@ -555,7 +561,7 @@ img {
 .section__title .dot {
   color: var(--first-color);
   font-size: 4rem;
-  margin-left: -10px;
+  margin-left: -30px;
 }
 
 .about__info {
@@ -1369,9 +1375,3 @@ img {
 }
 
 
-
-#svg-stage {
-  width:60%;
-  max-width:500px;
-  overflow:visible;
-}

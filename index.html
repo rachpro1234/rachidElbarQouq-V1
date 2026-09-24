@@ -42,6 +42,8 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container" id="nav">
+       <!-- 
+        
         <a href="#" class="nav__logo">
           <img
             src="./assets/img/portfolio=logo.png"
@@ -51,42 +53,90 @@
             loading="lazy"
           />
         </a>
+      
+        --> 
+
+            <svg
+          id="svg-stage"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+          fill="none"
+          stroke-width="4.2"
+          opacity="0"
+        >
+          <defs>
+            <linearGradient
+              id="grad-1"
+              x1="0"
+              y1="0"
+              x2="100"
+              y2="100"
+              gradientUnits="userSpaceOnUse"
+            >
+            <stop offset="0.2" stop-color="hsl(250.07deg 68.16% 60.59%)" />
+            <stop offset="0.8" stop-color="hsl(247.06deg 27.87% 11.96%)" />
+            </linearGradient>
+          </defs>
+
+          <path
+            id="letter-r"
+            stroke="url(#grad-1)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="
+              M 20 90
+              V 10
+              H 52
+              C 70 10, 80 20, 80 35
+              C 80 50, 70 60, 52 60
+              H 20
+              M 52 60
+              L 82 90
+            "
+          />
+        </svg>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link" id="homeNav">
-                <i class="uil uil-estate nav__icon"></i> Home
+              <a href="#home" class="nav__link active-link">
+                <i class="uil uil-estate nav__icon"></i> 
+                <span id="homeNav"></span>
               </a>
             </li>
             <!-- Item -->
             <li class="nav__item">
-              <a href="#about" class="nav__link" id="aboutNav">
-                <i class="uil uil-user nav__icon"></i> about
+              <a href="#about" class="nav__link">
+                <i class="uil uil-user nav__icon"></i>
+                <span id="aboutNav"></span>
               </a>
             </li>
             <!-- Item -->
             <li class="nav__item">
-              <a href="#skills" class="nav__link" id="skillsNav">
-                <i class="uil uil-file-alt nav__icon"></i> skills
+              <a href="#skills" class="nav__link">
+                <i class="uil uil-file-alt nav__icon"></i>
+                <span  id="skillsNav"></span>
               </a>
             </li>
             <!-- Item -->
             <li class="nav__item">
-              <a href="#services" class="nav__link" id="serviceNav">
-                <i class="uil uil-briefcase-alt nav__icon"></i> services
+              <a href="#services" class="nav__link">
+                <i class="uil uil-briefcase-alt nav__icon"></i>
+                <span id="serviceNav"></span>
               </a>
             </li>
             <!-- Item -->
             <li class="nav__item">
-              <a href="#portfolio" class="nav__link" id="portfolioNav">
-                <i class="uil uil-scenery nav__icon"></i> Portfolio
+              <a href="#portfolio" class="nav__link">
+                <i class="uil uil-scenery nav__icon"></i>
+                <span id="portfolioNav"></span>
               </a>
             </li>
             <!-- Item -->
             <li class="nav__item">
-              <a href="#contact" class="nav__link" id="contactNav">
-                <i class="uil uil-message nav__icon"></i> contact
+              <a href="#contact" class="nav__link">
+                <i class="uil uil-message nav__icon"></i>
+                <span id="contactNav"></span>
               </a>
             </li>
           </ul>
@@ -218,10 +268,11 @@
 
       <!--==================== ABOUT ====================-->
       <section class="about section fade" id="about">
-        <h2 class="section__title" id="aboutme">
-          a little about me <span class="dot">.</span>
+        <h2 class="section__title">
+          <span id="aboutme"></span>
+          <span class="dot">.</span>
         </h2>
-        <span class="section__subtitle" id="aboutsub">My Introduction</span>
+        <span class="section__subtitle" id="aboutsub"></span>
         <div class="about__container container grid">
           <div>
             <img
@@ -232,20 +283,11 @@
             />
           </div>
           <div class="about__data">
-            <p class="about__description" id="aboutcontent">
-              Frontend developer with experience in building websites and web
-              applications. I specialize in JavaScript, HTML5, CSS3,
-              TailwindCSS, Reactjs, Nextjs and Typescript. My job is to write
-              and style the frontend components and deliver quality work at all
-              levels.
-            </p>
+            <p class="about__description" id="aboutcontent"></p>
             <div class="about__info">
               <div>
                 <span class="about__info-title about-num" data-val="3">0</span>
-                <span class="about__info-name" id="aboutexperience">
-                  Years <br />
-                  experience</span
-                >
+                <span class="about__info-name" id="aboutexperience"><br /></span>
               </div>
               <div>
                 <span class="about__info-title about-num" data-val="16">0</span>
@@ -268,10 +310,9 @@
                 href="./assets/pdf/Entw.v.1.pdf"
                 class="button button--flex"
                 target="_blank"
-                id="aboutcv"
                 download
               >
-                Download resume
+                <span id="aboutcv"></span>
                 <i class="uil uil-download-alt button__icon"></i>
               </a>
             </div>
@@ -281,23 +322,19 @@
 
       <!--==================== SKILLS ====================-->
       <section class="skills section fade" id="skills">
-        <h2 class="section__title" id="skill">
-          Skills <span class="dot">.</span>
+        <h2 class="section__title">
+          <span id="skill"></span>
+          <span class="dot">.</span>
         </h2>
-        <span class="section__subtitle" id="skilltitle"
-          >My technical level</span
-        >
-
+        <span class="section__subtitle" id="skilltitle"></span>
         <div class="skills__container container grid">
           <!-- ============= Skills 1 =============  -->
           <div class="skills__content skills__close">
             <div class="skills__header">
               <i class="uil uil-brackets-curly skills__icon"></i>
               <div>
-                <h1 class="skills__title" id="frontrole">Frontend developer</h1>
-                <span class="skills__subtitle" id="skillexperience"
-                  >more than 3 year</span
-                >
+                <h1 class="skills__title" id="frontRole"></h1>
+                <span class="skills__subtitle" id="skillExperience1"></span>
               </div>
               <i class="uil uil-angle-down skills__arrow"></i>
             </div>
@@ -336,9 +373,8 @@
             <div class="skills__header">
               <i class="uil uil-palette skills__icon"></i>
               <div>
-                <h1 class="skills__title" id="frameworks">Frameworks</h1>
-                <span class="skills__subtitle" id="skillexperience1"
-                  >more than 3 year</span
+                <h1 class="skills__title" id="frameworks"></h1>
+                <span class="skills__subtitle" id="skillExperience2"></span
                 >
               </div>
               <i class="uil uil-angle-down skills__arrow"></i>
@@ -1225,15 +1261,46 @@
     </footer>
 
 
-      <svg id="svg-stage" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 103 103" fill="none" stroke-width="2.2" opacity="0">
-    <defs>
-      <linearGradient id="grad-1" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-        <stop offset="0.2" stop-color="rgb(255, 135, 9)"></stop>
-        <stop offset="0.8" stop-color="rgb(247, 189, 248)"></stop>
-      </linearGradient>
-    </defs>
-    <path stroke="url(#grad-1)" d="M50.5 50.5h50v50s-19.2 1.3-37.2-16.7S56 35.4 35.5 15.5C18.5-1 .5.5.5.5v50h50s25.6-.6 38-18 12-32 12-32h-50v100H.5S.2 80.7 11.8 68.2 40 49.7 50.5 50.5Z" />
-  </svg>
+
+  <svg
+  id="svg-stage"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  fill="none"
+  stroke-width="2.2"
+  opacity="0"
+>
+  <defs>
+    <linearGradient
+      id="grad-1"
+      x1="0"
+      y1="0"
+      x2="100"
+      y2="100"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop offset="0.2" stop-color="#ff8709" />
+      <stop offset="0.8" stop-color="#f7bdf8" />
+    </linearGradient>
+  </defs>
+
+  <path
+    id="letter-r"
+    stroke="url(#grad-1)"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    d="
+      M 20 90
+      V 10
+      H 52
+      C 70 10, 80 20, 80 35
+      C 80 50, 70 60, 52 60
+      H 20
+      M 52 60
+      L 82 90
+    "
+  />
+</svg>
 
 </div>
     <!--==================== SCROLL TOP ====================-->
@@ -1253,8 +1320,9 @@
     <!--==================== GSAP ====================-->
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/MorphSVGPlugin.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/MorphSVGPlugin.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/DrawSVGPlugin.min.js"></script>
 
 
     <!--==================== MAIN JS ====================-->

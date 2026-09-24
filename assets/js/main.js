@@ -263,63 +263,6 @@ themeButton.addEventListener("click", () => {
 });
 
 // translation
-// const translations = {
-//   en: {
-//    description:
-//       "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
-//     profileName: "Hello, I'm Rachid",
-//     profileRole: "Frontend developer",
-//     contactBtn: "contact me",
-//     scrollDown: "scroll down",    
-//   },
-//   de: {
-//     description:
-//       "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.",
-//     profileName: "Hallo, Ich bin Rachid",
-//     profileRole: "Frontend-Entwickler",
-//     contactBtn: "Kontaktieren Sie mich",
-//     scrollDown: "Runterscrollen",
-//   },
-//   it: {
-//  description:
-//       "Sviluppatore frontend energico abile nello scrivere codice ben progettato e siti Web reattivi con un approccio mobile-first.",
-//     profileName: "Ciao, sono Rachid",
-//     profileRole: "Sviluppatore frontend",
-//     contactBtn: "contattami",
-//     scrollDown: "scorrere verso il basso",
-//   }
-// }
-
-// function updateLanguageFromHash() { 
-//   const langcode = location.hash.replace("#", '').toLowerCase();
-
-//   if(translations[langcode]) {
-//     document.getElementById("profileInformation").textContent = translations[langcode].profileName;
-//     document.getElementById("role").textContent = translations[langcode].profileRole;
-//     document.getElementById("profileDesc").textContent = translations[langcode].profileDesc;
-//     document.getElementById("contactButton").textContent = translations[langcode].contactBtn;
-//   } else {
-//     document.getElementById("profileInformation").textContent = translations.en.profileName;
-//     document.getElementById("role").textContent = translations.en.profileRole;
-//     document.getElementById("profileDesc").textContent = translations.en.profileDesc;
-//     document.getElementById("contactButton").textContent = translations.en.contactBtn;
-//   }
-
-// }
-
-// function setLanguage(langCode) {
-//   if(translations[langCode]) {
-//      location.hash = langCode;
-//   } else {
-//     console.log("unsupported language", {langCode})
-//   }
-// }
-
-
-// window.addEventListener("hashchange", updateLanguageFromHash);
-
-// updateLanguageFromHash();
-
 
 // Create a function to change
 // the hash value of the page
@@ -331,6 +274,17 @@ function changeLanguage(lang) {
 let languageSwitcher = document.getElementById("languageSwitcher");
 
 // Define the language reload anchors
+
+// let aboutProject = "completed projects";
+
+// const splitString = aboutProject.split("").map((word) => {
+//   `${word.length === 9 ? "<br>" : "" }`;
+
+//   console.log(word)
+// });
+
+// console.log(splitString.join(""));
+
 
 let profileInfos = {
   en: {
@@ -424,25 +378,25 @@ let skillSection = {
     skills: "skills",
     skillsTitle: "My technical level",
     frontRole: "frontend developer",
-    skillsExperience: "more than 1 year",
-    skillsExperience1: "more than 1 year",
+    skillsExperience1: "more than 3 year",
     frameworks: "frameworks",
+    skillsExperience2: "more than 3 year",
   },
   it: {
     skills: "competenze",
     skillsTitle: "Il mio livello tecnico",
     frontRole: "Sviluppatore frontend",
-    skillsExperience: "più di 1 anno",
-    skillsExperience1: "più di 1 anno",
+    skillsExperience1: "più di 3 anno",
     frameworks: "Quadri",
+    skillsExperience2: "più di 3 anno",
   },
   de: {
     skills: "Fähigkeiten",
     skillsTitle: "Mein technisches Niveau",
     frontRole: "Frontend Entwickler",
-    skillsExperience: "Mehr als 1 Jahr",
-    skillsExperience1: "Mehr als 1 Jahr",
+    skillsExperience1: "Mehr als 3 Jahr",
     frameworks: "Rahmenwerke",
+    skillsExperience2: "Mehr als 3 Jahr",
   },
 };
 
@@ -688,10 +642,10 @@ let footer = {
     // skills section
     skill.textContent = skillSection.it.skills;
     skilltitle.textContent = skillSection.it.skillsTitle;
-    frontrole.textContent = skillSection.it.frontRole;
-    skillexperience.textContent = skillSection.it.skillsExperience;
-    skillexperience1.textContent = skillSection.it.skillsExperience1;
+    frontRole.textContent = skillSection.it.frontRole;
+    skillExperience1.textContent = skillSection.it.skillsExperience1;
     frameworks.textContent = skillSection.it.frameworks;
+    skillExperience2.textContent = skillSection.it.skillsExperience2;
     // qualification section
     qualification.textContent = qualificationSection.it.qualification;
     qualificationtitle.textContent = qualificationSection.it.qualificationTitle;
@@ -772,12 +726,13 @@ let footer = {
     aboutproject.textContent = aboutSection.de.aboutProject;
     aboutcompany.textContent = aboutSection.de.aboutCompany;
     aboutcv.textContent = aboutSection.de.aboutCv;
+    // skills section
     skill.textContent = skillSection.de.skills;
     skilltitle.textContent = skillSection.de.skillsTitle;
-    frontrole.textContent = skillSection.de.frontRole;
-    skillexperience.textContent = skillSection.de.skillsExperience;
-    skillexperience1.textContent = skillSection.de.skillsExperience1;
+    frontRole.textContent = skillSection.de.frontRole;
+    skillExperience1.textContent = skillSection.de.skillsExperience1;
     frameworks.textContent = skillSection.de.frameworks;
+    skillExperience2.textContent = skillSection.de.skillsExperience2;
     // qualification section
     qualification.textContent = qualificationSection.de.qualification;
     qualificationtitle.textContent = qualificationSection.de.qualificationTitle;
@@ -933,6 +888,9 @@ function currentDate() {
 window.addEventListener("DOMContentLoaded", currentDate);
 
 
+/* ============================== GSAP ANIMATION ============================= */
+
+// split text animation
 gsap.registerPlugin(SplitText);
 
 let splitChars, splitWords, splitLines, animation;
@@ -979,12 +937,67 @@ setup();
 playAnimation();
 window.addEventListener("resize", setup);
 
+// drawSVG animation
+// gsap.registerPlugin(DrawSVGPlugin);
 
-const tl = gsap
-  .timeline({
-    repeat: -1,
-    defaults:{ duration: 3, ease: 'power1.inOut' }
-  })
-  .set('#svg-stage', { opacity: 1 })
-  .from('path', { drawSVG:'0% 0%' })
-  .to('path', { drawSVG:'100% 100%' })
+// const tl = gsap
+//   .timeline({
+//     repeat: -1,
+//     defaults:{ duration: 3, ease: 'power1.inOut' }
+//   })
+//   .set('#svg-stage', { opacity: 1 })
+//   .from('path', { drawSVG:'0% 0%' })
+//   .to('path', { drawSVG:'100% 100%' })
+
+
+gsap.registerPlugin(DrawSVGPlugin);
+
+const svg = document.querySelector("#svg-stage");
+
+const headerSvgObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        gsap.set(svg, { opacity: 1 });
+
+        gsap.from("#letter-r", {
+          drawSVG: "0%",
+          duration: 2,
+          ease: "power2.inOut"
+        });
+
+        headerSvgObserver.unobserve(svg);
+      }
+    });
+  },
+  {
+    threshold: 0.3
+  }
+);
+
+headerSvgObserver.observe(svg);
+
+const bgSvg = document.querySelector("#svg-bg");
+
+const bgSvgObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        gsap.set(svg, { opacity: 1 });
+
+        gsap.from("#bg-letter-r", {
+          drawSVG: "0%",
+          duration: 2,
+          ease: "power2.inOut"
+        });
+
+        bgSvgObserver.unobserve(bgSvg);
+      }
+    });
+  },
+  {
+    threshold: 0.3
+  }
+);
+
+bgSvgObserver.observe(bgSvg);
