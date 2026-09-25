@@ -19,202 +19,6 @@ if (navClose) {
   });
 }
 
-
-// nav menu with gsap animation
-// let isOpen = false;
-// let exitSpeed = 1.5;
-// let enterEndTime = 0;
-// let tl;
-
-// function init() {
-//   tl && tl.revert();
-
-//   gsap.set("#nav", { visibility: "hidden" });
-//   gsap.set("#nav-menu", { opacity: 0 });
-//   gsap.set(".nav-login", { opacity: 0, y: 8 });
-
-//   tl = gsap
-//     .timeline({ paused: true })
-
-//     .set("#nav", { visibility: "visible", pointerEvents: "auto" })
-//     // ═══ ENTER ═══
-
-//     .to(
-//       "#nav-menu",
-//       {
-//         opacity: 1,
-//         duration: 0.4,
-//         ease: "power2.out",
-//         easeReverse: er("power4.out")
-//       },
-//       0
-//     )
-
-//     .fromTo(
-//       ".nav-panel",
-//       { x: "110%", y: 0, rotation: 0 },
-//       {
-//         x: "0%",
-//         y: 0,
-//         duration: 0.6,
-//         ease: "back.out",
-//         easeReverse: er("power3.in"),
-//         stagger: 0.1,
-//       },
-//       0
-//     )
-
-//     .fromTo(
-//       ".nav-item",
-//       { opacity: 0, x: -20 },
-//       {
-//         opacity: 1,
-//         x: 0,
-//         duration: 1.2,
-//         ease: "expo.out",
-//         easeReverse: er("power3.in"),
-//         stagger: 0.03
-//       },
-//       0.1
-//     )
-
-//     .fromTo(
-//       ".bar-top",
-//       {
-//         stroke: "var(--white)",
-//         attr: { x1: 3, y1: 7, x2: 17, y2: 7 }
-//       },
-//       {
-//         stroke: "#0e100f",
-//         attr: { x1: 5, y1: 5, x2: 15, y2: 15 },
-//         duration: 0.35,
-//         ease: "back.out(1.4)",
-//         easeReverse: er("power3.out")
-//       },
-//       0.06
-//     )
-//     .fromTo(
-//       ".bar-bot",
-//       {
-//         stroke: "var(--white)",
-//         attr: { x1: 3, y1: 13, x2: 17, y2: 13 }
-//       },
-//       {
-//         stroke: "#0e100f",
-//         attr: { x1: 15, y1: 5, x2: 5, y2: 15 },
-//         duration: 0.35,
-//         ease: "back.out(1.4)",
-//         easeReverse: er("power3.out")
-//       },
-//       0.06
-//     )
-//     .to(
-//       ".nav-login",
-//       {
-//         opacity: 1,
-//         y: 0,
-//         duration: 0.3,
-//         ease: "power3.out",
-//         easeReverse: er("power4.out")
-//       },
-//       0.4
-//     )
-
-//     // ═══ PAUSE ═══
-//     .addPause();
-
-//   enterEndTime = tl.duration();
-
-//   // ═══ EXIT — panels fall down with stagger, bottom first ═══
-
-//   tl
-//     // X → hamburger
-//     .to(".bar", {
-//       stroke: "var(--white)",
-//       duration: 0.2
-//     })
-//     .to(
-//       ".bar-top",
-//       {
-//         attr: { x1: 3, y1: 7, x2: 17, y2: 7 },
-//         duration: 0.2,
-//         ease: "power3.in"
-//       },
-//       "<"
-//     )
-//     .to(
-//       ".bar-bot",
-//       {
-//         attr: { x1: 3, y1: 13, x2: 17, y2: 13 },
-//         duration: 0.2,
-//         ease: "power3.in"
-//       },
-//       "<"
-//     )
-
-//     // panels fall
-//     .to(
-//       ".nav-panel",
-//       {
-//         y: "110vh",
-//         rotation: "random(-25, 25)",
-//         duration: 1,
-//         ease: "power3.in",
-//         stagger: {
-//           from: "end",
-//           each: 0.02
-//         }
-//       },
-//       "<"
-//     )
-
-//     // bg fades
-//     .to(
-//       ".nav-bg",
-//       {
-//         opacity: 0,
-//         duration: 0.3,
-//         ease: "power2.in"
-//       },
-//       "<0.1"
-//     )
-
-//     .set("#nav", { visibility: "hidden", pointerEvents: "none" });
-// }
-// init();
-
-// function toggle() {
-//   isOpen = !isOpen;
-//   const btn = document.getElementById("nav-toggle");
-//   btn.setAttribute("aria-expanded", isOpen);
-//   btn.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
-
-//   if (isOpen) {
-//     if (tl.time() >= enterEndTime) {
-//       tl.timeScale(1).restart();
-//     } else {
-//       tl.timeScale(1).play();
-//     }
-//   } else {
-//     if (tl.time() < enterEndTime) {
-//       tl.timeScale(exitSpeed).reverse();
-//     } else {
-//       tl.timeScale(1).play();
-//     }
-//   }
-// }
-
-// document.getElementById("nav-toggle").addEventListener("click", toggle);
-// document.querySelector("#nav-menu").addEventListener("click", () => {
-//   if (isOpen) toggle();
-// });
-// document.addEventListener("keydown", (e) => {
-//   if (e.key === "Escape" && isOpen) {
-//     toggle();
-//     document.getElementById("menuToggle").focus();
-//   }
-// });
-
 /* =================== NUMBERS INCREMENT ANIMATION =====================*/
 const numEle = document.querySelectorAll(".about-num");
 const numSec = document.querySelector(".about");
@@ -458,7 +262,284 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-icon", getCurrentIcon());
 });
 
-// translation
+// =========================== COLOR PICK ============================ //
+// ========================================
+// COLOR THEME DROPDOWN
+// ========================================
+
+const root = document.documentElement;
+
+const colorDropdown = document.querySelector(".dropdown-colors");
+const colorButton = document.querySelector(".color-btn");
+const colorCircle = document.querySelector(".color-circle");
+const dropdownResults = document.querySelector(".dropdown-results");
+const colorOptions = document.querySelectorAll(".dropdown-option");
+
+let dropdownOpen = false;
+
+
+// ========================================
+// THEMES
+// ========================================
+
+const themes = {
+
+  purple: {
+    firstColor: "hsl(250, 69%, 61%)",
+    firstColorAlt: "#5a52d5"
+  },
+
+  green: {
+    firstColor: " hsl(142, 69%, 61%)",
+    firstColorAlt: "#159a29"
+  },
+
+  blue: {
+    firstColor: "hsl(41, 100%, 42%)",
+    firstColorAlt: "#b98b29"
+  },
+
+  pink: {
+    firstColor: "hsl(0, 0%, 50%)",
+    firstColorAlt: "#6c5f65"
+  }
+
+};
+
+
+// ========================================
+// INITIAL DROPDOWN STATE
+// ========================================
+
+gsap.set(dropdownResults, {
+  autoAlpha: 0,
+  y: -10,
+  scale: 0.95,
+  transformOrigin: "top center"
+});
+
+gsap.set(colorOptions, {
+  opacity: 0,
+  y: -8
+});
+
+
+// ========================================
+// OPEN DROPDOWN
+// ========================================
+
+function openColorDropdown() {
+
+  if (dropdownOpen) return;
+
+  dropdownOpen = true;
+
+  colorButton.setAttribute("aria-expanded", "true");
+
+  gsap.killTweensOf([
+    dropdownResults,
+    colorOptions
+  ]);
+
+  const tl = gsap.timeline();
+
+  tl.to(dropdownResults, {
+    autoAlpha: 1,
+    y: 0,
+    scale: 1,
+    duration: 0.35,
+    ease: "back.out(1.4)"
+  })
+
+  .to(colorOptions, {
+    opacity: 1,
+    y: 0,
+    duration: 0.4,
+    ease: "power3.out",
+    stagger: 0.05
+  }, "-=0.2");
+}
+
+
+// ========================================
+// CLOSE DROPDOWN
+// ========================================
+
+function closeColorDropdown() {
+
+  if (!dropdownOpen) return;
+
+  dropdownOpen = false;
+
+  colorButton.setAttribute("aria-expanded", "false");
+
+  gsap.killTweensOf([
+    dropdownResults,
+    colorOptions
+  ]);
+
+  const tl = gsap.timeline();
+
+  tl.to(colorOptions, {
+    opacity: 0,
+    y: -8,
+    duration: 0.2,
+    ease: "power3.in",
+    stagger: {
+      each: 0.025,
+      from: "end"
+    }
+  })
+
+  .to(dropdownResults, {
+    autoAlpha: 0,
+    y: -10,
+    scale: 0.95,
+    duration: 0.25,
+    ease: "power3.in"
+  }, "-=0.1");
+}
+
+
+// ========================================
+// TOGGLE DROPDOWN
+// ========================================
+
+colorButton.addEventListener("click", (event) => {
+
+  event.stopPropagation();
+
+  if (dropdownOpen) {
+    closeColorDropdown();
+  } else {
+    openColorDropdown();
+  }
+
+});
+
+
+// ========================================
+// THEME
+// ========================================
+
+function applyTheme(theme) {
+
+  const selectedTheme = themes[theme];
+
+  if (!selectedTheme) return;
+
+  root.style.setProperty(
+    "--first-color",
+    selectedTheme.firstColor
+  );
+
+  root.style.setProperty(
+    "--first-color-alt",
+    selectedTheme.firstColorAlt
+  );
+
+  // Update color shown inside the button
+  colorCircle.style.backgroundColor =
+    selectedTheme.firstColor;
+
+  // Mark active option
+  colorOptions.forEach((option) => {
+
+    option.classList.toggle(
+      "active",
+      option.dataset.theme === theme
+    );
+
+  });
+
+  // Save theme
+  localStorage.setItem(
+    "selectedTheme",
+    theme
+  );
+}
+
+
+// ========================================
+// COLOR OPTIONS
+// ========================================
+
+colorOptions.forEach((option) => {
+
+  const circle = option.querySelector(".circle");
+
+  // Set preview color
+  circle.style.backgroundColor =
+    option.dataset.color;
+
+
+  option.addEventListener("click", () => {
+
+    const theme = option.dataset.theme;
+
+    applyTheme(theme);
+
+    closeColorDropdown();
+
+  });
+
+});
+
+
+// ========================================
+// RESTORE SAVED THEME
+// ========================================
+
+const savedTheme =
+  localStorage.getItem("selectedTheme");
+
+if (savedTheme && themes[savedTheme]) {
+
+  applyTheme(savedTheme);
+
+} else {
+
+  applyTheme("purple");
+
+}
+
+
+// ========================================
+// CLICK OUTSIDE
+// ========================================
+
+document.addEventListener("click", (event) => {
+
+  if (
+    dropdownOpen &&
+    !colorDropdown.contains(event.target)
+  ) {
+    closeColorDropdown();
+  }
+
+});
+
+
+// ========================================
+// ESCAPE
+// ========================================
+
+document.addEventListener("keydown", (event) => {
+
+  if (
+    event.key === "Escape" &&
+    dropdownOpen
+  ) {
+
+    closeColorDropdown();
+
+    colorButton.focus();
+
+  }
+
+});
+
+// ============================ translation =========================== //
 
 // Create a function to change
 // the hash value of the page
@@ -577,6 +658,7 @@ let skillSection = {
     skillsExperience1: "more than 3 year",
     frameworks: "frameworks",
     skillsExperience2: "more than 3 year",
+    backRole: "",
   },
   it: {
     skills: "competenze",

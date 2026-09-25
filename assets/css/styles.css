@@ -33,6 +33,13 @@
   /*========== Colors ==========*/
   /* Change favorite color */
   --hue-color: 250; /*Purple 250 - Green 142 - Blue 230- Pink 340*/
+  --hue-green: 142;
+  --hue-blue: 230;
+  --hue-pink: 0; 
+
+  --hue-pink-theme: hsl(var(--hue-pink), 0%, 50%);
+  --hue-green-theme: hsl(var(--hue-green), 69%, 61%);
+  --hue-blue-theme: hsl(var(--hue-blue), 69%, 61%);
 
   /* HSL color mode */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -102,6 +109,97 @@ body.dark-theme {
   --body-color: hsl(var(--hue-color), 28%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
 }
+
+
+/* ================== COLOR PICKER ========================= */
+.dropdown-colors {
+  position: relative;
+}
+
+.dropdown-colors .dropdown-results {
+    background: var(--body-colorr);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    /* box-shadow: var(--box-shadow); */
+    box-shadow: 0px 4px 7px rgba(0, 1, 2, .3), 0px 2px 2px rgba(0, 1, 2, .3), 0px 1px 1px rgba(0, 1, 2, .3);
+    left: 50%;
+    padding: .5rem 0;
+    position: absolute;
+    top: 44px;
+    transform: translate(-50%);
+    z-index: 99;
+}
+
+.color-btn {
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.color-circle {
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+
+  background: var(--first-color);
+
+  pointer-events: none;
+}
+
+.dropdown-results .circles {
+  display: flex;
+    flex-direction: column;
+}
+
+.circles .dropdown-option {
+      cursor: pointer;
+    padding: .5rem 1rem;
+      transition: transform .2s ease;
+}
+
+.dropdown-option:hover {
+  transform: scale(1.08);
+}
+
+.dropdown-option .circle {
+  border-radius: 50%;
+    height: 16px;
+    width: 16px;
+}
+
+/* .dropdown-option.active .circle {
+  outline: 2px solid var(--first-color);
+  outline-offset: 3px;
+} */
+
+/* .dropdown-option:nth-child(1) .circle {
+  background-color: var(--first-color);
+}
+
+.dropdown-option:nth-child(2) .circle {
+  background-color: var(--hue-green-theme);
+}
+
+.dropdown-option:nth-child(3) .circle {
+  background-color: var(--hue-blue-theme);
+}
+
+.dropdown-option:nth-child(4) .circle {
+  background-color: var(--hue-pink-theme);
+} */
+
+/* .cirle-active {
+  background-color: var(--hue-color);
+} */
 
 /*========== Button Dark/Light ==========*/
 .nav__btns {
@@ -183,7 +281,6 @@ img {
   font-size: var(--h1-font-size);
   color: var(--title-color);
   text-shadow: 0 9px 20px #ffffff1f;
-  letter-spacing: -.3rem;
   text-transform: capitalize;
 }
 
@@ -1348,6 +1445,10 @@ img {
   /* .home__social {
     transform: translateX(-6rem);
   } */
+
+  .services__title {
+      letter-spacing: -.3rem;
+  }
 
   .services__container {
     grid-template-columns: repeat(3, 238px);
