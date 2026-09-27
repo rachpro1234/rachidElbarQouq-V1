@@ -20,47 +20,33 @@ if (navClose) {
 }
 
 /* =================== NUMBERS INCREMENT ANIMATION =====================*/
-const numEle = document.querySelectorAll(".about-num");
+//  motion
 const numSec = document.querySelector(".about");
-let interval = 4000;
+const animateNums = document.querySelectorAll(".about-num");
 
+const aboutNumbers = [3, 16, 1];
 
-function animateValue (el, start, end, duration) {
-  let startTimestamp = null;
-  const easeEffect = (t) => t * (2 - t);
-
-  const step = (timestamp) => {
-    if(!startTimestamp) startTimestamp = timestamp;
-    let progress = Math.min((timestamp - startTimestamp) / duration, 1);
-    let eased = easeEffect(progress);
-    el.innerHTML = Math.floor(start + eased * (end - start)) + "+";
-    if(progress < 1) {
-      requestAnimationFrame(step);
-    }
-  };
-
-  requestAnimationFrame(step)
-}
-
-
-const secObserve = new IntersectionObserver((enteries) => {
-  enteries.forEach((entry) => {
+const secObserve = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if(entry.isIntersecting) {
-      console.log("section about is in view");
-      numEle.forEach((valueDisplay) => {
-        let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-        animateValue(valueDisplay, 0, endValue, interval);
-      });
+      console.log("about section is in view");
+       animateNums.forEach((ele, index) => {
+         animate(0, aboutNumbers[index], {
+           duration: 3,
+           ease: 'circOut',
+           onUpdate: (latest) => (ele.innerHTML = Math.round(latest) + "+"),
+         })
+       })
+    
       secObserve.unobserve(entry.target);
-
-      
-       } else {
-        console.log("element is not in View yet");
-       }
-   })
+    } else {
+       console.log("about section isn't in view")
+    }
+  })
 }, { threshold: 0.5 });
 
 secObserve.observe(numSec);
+
 
 
 /*==================== REMOVE MENU MOBILE ====================*/
@@ -655,26 +641,31 @@ let skillSection = {
     skills: "skills",
     skillsTitle: "My technical level",
     frontRole: "frontend developer",
-    skillsExperience1: "more than 3 year",
+    skillExperience1: "more than 3 year",
     frameworks: "frameworks",
-    skillsExperience2: "more than 3 year",
-    backRole: "",
+    skillExperience2: "more than 3 year",
+    backRole: "backend developer",
+    skillExperience3: "more than 1 year"
   },
   it: {
     skills: "competenze",
     skillsTitle: "Il mio livello tecnico",
     frontRole: "Sviluppatore frontend",
-    skillsExperience1: "più di 3 anno",
+    skillExperience1: "più di 3 anno",
     frameworks: "Quadri",
-    skillsExperience2: "più di 3 anno",
+    skillExperience2: "più di 3 anno",
+    backRole: "Sviluppatore backend",
+    skillExperience3: "più di 1 anno"
   },
   de: {
     skills: "Fähigkeiten",
     skillsTitle: "Mein technisches Niveau",
     frontRole: "Frontend Entwickler",
-    skillsExperience1: "Mehr als 3 Jahr",
+    skillExperience1: "Mehr als 3 Jahr",
     frameworks: "Rahmenwerke",
-    skillsExperience2: "Mehr als 3 Jahr",
+    skillExperience2: "Mehr als 3 Jahr",
+    backRole: "backend Entwickler",
+    skillExperience3: "Mehr als 1 Jahr"
   },
 };
 
@@ -819,12 +810,15 @@ let service = {
 
 let portfolio = {
   en: {
+    title: "portfolio",
     subtitle: "Latest work",
   },
   it: {
+    title: "portfolio",
     subtitle: "Ultimi lavori",
   },
   de: {
+    title: "portfolio",
     subtitle: "Neueste Arbeiten",
   },
 };
@@ -921,9 +915,11 @@ let footer = {
     skill.textContent = skillSection.it.skills;
     skilltitle.textContent = skillSection.it.skillsTitle;
     frontRole.textContent = skillSection.it.frontRole;
-    skillExperience1.textContent = skillSection.it.skillsExperience1;
+    skillExperience1.textContent = skillSection.it.skillExperience1;
     frameworks.textContent = skillSection.it.frameworks;
-    skillExperience2.textContent = skillSection.it.skillsExperience2;
+    skillExperience2.textContent = skillSection.it.skillExperience2;
+    backRole.textContent = skillSection.it.backRole;
+    skillExperience3.textContent = skillSection.it.skillExperience3
     // qualification section
     qualification.textContent = qualificationSection.it.qualification;
     qualificationtitle.textContent = qualificationSection.it.qualificationTitle;
@@ -964,6 +960,7 @@ let footer = {
     service2Task3.textContent = service.it.service2Task3;
     service2Task4.textContent = service.it.service2Task4;
     // portfolio
+    portfolioTitle.textContent = portfolio.it.title; 
     secSubtitle.textContent = portfolio.it.subtitle;
     // contact
     contactMe.textContent = contact.it.contactme;
@@ -1008,9 +1005,11 @@ let footer = {
     skill.textContent = skillSection.de.skills;
     skilltitle.textContent = skillSection.de.skillsTitle;
     frontRole.textContent = skillSection.de.frontRole;
-    skillExperience1.textContent = skillSection.de.skillsExperience1;
+    skillExperience1.textContent = skillSection.de.skillExperience1;
     frameworks.textContent = skillSection.de.frameworks;
-    skillExperience2.textContent = skillSection.de.skillsExperience2;
+    skillExperience2.textContent = skillSection.de.skillExperience2;
+    backRole.textContent = skillSection.de.backRole;
+    skillExperience3.textContent = skillSection.de.skillExperience3
     // qualification section
     qualification.textContent = qualificationSection.de.qualification;
     qualificationtitle.textContent = qualificationSection.de.qualificationTitle;
@@ -1051,6 +1050,7 @@ let footer = {
     service2Task3.textContent = service.de.service2Task3;
     service2Task4.textContent = service.de.service2Task4;
     // portfolio
+    portfolioTitle.textContent = portfolio.de.title; 
     secSubtitle.textContent = portfolio.de.subtitle;
     // contact
     contactMe.textContent = contact.de.contactme;
@@ -1095,9 +1095,11 @@ let footer = {
     skill.textContent = skillSection.en.skills;
     skilltitle.textContent = skillSection.en.skillsTitle;
     frontRole.textContent = skillSection.en.frontRole;
-    skillExperience1.textContent = skillSection.en.skillsExperience1;
+    skillExperience1.textContent = skillSection.en.skillExperience1;
     frameworks.textContent = skillSection.en.frameworks;
-    skillExperience2.textContent = skillSection.en.skillsExperience2;
+    skillExperience2.textContent = skillSection.en.skillExperience2;
+     backRole.textContent = skillSection.en.backRole;
+    skillExperience3.textContent = skillSection.en.skillExperience3
     // qualification section
     qualification.textContent = qualificationSection.en.qualification;
     qualificationtitle.textContent = qualificationSection.en.qualificationTitle;
@@ -1138,6 +1140,7 @@ let footer = {
     service2Task3.textContent = service.en.service2Task3;
     service2Task4.textContent = service.en.service2Task4;
     // portfolio
+    portfolioTitle.textContent = portfolio.en.title; 
     secSubtitle.textContent = portfolio.en.subtitle;
     // contact
     contactMe.textContent = contact.en.contactme;

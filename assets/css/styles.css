@@ -387,45 +387,35 @@ text-fill-color: transparent;
   } */
 
   .nav__menu {
-  position: fixed;
-  top: 0;
-  left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--body-color);
+    padding: 5rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    z-index: 100;
 
-  width: 100%;
-  height: 100vh;
-
-  background: var(--body-color);
-
-  padding: 5rem 1.5rem 4rem;
-
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-
-  border-radius: 1.5rem 1.5rem 0 0;
-
-  z-index: 100;
-
-  /* Initial closed state */
-  clip-path: circle(
-    0% at calc(100% - 36px) 36px
-  );
-
-  visibility: hidden;
-  pointer-events: none;
-
-  /* We let GSAP/CSS handle the animation */
-  transition:
-    clip-path 0.7s cubic-bezier(0.77, 0, 0.175, 1),
-    visibility 0s linear 0.7s;
+    /* Initial closed state */
+    clip-path: circle(
+      0% at calc(100% - 36px) 36px
+    );
+    visibility: hidden;
+    pointer-events: none;
+    /* GSAP/CSS handle the animation */
+    transition:
+      clip-path 0.7s cubic-bezier(0.77, 0, 0.175, 1),
+      visibility 0s linear 0.7s;
 }
 
 .nav__menu.is-open {
   clip-path: circle(
     150% at calc(100% - 36px) 36px
   );
-
   visibility: visible;
   pointer-events: auto;
-
   transition:
     clip-path 0.7s cubic-bezier(0.77, 0, 0.175, 1),
     visibility 0s;
@@ -436,11 +426,10 @@ text-fill-color: transparent;
 }
 
 .nav__link {
-      font-size: 38px;
-    font-weight: 700;
+  font-size: 38px;
+  font-weight: 700;
   transform: translateY(100%);
   opacity: 0;
-
   transition:
     transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.5s ease;
@@ -538,6 +527,10 @@ text-fill-color: transparent;
 
 .nav__icon {
     font-size: 38px;
+}
+
+.dropdown-colors {
+  margin-left: auto;
 }
 
 /* .nav__close {
@@ -833,7 +826,7 @@ text-fill-color: transparent;
 
 .skills__header {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
