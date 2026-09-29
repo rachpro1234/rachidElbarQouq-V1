@@ -963,15 +963,15 @@ let footer = {
     portfolioTitle.textContent = portfolio.it.title; 
     secSubtitle.textContent = portfolio.it.subtitle;
     // contact
-    contactMe.textContent = contact.it.contactme;
-    getInTouch.textContent = contact.it.getintouch;
-    callMe.textContent = contact.it.callme;
-    email.textContent = contact.it.email;
-    myLocation.textContent = contact.it.location;
-    myMessage.textContent = contact.it.message;
-    myProject.textContent = contact.it.project;
-    myName.textContent = contact.it.theName;
-    sendbtn.textContent = contact.it.sendBtn;
+    // contactMe.textContent = contact.it.contactme;
+    // getInTouch.textContent = contact.it.getintouch;
+    // callMe.textContent = contact.it.callme;
+    // email.textContent = contact.it.email;
+    // myLocation.textContent = contact.it.location;
+    // myMessage.textContent = contact.it.message;
+    // myProject.textContent = contact.it.project;
+    // myName.textContent = contact.it.theName;
+    // sendbtn.textContent = contact.it.sendBtn;
     // footer
     footerRole.textContent = footer.it.role;
     footerServices.textContent = footer.it.services;
@@ -1053,15 +1053,15 @@ let footer = {
     portfolioTitle.textContent = portfolio.de.title; 
     secSubtitle.textContent = portfolio.de.subtitle;
     // contact
-    contactMe.textContent = contact.de.contactme;
-    getInTouch.textContent = contact.de.getintouch;
-    callMe.textContent = contact.de.callme;
-    email.textContent = contact.de.email;
-    myLocation.textContent = contact.de.location;
-    myMessage.textContent = contact.de.message;
-    myProject.textContent = contact.de.project;
-    myName.textContent = contact.de.theName;
-    sendbtn.textContent = contact.de.sendBtn;
+    // contactMe.textContent = contact.de.contactme;
+    // getInTouch.textContent = contact.de.getintouch;
+    // callMe.textContent = contact.de.callme;
+    // email.textContent = contact.de.email;
+    // myLocation.textContent = contact.de.location;
+    // myMessage.textContent = contact.de.message;
+    // myProject.textContent = contact.de.project;
+    // myName.textContent = contact.de.theName;
+    // sendbtn.textContent = contact.de.sendBtn;
     // footer
     footerRole.textContent = footer.de.role;
     footerServices.textContent = footer.de.services;
@@ -1143,15 +1143,15 @@ let footer = {
     portfolioTitle.textContent = portfolio.en.title; 
     secSubtitle.textContent = portfolio.en.subtitle;
     // contact
-    contactMe.textContent = contact.en.contactme;
-    getInTouch.textContent = contact.en.getintouch;
-    callMe.textContent = contact.en.callme;
-    email.textContent = contact.en.email;
-    myLocation.textContent = contact.en.location;
-    myMessage.textContent = contact.en.message;
-    myProject.textContent = contact.en.project;
-    myName.textContent = contact.en.theName;
-    sendbtn.textContent = contact.en.sendBtn;
+    // contactMe.textContent = contact.en.contactme;
+    // getInTouch.textContent = contact.en.getintouch;
+    // callMe.textContent = contact.en.callme;
+    // email.textContent = contact.en.email;
+    // myLocation.textContent = contact.en.location;
+    // myMessage.textContent = contact.en.message;
+    // myProject.textContent = contact.en.project;
+    // myName.textContent = contact.en.theName;
+    // sendbtn.textContent = contact.en.sendBtn;
     // footer
     footerRole.textContent = footer.en.role;
     footerServices.textContent = footer.en.services;
@@ -1219,18 +1219,6 @@ playAnimation();
 window.addEventListener("resize", setup);
 
 // drawSVG animation
-// gsap.registerPlugin(DrawSVGPlugin);
-
-// const tl = gsap
-//   .timeline({
-//     repeat: -1,
-//     defaults:{ duration: 3, ease: 'power1.inOut' }
-//   })
-//   .set('#svg-stage', { opacity: 1 })
-//   .from('path', { drawSVG:'0% 0%' })
-//   .to('path', { drawSVG:'100% 100%' })
-
-
 gsap.registerPlugin(DrawSVGPlugin);
 
 const svg = document.querySelector("#svg-stage");
@@ -1282,3 +1270,6 @@ const bgSvgObserver = new IntersectionObserver(
 );
 
 bgSvgObserver.observe(bgSvg);
+
+
+// ================== ANIME JS ANIMATION ================== // 
