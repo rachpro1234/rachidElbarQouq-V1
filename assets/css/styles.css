@@ -594,7 +594,7 @@ text-fill-color: transparent;
   font-size: 1.25rem;
 }
 /*==================== BUTTONS ====================*/
-.button {
+.main-button {
   display: inline-block;
   background-color: var(--first-color);
   color: #fff;
@@ -604,9 +604,10 @@ text-fill-color: transparent;
   transition: 0.6s;
   text-transform: uppercase;
   border: none;
+  text-shadow: 1px 2px 4px #32160D;
 }
 
-.button:hover {
+.main-button:hover {
   opacity: 0.6;
 }
 
@@ -910,6 +911,7 @@ text-fill-color: transparent;
   margin-bottom: var(--mb-1);
   font-weight: var(--font-medium);
   width: 20px;
+  color: var(--title-color);
 }
 
 .services__button:hover {
@@ -984,6 +986,120 @@ text-fill-color: transparent;
   opacity: 1;
   visibility: visible;
 }
+
+/* ================= SERVICES v.2.0 ================= */
+#layout-dialog {
+  --overlay-alpha: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  max-width: 100%;
+  max-height: 100%;
+  border: none;
+  background: transparent;
+  pointer-events: none;
+  background-color: color-mix(in srgb, rgba(0, 0, 0, 0.5) , transparent var(--overlay-alpha));
+}
+
+#layout-dialog[open] {
+  --overlay-alpha: 40%;
+  pointer-events: auto;
+}
+
+#layout-dialog::backdrop {
+  background: transparent;
+}
+
+#layout-dialog .item {
+  position: relative;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  /* width: 22rem; */
+  width: 450px;
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px dashed var(--first-color);
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--container-color);
+}
+
+#layout-dialog[open] .item {
+  visibility: visible;
+}
+
+/* #layout-dialog .item h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  will-change: font-size;
+  text-wrap: nowrap;
+}
+
+#layout-dialog .item h3 {
+  position: absolute;
+  top: 2.9rem;
+  right: 2rem;
+} */
+
+#layout-usage-animate-modal-dialog .item {
+  cursor: pointer;
+}
+
+#layout-usage-animate-modal-dialog .item.is-open {
+  visibility: hidden;
+      /* background: #898989; */
+}
+
+#layout-usage-animate-modal-dialog .item article {
+  text-align: left;
+  display: none;
+}
+/* #layout-dialog .item p {
+  padding-top: 1rem;
+  border-top: 1px solid currentColor;  
+} */
+
+#layout-dialog[open] .item article {
+  display: block;
+}
+
+.button {
+  /* height: 30%;
+  width: 50%; */
+
+       /* position: relative; */
+    /* background-color: var(--container-color);
+    padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.4s; */
+
+        background-color: var(--container-color);
+padding: 3rem 0.5rem 2rem 1.5rem;    
+border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    transition: 0.4s;
+    border: none;
+    border-radius: 21px;    
+}
+
+.service1__wrapper {
+  display: flex;
+  gap: 10px;
+}
+
 /*==================== PORTFOLIO ====================*/
 .portfolio__container {
   overflow: initial;
@@ -1113,8 +1229,25 @@ text-fill-color: transparent;
 
 .contact-cta-buttons-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 10px;
+}
+
+.contact-info-txt p {
+    line-height: 25px;
+    font-size: 1.4rem;
+    max-width: 500px;
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.contact-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 /*==================== FOOTER ====================*/
 
@@ -1415,13 +1548,19 @@ text-fill-color: transparent;
       justify-content: space-around;
     }
 
+    .layout-container {
+      grid-template-columns: repeat(3, 218px);
+      justify-content: space-around;
+    height: 220px;
+    }
+
     .services__icon {
       font-size: 2rem;
     }
 
-    .services__content {
+    /* .services__content {
       padding: 6rem 0 2rem 2.5rem;
-    }
+    } */
     .services__modal-content {
       width: 450px;
     }
@@ -1604,13 +1743,6 @@ text-fill-color: transparent;
   .home__blob {
     width: 320px;
   }
-  /* .home__social {
-    transform: translateX(-6rem);
-  } */
-
-  .services__title {
-      letter-spacing: -.3rem;
-  }
 
   .services__container {
     grid-template-columns: repeat(3, 238px);
@@ -1640,5 +1772,3 @@ text-fill-color: transparent;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-

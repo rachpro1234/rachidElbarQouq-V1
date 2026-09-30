@@ -299,7 +299,7 @@
               <h1 class="home__title" id="profileInformation"></h1>
               <h3 class="home__subtitle" id="role"></h3>
               <p class="home__description" id="profileDesc"></p>
-              <a href="#contact" class="button button--flex" id="contactButton">
+              <a href="#contact" class="main-button button--flex" id="contactButton">
                 <span id="contactButtonText"></span>
                 <i class="uil uil-message button__icon"></i>
               </a>
@@ -352,7 +352,7 @@
               <a
                 download=""
                 href="./assets/pdf/Entw.v.1.pdf"
-                class="button button--flex"
+                class="main-button button--flex"
                 target="_blank"
                 download
               >
@@ -670,37 +670,28 @@
       </section>
 
       <!--==================== SERVICES ====================-->
-      <section class="services section fade" id="services">
+
+      <section class="docs-demo-content container" id="layout-usage-animate-modal-dialog">
         <h2 class="section__title" id="serviceTitle">
           Services <span class="dot">.</span>
         </h2>
         <span class="section__subtitle" id="serviceSubTitle">What I offer</span>
-        <div class="services__container container grid">
-          <!-- ================ SERVICES 1 =================  -->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-arrow services__icon"></i>
-              <h3 class="services__title" id="service1">
-                Frontend <br />
-                developer
-              </h3>
-            </div>
-
-            <span
-              class="button button--flex button--small button--link services__button"
-              id="service1Sub"
-            >
-              see more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title" id="service1Plus">
-                  Frontend <br />
-                  developer
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-                <ul class="services__modal-services grid">
+        <div class="large layout centered row">
+           <div class="layout-container grid ">
+               <button data-layout-id="A" data-duration="1000" class="button item col">
+                 <!--  
+                  <h2 data-layout-id="A-title">Item A</h2>
+                   <h3 data-layout-id="A-duration">(500ms)</h3>
+                  -->  
+                    <div class="service1__wrapper">
+                      <i class="uil uil-arrow services__icon"></i>                      
+                      <h3 class="services__title">
+                        Frontend <br />
+                        developer
+                      </h3>
+                    </div>
+                   <article>
+                      <ul class="services__modal-services grid">
                   <!-- =============== N 1 ============== -->
                   <li class="services__modal-service" id="service1Task1">
                     <i class="uil uil-check-circle services__modal-icon"></i>
@@ -721,113 +712,79 @@
                     <i class="uil uil-check-circle services__modal-icon"></i>
                     <p>Consume API(s).</p>
                   </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- ================ SERVICES 2 =================  -->
-
-          <div class="services__content">
-            <div>
-              <i class="uil uil-window services__icon"></i>
-              <h3 class="services__title" id="service2">
-                Ui/Ux <br />
-                Designer
-              </h3>
-            </div>
-
-            <span
-              class="button button--flex button--small button--link services__button"
-              id="service2Sub"
-            >
-              see more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title" id="service2Plus">
-                  Ui/Ux <br />
-                  Designer
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-                <ul class="services__modal-services grid">
-                  <!-- =============== N 1 ============== -->
-                  <li class="services__modal-service" id="service2Task1">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>User interface development.</p>
-                  </li>
-                  <!-- =============== N 2 ============== -->
-                  <li class="services__modal-service" id="service2Task2">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Creating a responsive website with TailwindCSS.</p>
-                  </li>
-                  <!-- =============== N 3 ============== -->
-                  <li class="services__modal-service" id="service2Task3">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Creating usage plans and flowcharts.</p>
-                  </li>
-                  <!-- =============== N 4 ============== -->
-                  <li class="services__modal-service" id="service2Task4">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>Animate your website with CSS and TailwindCSS.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- SERVICE 3 -->
-          <div class="services__content">
-            <div>
-              <i class="uil uil-server services__icon"></i>              
-              <h3 class="services__title" id="service2">
-                Backend <br />
-                Developer
-              </h3>
-            </div>
-
-            <span
-              class="button button--flex button--small button--link services__button"
-              id="service2Sub"
-            >
-              see more
-              <i class="uil uil-arrow-right button__icon"></i>
-            </span>
-            <div class="services__modal">
-              <div class="services__modal-content">
-                <h4 class="services__modal-title" id="service2Plus">
-                  backend<br />
-                  developer
-                </h4>
-                <i class="uil uil-times services__modal-close"></i>
-                <ul class="services__modal-services grid">
-                  <!-- =============== N 1 ============== -->
-                  <li class="services__modal-service" id="service2Task1">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>build RESTful APIs and integrate MySQL databases.</p>
-                  </li>
-                  <!-- =============== N 2 ============== -->
-                  <li class="services__modal-service" id="service2Task2">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>handle authentication, and data management. test, troubleshoot</p>
-                  </li>
-                  <!-- =============== N 3 ============== -->
-                  <li class="services__modal-service" id="service2Task3">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>implement server-side logic & optimize backend systems</p>
-                  </li>
-                  <!-- =============== N 4 ============== -->
-                  <li class="services__modal-service" id="service2Task4">
-                    <i class="uil uil-check-circle services__modal-icon"></i>
-                    <p>focus on building reliable and maintainable systems.</p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                </ul>  
+                  </article>
+               </button>
+               <button data-layout-id="B" data-duration="1000" class="button item col">
+                     <div class="service1__wrapper">
+                      <i class="uil uil-window services__icon"></i>
+                        <h3 class="services__title">
+                          Ui/Ux <br />
+                          Designer
+                        </h3>
+                      </div>
+                      <article>
+                          <ul class="services__modal-services grid">
+                            <!-- =============== N 1 ============== -->
+                            <li class="services__modal-service" id="service2Task1">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>User interface development.</p>
+                            </li>
+                            <!-- =============== N 2 ============== -->
+                            <li class="services__modal-service" id="service2Task2">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>Creating a responsive website with TailwindCSS.</p>
+                            </li>
+                            <!-- =============== N 3 ============== -->
+                            <li class="services__modal-service" id="service2Task3">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>Creating usage plans and flowcharts.</p>
+                            </li>
+                            <!-- =============== N 4 ============== -->
+                            <li class="services__modal-service" id="service2Task4">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>Animate your website with CSS and TailwindCSS.</p>
+                            </li>
+                          </ul>  
+                      </article>
+               </button>
+               <button data-layout-id="C" data-duration="1000" class="button item col">
+                     <div class="service1__wrapper">
+                        <i class="uil uil-server services__icon"></i>              
+                        <h3 class="services__title" id="service2">
+                          Backend <br />
+                          Developer
+                        </h3>
+                      </div>
+                      <article>
+                           <ul class="services__modal-services grid">
+                            <!-- =============== N 1 ============== -->
+                            <li class="services__modal-service" id="service2Task1">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>build RESTful APIs and integrate MySQL databases.</p>
+                            </li>
+                            <!-- =============== N 2 ============== -->
+                            <li class="services__modal-service" id="service2Task2">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>handle authentication, and data management. test, troubleshoot</p>
+                            </li>
+                            <!-- =============== N 3 ============== -->
+                            <li class="services__modal-service" id="service2Task3">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>implement server-side logic & optimize backend systems</p>
+                            </li>
+                            <!-- =============== N 4 ============== -->
+                            <li class="services__modal-service" id="service2Task4">
+                              <i class="uil uil-check-circle services__modal-icon"></i>
+                              <p>focus on building reliable and maintainable systems.</p>
+                            </li>
+                          </ul>  
+                      </article>
+               </button>
+           </div>
+       </div>
+    </section>
+ 
 
       <!--==================== PORTFOLIO ====================-->
       <section class="portfolio section fade" id="portfolio">
@@ -856,7 +813,7 @@
                 </p>
                 <a
                   href="https://rachpro1234.github.io/Ur-Shop/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo <i class="uil uil-arrow-right button__icon-demo"></i>
@@ -864,7 +821,7 @@
 
                 <a
                   href="https://rachpro1234.github.io/Ur-Shop/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code
@@ -890,7 +847,7 @@
                 </p>
                 <a
                   href="https://rachop.vercel.app/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo <i class="uil uil-arrow-right button__icon"></i>
@@ -898,7 +855,7 @@
 
                 <a
                   href="https://github.com/rachpro1234/Rachop"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
@@ -924,7 +881,7 @@
                 </p>
                 <a
                   href="https://rachpro1234.github.io/Dice-Game/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo <i class="uil uil-arrow-right button__icon"></i>
@@ -932,7 +889,7 @@
 
                 <a
                   href="https://github.com/rachpro1234/Dice-Game"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
@@ -958,7 +915,7 @@
                 </p>
                 <a
                   href="https://samparis.fr/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo<i class="uil uil-arrow-right button__icon"></i>
@@ -966,7 +923,7 @@
 
                 <!-- <a
                   href="https://github.com/rachpro1234/Dice-Game"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
@@ -992,7 +949,7 @@
                 </p>
                 <a
                   href="https://antikly.nowotch.work"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo<i class="uil uil-arrow-right button__icon"></i>
@@ -1000,7 +957,7 @@
 
                 <!-- <a
                   href="https://github.com/rachpro1234/Dice-Game"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
@@ -1027,7 +984,7 @@
                 </p>
                 <a
                   href="https://anaia.ma/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo<i class="uil uil-arrow-right button__icon"></i>
@@ -1035,7 +992,7 @@
 
                 <!-- <a
                   href="https://github.com/rachpro1234/Dice-Game"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
@@ -1061,7 +1018,7 @@
                 </p>
                 <a
                   href="https://gourmand.nowotch.com/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo<i class="uil uil-arrow-right button__icon"></i>
@@ -1069,7 +1026,7 @@
 
                 <!-- <a
                   href="https://github.com/rachpro1234/Dice-Game"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
@@ -1095,7 +1052,7 @@
                 </p>
                 <a
                   href="https://keytomarrakech.com/"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Demo<i class="uil uil-arrow-right button__icon"></i>
@@ -1103,7 +1060,7 @@
 
                 <!-- <a
                   href="https://github.com/rachpro1234/Dice-Game"
-                  class="button button--flex button--small portfolio__button"
+                  class="main-button button--flex button--small portfolio__button"
                   target="_blank"
                   rel="noopener"
                   >Source code <i class="uil uil-arrow-right button__icon"></i>
@@ -1133,19 +1090,19 @@
         <span class="section__subtitle" id="getInTouch">Get in touch</span>
 
        <article class="contact-info-wrapper container">
-        <div>
+        <div class="contact-info-txt">
           <p>
           If you are looking for a freelancer then you are in the right place, or if you are looking for a full-time employee, otherwise, if you just want to say hi, I will definitely say Hi back to you.  
           </p>
         </div>  
         <div class="contact-cta-buttons-container">
-          <button type="button" class="button">
+          <button type="button" class="main-button contact-cta">
             contact me via email
             <span>
               <i class="ph ph-mailbox"></i>
               </span>
           </button> 
-          <button type="button" class="button">
+          <button type="button" class="main-button contact-cta">
             let's connect on linkedin
             <span>
              <i class="ph ph-linkedin-logo"></i>  
@@ -1235,9 +1192,56 @@
 
     <!--==================== ANIME JS ====================-->
     <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
-    <!-- <script>
-      const { animate } = anime;
-    </script> -->
+    <script type="module">
+      
+
+  import { createLayout, utils } from "https://cdn.jsdelivr.net/npm/animejs/+esm";
+
+
+const buttons = utils.$('button');
+
+// Create demo dialog and append it to the body
+const $dialog = document.createElement('dialog');
+$dialog.id = 'layout-dialog';
+document.body.appendChild($dialog);
+
+// Create the modal layout by setting the dialog as the root
+// Since the elements are not yet part of the modal root, it's necessary to specify all animated children
+// to tell the layout what to look for during an update
+const modalLayout = createLayout($dialog, {
+  children: ['.item', 'div', 'article'],
+  properties: ['--overlay-alpha'],
+});
+
+const closeModal = (e) => {
+  let $item;
+  modalLayout.update(({ root }) => {
+    $dialog.close();
+    $item = buttons.find(item => item.classList.contains('is-open'));
+    $item.classList.remove('is-open'); // Makes the clicked element visible again
+    $item.focus(); // Focus to the closed element to preserve the keyboard navigation flow
+  });
+};
+
+const openModal = e => {
+  const $target = e.target;
+  const $item = $target.closest('.item');
+  const $clone = $item.cloneNode(true);
+  $dialog.innerHTML = ''; // Make sure old clones are removed from the modal before adding a new one
+  $dialog.appendChild($clone); // Append the clicked element clone to the modal
+  modalLayout.update(() => {
+    $dialog.showModal(); // Open the modal
+    $item.classList.add('is-open'); // Hide the clicked element
+  }, {
+    duration: $item.dataset.duration // Custom duration depending of the button clicked
+  });
+
+}
+
+buttons.forEach($button => $button.addEventListener('click', openModal));
+$dialog.addEventListener('cancel', closeModal);
+$dialog.addEventListener('click', closeModal);  
+    </script>
 
     <!--==================== MOTION ====================-->
 
