@@ -869,6 +869,10 @@ text-fill-color: transparent;
   color: var(--text-color-light);
 }
 
+.qualification-icon {
+  color: var(--first-color);
+}
+
 .qualification [data-content] {
   display: none;
 }
@@ -1252,7 +1256,7 @@ border-radius: 0.25rem;
 /*==================== FOOTER ====================*/
 
 .footer {
-  padding-top: 2rem;
+  padding: 2rem 0rem;
 }
 
 .footer__container {
@@ -1263,7 +1267,7 @@ border-radius: 0.25rem;
 .footer__bg {
   /* background-color: var(--first-color-second); */
   padding: 2rem 0 3rem;
-   background: rgba(255, 255, 255, 0);
+   background: var(--body-color);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
   border-radius: 16px;
@@ -1274,6 +1278,7 @@ border-radius: 0.25rem;
 .footer__title {
   font-size: var(--h1-font-size);
   margin-bottom: var(--mb-0-25);
+  color: var(--text-color);
 }
 
 .footer__subtitle {
