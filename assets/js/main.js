@@ -963,8 +963,8 @@ let footer = {
     portfolioTitle.textContent = portfolio.it.title; 
     secSubtitle.textContent = portfolio.it.subtitle;
     // contact
-    // contactMe.textContent = contact.it.contactme;
-    // getInTouch.textContent = contact.it.getintouch;
+    contactMe.textContent = contact.it.contactme;
+    getInTouch.textContent = contact.it.getintouch;
     // callMe.textContent = contact.it.callme;
     // email.textContent = contact.it.email;
     // myLocation.textContent = contact.it.location;
@@ -1053,8 +1053,8 @@ let footer = {
     portfolioTitle.textContent = portfolio.de.title; 
     secSubtitle.textContent = portfolio.de.subtitle;
     // contact
-    // contactMe.textContent = contact.de.contactme;
-    // getInTouch.textContent = contact.de.getintouch;
+    contactMe.textContent = contact.de.contactme;
+    getInTouch.textContent = contact.de.getintouch;
     // callMe.textContent = contact.de.callme;
     // email.textContent = contact.de.email;
     // myLocation.textContent = contact.de.location;
@@ -1143,8 +1143,8 @@ let footer = {
     portfolioTitle.textContent = portfolio.en.title; 
     secSubtitle.textContent = portfolio.en.subtitle;
     // contact
-    // contactMe.textContent = contact.en.contactme;
-    // getInTouch.textContent = contact.en.getintouch;
+    contactMe.textContent = contact.en.contactme;
+    getInTouch.textContent = contact.en.getintouch;
     // callMe.textContent = contact.en.callme;
     // email.textContent = contact.en.email;
     // myLocation.textContent = contact.en.location;
