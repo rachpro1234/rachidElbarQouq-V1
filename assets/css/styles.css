@@ -293,7 +293,8 @@ text-fill-color: transparent;
 
 .section__subtitle {
   display: block;
-  font-size: var(--small-font-size);
+  font-size: 1.3rem;
+  font-style: italic;
   margin-bottom: var(--mb-3);
 }
 
@@ -565,6 +566,7 @@ text-fill-color: transparent;
   margin-bottom: var(--mb-0-75);
 }
 
+
 .home__description {
   margin-bottom: var(--mb-2);
   line-height: 1.5rem;
@@ -593,6 +595,10 @@ text-fill-color: transparent;
 .home__scroll-arrow {
   font-size: 1.25rem;
 }
+
+/* highlight effect */
+
+
 /*==================== BUTTONS ====================*/
 .main-button {
   display: inline-block;

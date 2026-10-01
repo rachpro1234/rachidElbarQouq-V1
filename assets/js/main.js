@@ -719,7 +719,7 @@ let training = {
     training3: "Deutsch-Mittelstufe-Zertifikat B1+",
     training3Place: "Deutsches Goethe-Institut",
     training4: "Abitur-Abschluss in Literatur und Humanwissenschaften",
-    training4Place: "Omar EL Khayam High School – Marokko",
+    training4Place: "Omar EL Khayam Gymnasium – Marokko",
   },
 };
 
@@ -1272,4 +1272,14 @@ const bgSvgObserver = new IntersectionObserver(
 bgSvgObserver.observe(bgSvg);
 
 
-// ================== ANIME JS ANIMATION ================== // 
+// ================== HIGHLIGHT EFFECT ================== //
+// gsap.registerPlugin(ScrollTrigger);
+// gsap.utils.toArray(".home__subtitle").forEach((h3) => {
+//   ScrollTrigger.create({
+//     trigger: h3,
+//     start: "top center",
+//     toggleClass: "active",
+//      markers: true,
+//     onEnter: () => span.classList.add("active"),
+//   });
+// }); 
