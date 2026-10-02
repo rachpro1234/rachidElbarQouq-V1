@@ -1,13 +1,5 @@
 /**
  * Swiper 6.5.8
- * Most modern mobile touch slider and framework with hardware accelerated transitions
- * https://swiperjs.com
- *
- * Copyright 2014-2021 Vladimir Kharlampidi
- *
- * Released under the MIT License
- *
- * Released on: April 23, 2021
  */
 
 @font-face {
@@ -20,6 +12,18 @@
 :root {
   --swiper-theme-color: #007aff;
   --bullet-color: #000;  
+
+  --hue-color: 250; /*Purple 250 - Green 142 - Blue 230- Pink 340*/
+  --hue-green: 142;
+  --hue-blue: 230;
+  --hue-pink: 0; 
+
+  --hue-pink-theme: hsl(var(--hue-pink), 0%, 50%);
+  --hue-green-theme: hsl(var(--hue-green), 69%, 61%);
+  --hue-blue-theme: hsl(var(--hue-blue), 69%, 61%);
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 69%, 61%);
 }
 .swiper-container {
   margin-left: auto;
@@ -270,6 +274,7 @@ body.dark-theme {
 
 
 
+
 button.swiper-pagination-bullet {
   border: none;
   margin: 0;
@@ -283,7 +288,7 @@ button.swiper-pagination-bullet {
 }
 .swiper-pagination-bullet-active {
   opacity: 1;
-  background: var(--swiper-pagination-color, var(--swiper-theme-color));
+  background: var(--swiper-pagination-color, var(--first-color));
 }
 .swiper-container-vertical > .swiper-pagination-bullets {
   right: 10px;
@@ -564,4 +569,11 @@ button.swiper-pagination-bullet {
   z-index: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+
+@media screen and (max-width: 670px) {
+    .swiper-slide {
+    height: stretch;
+  }
 }

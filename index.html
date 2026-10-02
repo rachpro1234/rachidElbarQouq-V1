@@ -42,59 +42,47 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container" id="nav">
-       <!-- 
-        
-        <a href="#" class="nav__logo">
-          <img
-            src="./assets/img/portfolio=logo.png"
-            width="40px"
-            height="40px"
-            alt="logo"
-            loading="lazy"
-          />
+        <a href="/" alt="portfolio-logo" class="portfolio__logo"> 
+          <svg
+        id="svg-stage"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke-width="4.2"
+        opacity="0"
+      >
+        <defs>
+          <linearGradient
+            id="grad-1"
+            x1="0"
+            y1="0"
+            x2="100"
+            y2="100"
+            gradientUnits="userSpaceOnUse"
+          >
+          <stop offset="0.2"  stop-color="var(--first-color)" />
+          <stop offset="0.8" stop-color="var(--first-color-alt)" />
+          </linearGradient>
+        </defs>
+
+        <path
+          id="letter-r"
+          stroke="url(#grad-1)"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="
+            M 20 90
+            V 10
+            H 52
+            C 70 10, 80 20, 80 35
+            C 80 50, 70 60, 52 60
+            H 20
+            M 52 60
+            L 82 90
+          "
+        />
+          </svg>
         </a>
-      
-        --> 
-
-            <svg
-          id="svg-stage"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 100 100"
-          fill="none"
-          stroke-width="4.2"
-          opacity="0"
-        >
-          <defs>
-            <linearGradient
-              id="grad-1"
-              x1="0"
-              y1="0"
-              x2="100"
-              y2="100"
-              gradientUnits="userSpaceOnUse"
-            >
-            <stop offset="0.2"  stop-color="var(--first-color)" />
-            <stop offset="0.8" stop-color="var(--first-color-alt)" />
-            </linearGradient>
-          </defs>
-
-          <path
-            id="letter-r"
-            stroke="url(#grad-1)"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="
-              M 20 90
-              V 10
-              H 52
-              C 70 10, 80 20, 80 35
-              C 80 50, 70 60, 52 60
-              H 20
-              M 52 60
-              L 82 90
-            "
-          />
-        </svg>
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
@@ -227,7 +215,6 @@
                 rel="noopener"
                 title="linkedin"
               >
-              <!--  <i class="uil uil-linkedin-alt"></i> -->
                 <i class="ph ph-linkedin-logo"></i>
               </a>
 
@@ -236,7 +223,7 @@
                 class="home__social-icon"
                 target="_blank"
                 rel="noopener"
-                title="dribble"
+                title="instagram"
               >
                 <i class="ph ph-instagram-logo"></i>
               </a>
@@ -256,7 +243,7 @@
                 class="home__social-icon"
                 target="_blank"
                 rel="noopener"
-                title="twitter"
+                title="x-twitter"
               >
                 <i class="ph ph-x-logo"></i>
               </a>
@@ -787,12 +774,14 @@
           <div class="swiper-wrapper">
             <!-- ==================== PORTFOLIO 1 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/ur-shop.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/ur-shop.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Ur-Shop</h3>
@@ -801,33 +790,40 @@
                   <span>ReactJS</span>, <span>Firebase</span>.It has different
                   pages and switchable Animation movements.
                 </p>
-                <a
-                  href="https://rachpro1234.github.io/Ur-Shop/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo <i class="uil uil-arrow-right button__icon-demo"></i>
-                </a>
-
-                <a
-                  href="https://rachpro1234.github.io/Ur-Shop/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code
-                  <i class="uil uil-arrow-right button__icon-demo"></i>
-                </a>
+                <div class="portfolio__btns">
+                  <a
+                    href="https://rachpro1234.github.io/Ur-Shop/"
+                    class="main-button button--flex portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Demo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                      <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                      <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                      </svg>
+                  </a>
+  
+                  <a
+                    href="https://rachpro1234.github.io/Ur-Shop/"
+                    class="main-button button--flex portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Source code
+                    <i class="ph ph-github-logo"></i>                 
+                  </a>
+                </div>
               </div>
             </div>
 
             <!-- ==================== PORTFOLIO 2 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/Rachop.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/Rachop.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Rachop</h3>
@@ -835,32 +831,40 @@
                   A clothing website made with <span>NextJS</span> and
                   <span>Typescript</span> that interacts with all screen types.
                 </p>
-                <a
-                  href="https://rachop.vercel.app/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="portfolio__btns">
+                  <a
+                    href="https://rachop.vercel.app/"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Demo 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                        <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                        <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                        </svg>
+                  </a>
 
-                <a
-                  href="https://github.com/rachpro1234/Rachop"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                  <a
+                    href="https://github.com/rachpro1234/Rachop"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Source code <i class="ph ph-github-logo"></i> 
+                  </a>
+                </div>
               </div>
             </div>
 
             <!-- ==================== PORTFOLIO 3 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/dice-game.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/dice-game.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Dice-Game</h3>
@@ -869,32 +873,40 @@
                   with all screen types, smooth while playing with many other
                   features.
                 </p>
-                <a
-                  href="https://rachpro1234.github.io/Dice-Game/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                <div class="portfolio__btns">
+                  <a
+                    href="https://rachpro1234.github.io/Dice-Game/"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Demo 
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                        <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                        <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                        </svg>
+                  </a>
 
-                <a
-                  href="https://github.com/rachpro1234/Dice-Game"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code <i class="uil uil-arrow-right button__icon"></i>
-                </a>
+                  <a
+                    href="https://github.com/rachpro1234/Dice-Game"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Source code <i class="ph ph-github-logo"></i> 
+                  </a>
+                </div>
               </div>
             </div>
 
             <!-- ==================== PORTFOLIO 4 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/vtc-driver.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/vtc-driver.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">VTC-driver</h3>
@@ -903,32 +915,32 @@
                   users to calculate a ride from point A to B, then to get the
                   ride info like the price, distance and duration.
                 </p>
-                <a
-                  href="https://samparis.fr/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo<i class="uil uil-arrow-right button__icon"></i>
-                </a>
-
-                <!-- <a
-                  href="https://github.com/rachpro1234/Dice-Game"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code <i class="uil uil-arrow-right button__icon"></i>
-                </a> -->
+                <div class="portfolio__btns">
+                  <a
+                    href="https://samparis.fr/"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Demo
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                        <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                        <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                        </svg>
+                  </a>
+                </div>
               </div>
             </div>
 
             <!-- ==================== PORTFOLIO 6 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/antikly.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/antikly.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Antikly</h3>
@@ -937,32 +949,32 @@
                   store for Sellers and Dealers who are presenting their Antique
                   Products (Th App is not fully complete, still working on it)
                 </p>
-                <a
-                  href="https://antikly.nowotch.work"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo<i class="uil uil-arrow-right button__icon"></i>
-                </a>
-
-                <!-- <a
-                  href="https://github.com/rachpro1234/Dice-Game"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code <i class="uil uil-arrow-right button__icon"></i>
-                </a> -->
+                <div class="portfolio__btns">
+                  <a
+                    href="https://antikly.nowotch.work"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >demo
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                        <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                        <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                        </svg>
+                  </a>
+                </div>
               </div>
             </div>
 
             <!-- ==================== PORTFOLIO 7 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/anaia.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/anaia.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Anaia</h3>
@@ -972,32 +984,32 @@
                   high-quality residential and commercial moves, especially
                   around Marrakech and other major cities.
                 </p>
-                <a
-                  href="https://anaia.ma/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo<i class="uil uil-arrow-right button__icon"></i>
-                </a>
-
-                <!-- <a
-                  href="https://github.com/rachpro1234/Dice-Game"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code <i class="uil uil-arrow-right button__icon"></i>
-                </a> -->
+                <div class="portfolio__btns">
+                  <a
+                    href="https://anaia.ma/"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >demo
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                        <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                        <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                        </svg>
+                  </a>
+                </div>
               </div>
             </div>
 
              <!-- ==================== PORTFOLIO 8 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/gourmand.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/gourmand.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Gourmand</h3>
@@ -1006,32 +1018,32 @@
                   like translation to many languages and a booking system sychnonized with Google calendar and many more 
                   features.
                 </p>
-                <a
-                  href="https://gourmand.nowotch.com/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo<i class="uil uil-arrow-right button__icon"></i>
-                </a>
-
-                <!-- <a
-                  href="https://github.com/rachpro1234/Dice-Game"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code <i class="uil uil-arrow-right button__icon"></i>
-                </a> -->
+                <div class="portfolio__btns">
+                  <a
+                    href="https://gourmand.nowotch.com/"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >demo
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                        <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                        <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                        </svg>
+                  </a>
+                </div>
               </div>
             </div>
 
               <!-- ==================== PORTFOLIO 9 ==================== -->
             <div class="portfolio__content grid swiper-slide">
-              <img
-                src="./assets/img/keytomarrakech.png"
-                alt=""
-                class="portfolio__img"
-                loading="lazy"
-              />
+              <div class="portfolio__img__container">
+                <img
+                  src="./assets/img/keytomarrakech.png"
+                  alt=""
+                  class="portfolio__img"
+                  loading="lazy"
+                />
+              </div>
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Key To Marrakech</h3>
@@ -1040,21 +1052,19 @@
                   (Airbnb...). The whole website is made with Next js with many features like swiping between popular languages as well as featuring 
                   the Services provided in a clean and modern design.
                 </p>
-                <a
-                  href="https://keytomarrakech.com/"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Demo<i class="uil uil-arrow-right button__icon"></i>
-                </a>
-
-                <!-- <a
-                  href="https://github.com/rachpro1234/Dice-Game"
-                  class="main-button button--flex button--small portfolio__button"
-                  target="_blank"
-                  rel="noopener"
-                  >Source code <i class="uil uil-arrow-right button__icon"></i>
-                </a> -->
+                <div class="portfolio__btns">
+                  <a
+                    href="https://keytomarrakech.com/"
+                    class="main-button button--flex button--small portfolio__button"
+                    target="_blank"
+                    rel="noopener"
+                    >Demo
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                        <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
+                        <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
+                        </svg>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -1086,18 +1096,22 @@
           </p>
         </div>  
         <div class="contact-cta-buttons-container">
-          <button type="button" class="main-button contact-cta">
-            contact me via email
-            <span>
-              <i class="ph ph-mailbox"></i>
+          <a href="mailto:elbarqouqyrachid@gmail.com">
+            <button type="button" class="main-button contact-cta">
+              contact me via
+              <span>
+                <i class="ph ph-envelope-simple"></i>
+                </span>
+            </button> 
+          </a>
+          <a href="https://www.linkedin.com/in/rachid-el-barqouqy-945783262/" target="_blank">
+            <button type="button" class="main-button contact-cta">
+              let's connect via
+              <span>
+               <i class="ph ph-linkedin-logo"></i>  
               </span>
-          </button> 
-          <button type="button" class="main-button contact-cta">
-            let's connect on linkedin
-            <span>
-             <i class="ph ph-linkedin-logo"></i>  
-            </span>
-          </button> 
+            </button>         
+          </a>
         </div>
       </article>
       </section>
@@ -1108,30 +1122,11 @@
       <div class="footer__bg">
         <div class="footer__container grid">
           <div>
-            <h1 class="footer__title">Rachid</h1>
+            <h2 class="footer__title">Rachid</h2>
             <span class="footer__subtitle" id="footerRole"
               >Frontend developer</span
             >
           </div>
-          <ul class="footer__links">
-            <li>
-              <a href="#services" class="footer__link" id="footerServices"
-                >Services</a
-              >
-            </li>
-
-            <li>
-              <a href="#portfolio" class="footer__link" id="footerPortfolio"
-                >Portfolio</a
-              >
-            </li>
-
-            <li>
-              <a href="#contact" class="footer__link" id="footerContact"
-                >Contact</a
-              >
-            </li>
-          </ul>
 
           <div class="footer__socials">
             <a
@@ -1140,7 +1135,7 @@
               rel="noopener"
               title="Github"
             >
-              <i class="uil uil-github footer__social"></i>
+                <i class="ph ph-github-logo footer__social"></i>            
             </a>
 
             <a
@@ -1149,7 +1144,7 @@
               rel="noopener"
               title="x-(Twitter)"
             >
-              <i class="uil uil-twitter footer__social"></i>
+                <i class="ph ph-x-logo footer__social"></i>
             </a>
 
             <a
@@ -1158,13 +1153,24 @@
               rel="noopener"
               title="Linkedin"
             >
-              <i class="uil uil-linkedin footer__social"></i>
+                <i class="ph ph-linkedin-logo footer__social"></i>
+            </a>
+
+            
+            <a
+              href="https://www.instagram.com/rachid_domingez/"
+              target="_blank"
+              rel="noopener"
+              title="Instagram"
+            >
+                <i class="ph ph-instagram-logo footer__social"></i>
             </a>
           </div>
         </div>
 
-        <p class="footer__copy" id="footerReservedRights">
-          2023 - <span id="current-date"></span> &#169; Rachid. All RightS reserved.
+        <p class="footer__copy">
+          2023 - <span id="current-date"></span> &#169; 
+            <span id="footerReservedRights"></span>
         </p>
       </div>
     </footer>

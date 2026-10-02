@@ -126,6 +126,8 @@ let swiper = new Swiper(".portfolio__container", {
   cssMode: true,
   loop: true,
 
+  // freeMode: true,
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -862,23 +864,14 @@ let contact = {
 let footer = {
   en: {
     role: "frontend developer",
-    services: "services",
-    portfolio: "portfolio",
-    contact: "contact",
     reservedRights: "All rights reserved",
   },
   it: {
     role: "sviluppatore frontend",
-    services: "servizi",
-    portfolio: "portfolio",
-    contact: "contatto",
     reservedRights: "tutti i diritti riservati",
   },
   de: {
     role: "Frontend-Entwickler",
-    services: "Dienstleistungen",
-    portfolio: "Portfolio",
-    contact: "Kontakt",
     reservedRights: "Alle Rechte vorbehalten",
   },
 };
@@ -974,9 +967,6 @@ let footer = {
     // sendbtn.textContent = contact.it.sendBtn;
     // footer
     footerRole.textContent = footer.it.role;
-    footerServices.textContent = footer.it.services;
-    footerPortfolio.textContent = footer.it.portfolio;
-    footerContact.textContent = footer.it.contact;
     footerReservedRights.textContent = footer.it.reservedRights;
   } else if (window.location.hash == "#de") {
     languageSwitcher.value = "de";
@@ -1064,9 +1054,6 @@ let footer = {
     // sendbtn.textContent = contact.de.sendBtn;
     // footer
     footerRole.textContent = footer.de.role;
-    footerServices.textContent = footer.de.services;
-    footerPortfolio.textContent = footer.de.portfolio;
-    footerContact.textContent = footer.de.contact;
     footerReservedRights.textContent = footer.de.reservedRights;
   } else {
     languageSwitcher.value = "en";
@@ -1154,9 +1141,6 @@ let footer = {
     // sendbtn.textContent = contact.en.sendBtn;
     // footer
     footerRole.textContent = footer.en.role;
-    footerServices.textContent = footer.en.services;
-    footerPortfolio.textContent = footer.en.portfolio;
-    footerContact.textContent = footer.en.contact;
     footerReservedRights.textContent = footer.en.reservedRights;
   }
 // }
@@ -1164,10 +1148,16 @@ let footer = {
 /* ================ CURRENT DATE ================= */
 function currentDate() {
   let currentDateHolder = document.getElementById("current-date").textContent = new Date().getFullYear();
+  return currentDateHolder;
 };
 
 window.addEventListener("DOMContentLoaded", currentDate);
 
+
+/* =============== EMAIL SEND ==================== */
+// function getInTouch() {
+//   location.href="mailto:elbarqouqyrachid@gmail.com";
+// }
 
 /* ============================== GSAP ANIMATION ============================= */
 
@@ -1221,7 +1211,7 @@ window.addEventListener("resize", setup);
 // drawSVG animation
 gsap.registerPlugin(DrawSVGPlugin);
 
-const svg = document.querySelector("#svg-stage");
+const svg = document.querySelector(".portfolio__logo #svg-stage");
 
 const headerSvgObserver = new IntersectionObserver(
   (entries) => {
@@ -1246,30 +1236,6 @@ const headerSvgObserver = new IntersectionObserver(
 
 headerSvgObserver.observe(svg);
 
-const bgSvg = document.querySelector("#svg-bg");
-
-const bgSvgObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        gsap.set(svg, { opacity: 1 });
-
-        gsap.from("#bg-letter-r", {
-          drawSVG: "0%",
-          duration: 2,
-          ease: "power2.inOut"
-        });
-
-        bgSvgObserver.unobserve(bgSvg);
-      }
-    });
-  },
-  {
-    threshold: 0.3
-  }
-);
-
-bgSvgObserver.observe(bgSvg);
 
 
 // ================== HIGHLIGHT EFFECT ================== //
