@@ -576,4 +576,9 @@ button.swiper-pagination-bullet {
     .swiper-slide {
     height: stretch;
   }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }

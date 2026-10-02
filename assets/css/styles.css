@@ -1134,17 +1134,14 @@ border-radius: 0.25rem;
   overflow: initial;
 }
 
-.portfolio__content {
-  padding: 0 1.5rem;
-}
 
 .portfolio__img__container {
     height: 250px;
 }
 
 .portfolio__img {
-  /* width: 265px; */
   height: 100%;
+  object-fit: cover;
   border-radius: 1.5rem;
   justify-self: center;
   border: 2px solid #000;
@@ -1803,6 +1800,15 @@ border-radius: 0.25rem;
 .section__title .dot {
   margin-left: -10px;
 }
+
+.portfolio__img__container{
+  height: 100%;
+}
+
+.portfolio__content {
+  padding-inline: .5rem;
+}
+
 }
 
 /* For large devices */
