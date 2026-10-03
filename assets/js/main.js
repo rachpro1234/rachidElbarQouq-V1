@@ -97,36 +97,11 @@ tabs.forEach((tab) => {
   });
 });
 
-/*==================== SERVICES MODAL ====================*/
-const modalViews = document.querySelectorAll(".services__modal"),
-  modalBtns = document.querySelectorAll(".services__button"),
-  modalCloses = document.querySelectorAll(".services__modal-close");
-
-let modal = function (modalClick) {
-  modalViews[modalClick].classList.add("active-modal");
-};
-
-modalBtns.forEach((modalBtn, i) => {
-  modalBtn.addEventListener("click", () => {
-    modal(i);
-  });
-});
-
-modalCloses.forEach((modalClose) => {
-  modalClose.addEventListener("click", () => {
-    modalViews.forEach((modalView) => {
-      modalView.classList.remove("active-modal");
-    });
-  });
-});
-
 /*==================== PORTFOLIO SWIPER  ====================*/
 
 let swiper = new Swiper(".portfolio__container", {
   cssMode: true,
   loop: true,
-
-  // freeMode: true,
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -538,19 +513,8 @@ function changeLanguage(lang) {
 
 let languageSwitcher = document.getElementById("languageSwitcher");
 
-// Define the language reload anchors
 
-// let aboutProject = "completed projects";
-
-// const splitString = aboutProject.split("").map((word) => {
-//   `${word.length === 9 ? "<br>" : "" }`;
-
-//   console.log(word)
-// });
-
-// console.log(splitString.join(""));
-
-
+// language variables
 let profileInfos = {
   en: {
     description:
@@ -814,14 +778,20 @@ let portfolio = {
   en: {
     title: "portfolio",
     subtitle: "Latest work",
+    portfoliodescri1: "A customizable, responsive website for all devices, made with ReactJS, Firebase. It has different pages and switchable Animation movements.",
+    portfolioDemo: "demo",
   },
   it: {
     title: "portfolio",
     subtitle: "Ultimi lavori",
+    portfoliodescri1: "Un sito web personalizzabile e responsive per tutti i dispositivi, realizzato con ReactJS e Firebase. Presenta diverse pagine e animazioni intercambiabili.",
+    portfolioDemo: "demo"
   },
   de: {
     title: "portfolio",
     subtitle: "Neueste Arbeiten",
+    portfoliodescri1: "Eine anpassbare, responsiv gestaltete Website für alle Geräte, erstellt mit ReactJS und Firebase. Sie verfügt über verschiedene Seiten und umschaltbare Animationen.",
+    portfolioDemo: "demo"
   },
 };
 
@@ -955,6 +925,8 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.it.title; 
     secSubtitle.textContent = portfolio.it.subtitle;
+    portfolioDesc1.textContent = portfolio.it.portfoliodescri1;
+    portfolioDemo.textContent = portfolio.it.portfolioDemo;
     // contact
     contactMe.textContent = contact.it.contactme;
     getInTouch.textContent = contact.it.getintouch;
@@ -1042,6 +1014,8 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.de.title; 
     secSubtitle.textContent = portfolio.de.subtitle;
+    portfolioDesc1.textContent = portfolio.de.portfoliodescri1;
+    portfolioDemo.textContent = portfolio.de.portfolioDemo;
     // contact
     contactMe.textContent = contact.de.contactme;
     getInTouch.textContent = contact.de.getintouch;
@@ -1129,6 +1103,8 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.en.title; 
     secSubtitle.textContent = portfolio.en.subtitle;
+    portfolioDesc1.textContent = portfolio.en.portfoliodescri1
+    portfolioDemo.textContent = portfolio.en.portfolioDemo;
     // contact
     contactMe.textContent = contact.en.contactme;
     getInTouch.textContent = contact.en.getintouch;

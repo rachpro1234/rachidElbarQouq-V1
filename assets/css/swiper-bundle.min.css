@@ -10,7 +10,7 @@
   font-style: normal;
 }
 :root {
-  --swiper-theme-color: #007aff;
+  /* --swiper-theme-color: #007aff; */
   --bullet-color: #000;  
 
   --hue-color: 250; /*Purple 250 - Green 142 - Blue 230- Pink 340*/

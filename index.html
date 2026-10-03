@@ -37,7 +37,7 @@
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
     />
   </head>
-  <script type="module"> import phosphorIconswebcomponents from 'https://cdn.jsdelivr.net/npm/@phosphor-icons/webcomponents@2.1.5/+esm' </script>
+  <script type="module"> import 'https://cdn.jsdelivr.net/npm/@phosphor-icons/webcomponents@2.1.5/+esm' </script>
   <body>
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
@@ -312,7 +312,7 @@
         <div class="about__container container grid">
           <div>
             <img
-              src="./assets/img/background.jpg.jpg"
+              src="./assets/img/background.jpg"
               alt=""
               class="about__img"
               loading="lazy"
@@ -772,6 +772,7 @@
 
         <div class="portfolio__container container swiper-container">
           <div class="swiper-wrapper">
+
             <!-- ==================== PORTFOLIO 1 ==================== -->
             <div class="portfolio__content grid swiper-slide">
               <div class="portfolio__img__container">
@@ -785,10 +786,8 @@
 
               <div class="portfolio__data">
                 <h3 class="portfolio__title">Ur-Shop</h3>
-                <p class="portfolio__description">
-                  A customizable, responsive website for all devices, made with
-                  <span>ReactJS</span>, <span>Firebase</span>.It has different
-                  pages and switchable Animation movements.
+                <p class="portfolio__description" id="portfolioDesc1">
+                 
                 </p>
                 <div class="portfolio__btns">
                   <a
@@ -796,7 +795,8 @@
                     class="main-button button--flex portfolio__button"
                     target="_blank"
                     rel="noopener"
-                    >Demo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
+                    id="portfolioDemo"
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 194.818 194.818" style="width: 15px; height: 15px;">
                       <path d="M185.818 2.161h-57.04c-4.971 0-9 4.029-9 9s4.029 9 9 9h35.312l-86.3 86.3a9 9 0 0 0 6.364 15.364 8.975 8.975 0 0 0 6.364-2.636l86.3-86.3v35.313c0 4.971 4.029 9 9 9s9-4.029 9-9v-57.04a9 9 0 0 0-9-9.001z"></path>
                       <path d="M149 77.201a9 9 0 0 0-9 9v88.456H18v-122h93.778c4.971 0 9-4.029 9-9s-4.029-9-9-9H9a9 9 0 0 0-9 9v140a9 9 0 0 0 9 9h140a9 9 0 0 0 9-9V86.201a9 9 0 0 0-9-9z"></path>
                       </svg>
@@ -807,6 +807,7 @@
                     class="main-button button--flex portfolio__button"
                     target="_blank"
                     rel="noopener"
+                    id="portfolioSource"
                     >Source code
                     <i class="ph ph-github-logo"></i>                 
                   </a>
@@ -1123,9 +1124,7 @@
         <div class="footer__container grid">
           <div>
             <h2 class="footer__title">Rachid</h2>
-            <span class="footer__subtitle" id="footerRole"
-              >Frontend developer</span
-            >
+            <span class="footer__subtitle" id="footerRole"></span>
           </div>
 
           <div class="footer__socials">
@@ -1194,49 +1193,49 @@
   import { createLayout, utils } from "https://cdn.jsdelivr.net/npm/animejs/+esm";
 
 
-const buttons = utils.$('button');
+  const buttons = utils.$('button');
 
-// Create demo dialog and append it to the body
-const $dialog = document.createElement('dialog');
-$dialog.id = 'layout-dialog';
-document.body.appendChild($dialog);
+  // Create demo dialog and append it to the body
+  const $dialog = document.createElement('dialog');
+  $dialog.id = 'layout-dialog';
+  document.body.appendChild($dialog);
 
-// Create the modal layout by setting the dialog as the root
-// Since the elements are not yet part of the modal root, it's necessary to specify all animated children
-// to tell the layout what to look for during an update
-const modalLayout = createLayout($dialog, {
-  children: ['.item', 'div', 'article'],
-  properties: ['--overlay-alpha'],
-});
-
-const closeModal = (e) => {
-  let $item;
-  modalLayout.update(({ root }) => {
-    $dialog.close();
-    $item = buttons.find(item => item.classList.contains('is-open'));
-    $item.classList.remove('is-open'); // Makes the clicked element visible again
-    $item.focus(); // Focus to the closed element to preserve the keyboard navigation flow
-  });
-};
-
-const openModal = e => {
-  const $target = e.target;
-  const $item = $target.closest('.item');
-  const $clone = $item.cloneNode(true);
-  $dialog.innerHTML = ''; // Make sure old clones are removed from the modal before adding a new one
-  $dialog.appendChild($clone); // Append the clicked element clone to the modal
-  modalLayout.update(() => {
-    $dialog.showModal(); // Open the modal
-    $item.classList.add('is-open'); // Hide the clicked element
-  }, {
-    duration: $item.dataset.duration // Custom duration depending of the button clicked
+  // Create the modal layout by setting the dialog as the root
+  // Since the elements are not yet part of the modal root, it's necessary to specify all animated children
+  // to tell the layout what to look for during an update
+  const modalLayout = createLayout($dialog, {
+    children: ['.item', 'div', 'article'],
+    properties: ['--overlay-alpha'],
   });
 
-}
+  const closeModal = (e) => {
+    let $item;
+    modalLayout.update(({ root }) => {
+      $dialog.close();
+      $item = buttons.find(item => item.classList.contains('is-open'));
+      $item.classList.remove('is-open'); // Makes the clicked element visible again
+      $item.focus(); // Focus to the closed element to preserve the keyboard navigation flow
+    });
+  };
 
-buttons.forEach($button => $button.addEventListener('click', openModal));
-$dialog.addEventListener('cancel', closeModal);
-$dialog.addEventListener('click', closeModal);  
+  const openModal = e => {
+    const $target = e.target;
+    const $item = $target.closest('.item');
+    const $clone = $item.cloneNode(true);
+    $dialog.innerHTML = ''; // Make sure old clones are removed from the modal before adding a new one
+    $dialog.appendChild($clone); // Append the clicked element clone to the modal
+    modalLayout.update(() => {
+      $dialog.showModal(); // Open the modal
+      $item.classList.add('is-open'); // Hide the clicked element
+    }, {
+      duration: $item.dataset.duration // Custom duration depending of the button clicked
+    });
+
+  }
+
+  buttons.forEach($button => $button.addEventListener('click', openModal));
+  $dialog.addEventListener('cancel', closeModal);
+  $dialog.addEventListener('click', closeModal);  
     </script>
 
     <!--==================== MOTION ====================-->
