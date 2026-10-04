@@ -97,6 +97,665 @@ tabs.forEach((tab) => {
   });
 });
 
+// ============================ translation =========================== //
+
+// Create a function to change
+// the hash value of the page
+function changeLanguage(lang) {
+  location.hash = lang;
+  location.reload();
+}
+
+let languageSwitcher = document.getElementById("languageSwitcher");
+
+
+// language variables
+let profileInfos = {
+  en: {
+    description:
+      "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
+    profileName: "I'm Rachid",
+    profileRole: "Frontend developer",
+    contactBtn: "contact me",
+    scrollDown: "scroll down",
+  },
+  it: {
+    description:
+      "Sviluppatore frontend energico abile nello scrivere codice ben progettato e siti Web reattivi con un approccio mobile-first.",
+    profileName: "sono Rachid",
+    profileRole: "Sviluppatore frontend",
+    contactBtn: "contattami",
+    scrollDown: "scorrere verso il basso",
+  },
+  de: {
+    description:
+      "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.",
+    profileName: "Ich bin Rachid",
+    profileRole: "Frontend-Entwickler",
+    contactBtn: "Kontaktieren Sie mich",
+    scrollDown: "Runterscrollen",
+  },
+};
+
+let navs = {
+  en: {
+    home: "home",
+    about: "about",
+    skills: "skills",
+    services: "services",
+    portfolio: "portfolio",
+    contact: "contact",
+  },
+  it: {
+    home: "home",
+    about: "Di",
+    skills: "competenze",
+    services: "servizi",
+    portfolio: "portfolio",
+    contact: "contatto",
+  },
+  de: {
+    home: "starteseite",
+    about: "über",
+    skills: "Fähigkeiten",
+    services: "Dienstleistungen",
+    portfolio: "portfolio",
+    contact: "Kontakt",
+  },
+};
+
+let aboutSection = {
+  en: {
+    aboutMe: "a litte about me",
+    aboutDesc: "My introduction",
+    aboutContent:
+      "Frontend developer with experience in building websites and web applications. I specialize in JavaScript, HTML5, CSS3, TailwindCSS, Reactjs, Nextjs and Typescript. My job is to write and style the frontend components and deliver quality work at all levels.",
+    aboutExperience: "years of experience",
+    aboutProject: "completed projects",
+    aboutCompany: "companies worked",
+    aboutCv: "Download resume",
+  },
+  it: {
+    aboutMe: "un po' di me",
+    aboutDesc: "La mia introduzione",
+    aboutContent:
+      "Sviluppatore frontend con esperienza nella realizzazione di siti e applicazioni web. Sono specializzato in JavaScript, HTML5, CSS3, TailwindCSS, Reactjs, Nextjs e Typescript. Il mio lavoro è scrivere e modellare i componenti del frontend e fornire un lavoro di qualità a tutti i livelli.",
+    aboutExperience: "anni di esperienza",
+    aboutProject: "completa i progetti",
+    aboutCompany: "le aziende lavoravano",
+    aboutCv: "Scarica curriculum",
+  },
+  de: {
+    aboutMe: "ein wenig über mich",
+    aboutDesc: "Meine Einleitung",
+    aboutContent:
+      "Frontend-Entwickler mit Erfahrung in der Erstellung von Websites und Webanwendungen. Ich bin auf JavaScript, HTML5, CSS3, TailwindCSS, Reactjs, Nextjs und Typescript spezialisiert. Meine Aufgabe ist es, zu schreiben und zu stylen die Frontend-Komponenten und liefern Qualitätsarbeit auf allen Ebenen.",
+    aboutExperience: "jahre erfahrung",
+    aboutProject: "vollendet projekte",
+    aboutCompany: "firmen gearbeitet",
+    aboutCv: "Lebenslauf herunterladen",
+  },
+};
+
+let skillSection = {
+  en: {
+    skills: "skills",
+    skillsTitle: "My technical level",
+    frontRole: "frontend developer",
+    skillExperience1: "more than 3 year",
+    frameworks: "frameworks",
+    skillExperience2: "more than 3 year",
+    backRole: "backend developer",
+    skillExperience3: "more than 1 year"
+  },
+  it: {
+    skills: "competenze",
+    skillsTitle: "Il mio livello tecnico",
+    frontRole: "Sviluppatore frontend",
+    skillExperience1: "più di 3 anno",
+    frameworks: "Quadri",
+    skillExperience2: "più di 3 anno",
+    backRole: "Sviluppatore backend",
+    skillExperience3: "più di 1 anno"
+  },
+  de: {
+    skills: "Fähigkeiten",
+    skillsTitle: "Mein technisches Niveau",
+    frontRole: "Frontend Entwickler",
+    skillExperience1: "Mehr als 3 Jahr",
+    frameworks: "Rahmenwerke",
+    skillExperience2: "Mehr als 3 Jahr",
+    backRole: "backend Entwickler",
+    skillExperience3: "Mehr als 1 Jahr"
+  },
+};
+
+let qualificationSection = {
+  en: {
+    qualification: "qualification",
+    qualificationTitle: "My personal path",
+    academystudy: "Training",
+    work: "work",
+  },
+  it: {
+    qualification: "qualificazione",
+    qualificationTitle: "Il mio percorso personale",
+    academystudy: "Formazione",
+    work: "Lavoro",
+  },
+  de: {
+    qualification: "Qualifikation",
+    qualificationTitle: "Mein persönlicher Weg",
+    academystudy: "Ausbildung",
+    work: "arbeiten",
+  },
+};
+
+let training = {
+  en: {
+    training1: "Englich studies department",
+    training1Place: "Languages & cultures university",
+    training2: "Technical basics in Javascript",
+    training2Place: "private programming institut",
+    training3: "German intermediate level certificate B1+",
+    training3Place: "German Goethe Institut",
+    training4: "Abitur degree in literature and human sciences",
+    training4Place: "Omar EL Khiyam High School - Morocco",
+  },
+  it: {
+    training1: "Dipartimento di studi inglesi",
+    training1Place: "Università di Lingue e Culture",
+    training2: "Nozioni di base tecniche in Javascript",
+    training2Place: "istituto di programmazione privato",
+    training3: "Certificato di livello intermedio tedesco B1+",
+    training3Place: "Goethe-Institut tedesco",
+    training4: "Laurea magistrale in lettere e scienze umane",
+    training4Place: "Scuola Superiore Omar EL Khiyam - Marocco",
+  },
+  de: {
+    training1: "Abteilung für Anglistik",
+    training1Place: "Universität für Sprachen und Kulturen",
+    training2: "Technische Grundlagen in Javascript",
+    training2Place: "privates Programmierinstitut",
+    training3: "Deutsch-Mittelstufe-Zertifikat B1+",
+    training3Place: "Deutsches Goethe-Institut",
+    training4: "Abitur-Abschluss in Literatur und Humanwissenschaften",
+    training4Place: "Omar EL Khayam Gymnasium – Marokko",
+  },
+};
+
+let work = {
+  en: {
+    work1: "web development internship",
+    work2: "local freelance",
+    work2Place: "self-independent",
+    work3: "Frontend developer internship",
+    work4: "Frontend developer Fulll-Time"
+  },
+  it: {
+    work1: "tirocinio di sviluppo web",
+    work2: "libero professionista locale",
+    work2Place: "auto-indipendente",
+    work3: "Stage di sviluppatore frontend",
+    work4: "Frontend developer a tempo pieno", // Italian translation
+  },
+  de: {
+    work1: "Praktikum in der Webentwicklung",
+    work2: "lokaler Freiberufler",
+    work2Place: "selbständig",
+    work3: "Praktikum als Frontend-Entwickler",
+    work4: "Frontend-Entwickler Vollzeit", // German translation
+  },
+};
+
+let service = {
+  en: {
+    serviceTitle: "Services",
+    servicesSubTitle: "What I offer",
+    // service 1
+    service1: "frontend developer",
+    service1Plus: "frontend developer",
+    service1Sub: "See more",
+    service1Task1: "Using ReactJs & NextJs to develop UI interfaces.",
+    service1Task2: "Managing the state of the application with Redux",
+    service1Task3: "Implement the entire app using React hooks",
+    service1Task4: "Consume API(s).",
+    // service 2
+    service2: "ui/ux Designer",
+    service2Plus: "ui/ux Designer",
+    service2Sub: "See more",
+    service2Task1: "User interface development",
+    service2Task2: "Creating a responsive website with TailwindCSS",
+    service2Task3: "Creating usage plans and flowcharts",
+    service2Task4: "Animate your website with CSS and TailwindCSS",
+  },
+  it: {
+    serviceTitle: "Servizi",
+    servicesSubTitle: "Cosa offro",
+    service1: "sviluppatore frontend",
+    service1Plus: "sviluppatore frontend",
+    service1Sub: "Vedi di più",
+    service1Task1: "Utilizzo ReactJs & NextJs per sviluppare interfacce utente.",
+    service1Task2: "Gestisco lo stato dell'applicazione con Redux",
+    service1Task3: "Implemento l'intera app utilizzando hook di React",
+    service1Task4: "Consumo API.",
+    // service 2
+    service2: "Progettista UI/UX",
+    service2Plus: "Progettista UI/UX",
+    service2Sub: "Vedi di più",
+    service2Task1: "Sviluppo dell'interfaccia utente",
+    service2Task2: "Creo un sito web responsivo con TailwindCSS",
+    service2Task3: "Creo piani di utilizzo e diagrammi di flusso",
+    service2Task4: "Animazione del sito web con CSS e TailwindCSS",
+  },
+  de: {
+    serviceTitle: "Dienstleistungen",
+    servicesSubTitle: "Was ich anbiete",
+    service1: "Frontend-Entwickler",
+    service1Plus: "Frontend-Entwickler",
+    service1Sub: "mehr sehen",
+    service1Task1: "Verwende ReactJs & NextJs, um Benutzeroberflächen zu entwickeln.",
+    service1Task2: "Verwalte den Zustand der Anwendung mit Redux",
+    service1Task3: "Implementiere die gesamte App mit React Hooks",
+    service1Task4: "Verbrauche API.",
+    // service 2
+    service2: "UI/UX-Designer",
+    service2Plus: "UI/UX-Designer",
+    service2Sub: "Mehr sehen",
+    service2Task1: "Entwicklung der Benutzeroberfläche",
+    service2Task2: "Erstelle ein responsives Website mit TailwindCSS",
+    service2Task3: "Erstelle Nutzungspläne und Flussdiagramme",
+    service2Task4: "Animiere deine Website mit CSS und TailwindCSS",
+  },
+};
+
+let portfolio = {
+  en: {
+    title: "portfolio",
+    subtitle: "Latest work",
+    portfolioDemo: "demo",
+    portfolioCode: "Source code",
+    portfoliodescri1: "A customizable, responsive website for all devices, made with ReactJS, Firebase. It has different pages and switchable Animation movements.",
+    portfolioDesc2: "A clothing website made with NextJS and Typescript that interacts with all screen types.",
+    portfolioDesc3: "A Dice Game made with <span>ReactJS</span>, that interacts with all screen types, smooth while playing with many other features.",
+    portfolioDesc4: "A Web Page made logically with <span>JS</span>, that allows users to calculate a ride from point A to B, then to get the ride info like the price, distance and duration.",
+    portfolioDesc5: "An Antique App made with <span>NextJS</span>, that is like a store for Sellers and Dealers who are presenting their Antique Products (Th App is not fully complete, still working on it)",
+    portfolioDesc6: "Anaia.ma is a professional moving and relocation service based in France with branches in Morocco, focused on providing secure and high-quality residential and commercial moves, especially around Marrakech and other major cities.",
+  },
+  it: {
+    title: "portfolio",
+    subtitle: "Ultimi lavori",
+    portfoliodescri1: "Un sito web personalizzabile e responsive per tutti i dispositivi, realizzato con ReactJS e Firebase. Presenta diverse pagine e animazioni intercambiabili.",
+    portfolioDemo: "demo",
+    portfolioCode: "Codice sorgente",
+    portfolioDesc2: "Un sito web dedicato all'abbigliamento, realizzato con Next.js e TypeScript, che si adatta a tutti i tipi di schermo.",
+    portfolioDesc3: "Un gioco di dadi realizzato con <span>ReactJS</span>, che si adatta a tutti i tipi di schermo, garantisce un'esperienza di gioco fluida e offre numerose altre funzionalità.",
+    portfolioDesc4: "Una pagina web realizzata in modo logico con <span>JS</span>, che permette agli utenti di calcolare un tragitto dal punto A al punto B e di ottenere poi le informazioni relative al tragitto, quali il prezzo, la distanza e la durata.",
+    portfolioDesc5: "Un'app dedicata all'antiquariato realizzata con <span>NextJS</span>, che funge da vetrina per venditori e commercianti che presentano i propri prodotti d'antiquariato (l'app non è ancora del tutto completa, ci stiamo ancora lavorando)",
+    portfolioDesc6: "Anaia.ma è un’azienda specializzata in traslochi e trasferimenti con sede in Francia e filiali in Marocco, che si occupa di fornire servizi di trasloco residenziale e commerciale sicuri e di alta qualità, in particolare nella zona di Marrakech e in altre grandi città."
+  },
+  de: {
+    title: "portfolio",
+    subtitle: "Neueste Arbeiten",
+    portfoliodescri1: "Eine anpassbare, responsiv gestaltete Website für alle Geräte, erstellt mit ReactJS und Firebase. Sie verfügt über verschiedene Seiten und umschaltbare Animationen.",
+    portfolioDemo: "demo",
+    portfolioCode: "quellecode",
+    portfolioDesc2: "Eine Website zum Thema Bekleidung, die mit Next.js und TypeScript erstellt wurde und sich an alle Bildschirmgrößen anpasst.",
+    portfolioDesc3: "Ein Würfelspiel, das mit <span>ReactJS</span> entwickelt wurde, das mit allen Bildschirmtypen kompatibel ist, flüssig läuft und viele weitere Funktionen bietet.",
+    portfolioDesc4: "Eine logisch aufgebaute Webseite mit <span>JS</span>, auf der Nutzer eine Fahrt von Punkt A nach B berechnen und anschließend Informationen zur Fahrt wie Preis, Entfernung und Dauer abrufen können.",
+    portfolioDesc5: "Eine Antiquitäten-App, die mit <span>NextJS</span> erstellt wurde und wie ein Shop für Verkäufer und Händler funktioniert, die ihre Antiquitäten präsentieren (die App ist noch nicht ganz fertig, wir arbeiten noch daran)",
+    portfolioDesc6: "Anaia.ma è un’azienda specializzata in traslochi e trasferimenti con sede in Francia e filiali in Marocco, che si occupa di fornire servizi di trasloco residenziale e commerciale sicuri e di alta qualità, in particolare nella zona di Marrakech e in altre grandi città.",
+  },
+};
+
+let contact = {
+  en: {
+    contactme: "contact me",
+    getintouch: "Get in touch",
+    callme: "call me",
+    email: "email",
+    location: "location",
+    message: "message",
+    project: "project",
+    theName: "name",
+    sendBtn: "Send Message",
+  },
+  it: {
+    contactme: "Contattami",
+    getintouch: "Entrare in contatto",
+    callme: "Chiamami",
+    email: "email",
+    location: "luogo",
+    message: "messaggio",
+    project: "progetto",
+    theName: "nome",
+    sendBtn: "Invia messaggio",
+  },
+  de: {
+    contactme: "Kontaktiere mich",
+    getintouch: "Kommen Sie mit mir in Kontakt",
+    callme: "Rufen Sie mich an",
+    email: "E-Mail",
+    location: "Ort",
+    message: "nachricht",
+    project: "projekt",
+    theName: "name",
+    sendBtn: "nachricht senden",
+  },
+};
+
+let footer = {
+  en: {
+    role: "frontend developer",
+    reservedRights: "All rights reserved",
+  },
+  it: {
+    role: "sviluppatore frontend",
+    reservedRights: "tutti i diritti riservati",
+  },
+  de: {
+    role: "Frontend-Entwickler",
+    reservedRights: "Alle Rechte vorbehalten",
+  },
+};
+
+// Check if a hash value exists in the URL
+// if (window.location.hash) {
+  // Set the content of the webpage
+  // depending on the hash value
+  if (window.location.hash == "#it") {
+    // profile infos
+
+    languageSwitcher.value = "it";
+    profileDesc.textContent = profileInfos.it.description;
+    profileInformation.textContent = profileInfos.it.profileName;
+    role.textContent = profileInfos.it.profileRole;
+    contactButtonText.textContent = profileInfos.it.contactBtn;
+    scrollBtn.textContent = profileInfos.it.scrollDown;
+    // navbar items
+    homeNav.textContent = navs.it.home;
+    aboutNav.textContent = navs.it.about;
+    skillsNav.textContent = navs.it.skills;
+    serviceNav.textContent = navs.it.services;
+    portfolioNav.textContent = navs.it.portfolio;
+    contactNav.textContent = navs.it.contact;
+    // about section
+    aboutme.textContent = aboutSection.it.aboutMe;
+    aboutsub.textContent = aboutSection.it.aboutDesc;
+    aboutcontent.textContent = aboutSection.it.aboutContent;
+    aboutexperience.textContent = aboutSection.it.aboutExperience;
+    aboutproject.textContent = aboutSection.it.aboutProject;
+    aboutcompany.textContent = aboutSection.it.aboutCompany;
+    aboutcv.textContent = aboutSection.it.aboutCv;
+    // skills section
+    skill.textContent = skillSection.it.skills;
+    skilltitle.textContent = skillSection.it.skillsTitle;
+    frontRole.textContent = skillSection.it.frontRole;
+    skillExperience1.textContent = skillSection.it.skillExperience1;
+    frameworks.textContent = skillSection.it.frameworks;
+    skillExperience2.textContent = skillSection.it.skillExperience2;
+    backRole.textContent = skillSection.it.backRole;
+    skillExperience3.textContent = skillSection.it.skillExperience3
+    // qualification section
+    qualification.textContent = qualificationSection.it.qualification;
+    qualificationtitle.textContent = qualificationSection.it.qualificationTitle;
+    academy.textContent = qualificationSection.it.academystudy;
+    worktitle.textContent = qualificationSection.it.work;
+    // qualification (training)
+    training1.textContent = training.it.training1;
+    training1Place.textContent = training.it.training1Place;
+    training2.textContent = training.it.training2;
+    training2Place.textContent = training.it.training2Place;
+    training3.textContent = training.it.training3;
+    training3Place.textContent = training.it.training3Place;
+    training4.textContent = training.it.training4;
+    training4Place.textContent = training.it.training4Place;
+    // qualification (work)
+    work1.textContent = work.it.work1;
+    work2.textContent = work.it.work2;
+    work2Place.textContent = work.it.work2Place;
+    work3.textContent = work.it.work3;
+    work4.textContent = work.it.work4;
+    // service section
+    serviceTitle.textContent = service.it.serviceTitle;
+    serviceSubTitle.textContent = service.it.servicesSubTitle;
+    // service 1
+    // service1.textContent = service.it.service1;
+    // service1Plus.textContent = service.it.service1Plus;
+    // service1Sub.textContent = service.it.service1Sub;
+    // service1Task1.textContent = service.it.service1Task1;
+    // service1Task2.textContent = service.it.service1Task2;
+    // service1Task3.textContent = service.it.service1Task3;
+    // service1Task4.textContent = service.it.service1Task4;
+    // service 2
+    // service2.textContent = service.it.service2;
+    // service2Plus.textContent = service.it.service2Plus;
+    // service2Sub.textContent = service.it.service2Sub;
+    // service2Task1.textContent = service.it.service2Task1;
+    // service2Task2.textContent = service.it.service2Task2;
+    // service2Task3.textContent = service.it.service2Task3;
+    // service2Task4.textContent = service.it.service2Task4;
+    // portfolio
+    portfolioTitle.textContent = portfolio.it.title; 
+    secSubtitle.textContent = portfolio.it.subtitle;
+    portfolioDemo.textContent = portfolio.it.portfolioDemo;
+    portfolioCode.textContent = portfolio.it.portfolioCode;
+    portfolioDesc1.textContent = portfolio.it.portfoliodescri1;
+    portfolioDesc2.textContent = portfolio.it.portfoliodescri2;
+    portfolioDesc3.textContent = portfolio.it.portfoliodescri3;
+    portfolioDesc4.textContent = portfolio.it.portfoliodescri4;
+    portfolioDesc5.textContent = portfolio.it.portfoliodescri5;
+    portfolioDesc6.textContent = portfolio.it.portfoliodescri6;
+
+    // contact
+    contactMe.textContent = contact.it.contactme;
+    getInTouch.textContent = contact.it.getintouch;
+    // callMe.textContent = contact.it.callme;
+    // email.textContent = contact.it.email;
+    // myLocation.textContent = contact.it.location;
+    // myMessage.textContent = contact.it.message;
+    // myProject.textContent = contact.it.project;
+    // myName.textContent = contact.it.theName;
+    // sendbtn.textContent = contact.it.sendBtn;
+    // footer
+    footerRole.textContent = footer.it.role;
+    footerReservedRights.textContent = footer.it.reservedRights;
+  } else if (window.location.hash == "#de") {
+    languageSwitcher.value = "de";
+    // profile infos
+    profileDesc.textContent = profileInfos.de.description;
+    profileInformation.textContent = profileInfos.de.profileName;
+    role.textContent = profileInfos.de.profileRole;
+    contactButtonText.textContent = profileInfos.de.contactBtn;
+    scrollBtn.textContent = profileInfos.de.scrollDown;
+    // navbar items
+    homeNav.textContent = navs.de.home;
+    aboutNav.textContent = navs.de.about;
+    skillsNav.textContent = navs.de.skills;
+    serviceNav.textContent = navs.de.services;
+    portfolioNav.textContent = navs.de.portfolio;
+    contactNav.textContent = navs.de.contact;
+    // about section
+    aboutme.textContent = aboutSection.de.aboutMe;
+    aboutsub.textContent = aboutSection.de.aboutDesc;
+    aboutcontent.textContent = aboutSection.de.aboutContent;
+    aboutexperience.textContent = aboutSection.de.aboutExperience;
+    aboutproject.textContent = aboutSection.de.aboutProject;
+    aboutcompany.textContent = aboutSection.de.aboutCompany;
+    aboutcv.textContent = aboutSection.de.aboutCv;
+    // skills section
+    skill.textContent = skillSection.de.skills;
+    skilltitle.textContent = skillSection.de.skillsTitle;
+    frontRole.textContent = skillSection.de.frontRole;
+    skillExperience1.textContent = skillSection.de.skillExperience1;
+    frameworks.textContent = skillSection.de.frameworks;
+    skillExperience2.textContent = skillSection.de.skillExperience2;
+    backRole.textContent = skillSection.de.backRole;
+    skillExperience3.textContent = skillSection.de.skillExperience3
+    // qualification section
+    qualification.textContent = qualificationSection.de.qualification;
+    qualificationtitle.textContent = qualificationSection.de.qualificationTitle;
+    academy.textContent = qualificationSection.de.academystudy;
+    worktitle.textContent = qualificationSection.de.work;
+    // qualification (training)
+    training1.textContent = training.de.training1;
+    training1Place.textContent = training.de.training1Place;
+    training2.textContent = training.de.training2;
+    training2Place.textContent = training.de.training2Place;
+    training3.textContent = training.de.training3;
+    training3Place.textContent = training.de.training3Place;
+    training4.textContent = training.de.training4;
+    training4Place.textContent = training.de.training4Place;
+    // qualification (work)
+    work1.textContent = work.de.work1;
+    work2.textContent = work.de.work2;
+    work2Place.textContent = work.de.work2Place;
+    work3.textContent = work.de.work3;
+    work4.textContent = work.de.work4;
+    // service section
+    serviceTitle.textContent = service.de.serviceTitle;
+    serviceSubTitle.textContent = service.de.servicesSubTitle;
+    // service 2
+    // service1.textContent = service.de.service1;
+    // service1Plus.textContent = service.de.service1Plus;
+    // service1Sub.textContent = service.de.service1Sub;
+    // service1Task1.textContent = service.de.service1Task1;
+    // service1Task2.textContent = service.de.service1Task2;
+    // service1Task3.textContent = service.de.service1Task3;
+    // service1Task4.textContent = service.de.service1Task4;
+    // service 2
+    // service2.textContent = service.de.service2;
+    // service2Plus.textContent = service.de.service2Plus;
+    // service2Sub.textContent = service.de.service2Sub;
+    // service2Task1.textContent = service.de.service2Task1;
+    // service2Task2.textContent = service.de.service2Task2;
+    // service2Task3.textContent = service.de.service2Task3;
+    // service2Task4.textContent = service.de.service2Task4;
+    // portfolio
+    portfolioTitle.textContent = portfolio.de.title; 
+    secSubtitle.textContent = portfolio.de.subtitle;
+    portfolioDemo.textContent = portfolio.de.portfolioDemo;
+    portfolioCode.textContent = portfolio.de.portfolioCode;
+    portfolioDesc1.textContent = portfolio.de.portfoliodescri1;
+    portfolioDesc1.textContent = portfolio.de.portfoliodescri1;
+    portfolioDesc2.textContent = portfolio.de.portfoliodescri2;
+    portfolioDesc3.textContent = portfolio.de.portfoliodescri3;
+    portfolioDesc4.textContent = portfolio.de.portfoliodescri4;
+    portfolioDesc5.textContent = portfolio.de.portfoliodescri5;
+    portfolioDesc6.textContent = portfolio.de.portfoliodescri6;
+
+    // contact
+    contactMe.textContent = contact.de.contactme;
+    getInTouch.textContent = contact.de.getintouch;
+    // callMe.textContent = contact.de.callme;
+    // email.textContent = contact.de.email;
+    // myLocation.textContent = contact.de.location;
+    // myMessage.textContent = contact.de.message;
+    // myProject.textContent = contact.de.project;
+    // myName.textContent = contact.de.theName;
+    // sendbtn.textContent = contact.de.sendBtn;
+    // footer
+    footerRole.textContent = footer.de.role;
+    footerReservedRights.textContent = footer.de.reservedRights;
+  } else {
+    languageSwitcher.value = "en";
+    // profile infos
+    profileDesc.textContent = profileInfos.en.description;
+    profileInformation.textContent = profileInfos.en.profileName;
+    role.textContent = profileInfos.en.profileRole;
+    contactButtonText.textContent = profileInfos.en.contactBtn;
+    scrollBtn.textContent = profileInfos.en.scrollDown;
+    // navbar items
+    homeNav.textContent = navs.en.home;
+    aboutNav.textContent = navs.en.about;
+    skillsNav.textContent = navs.en.skills;
+    serviceNav.textContent = navs.en.services;
+    portfolioNav.textContent = navs.en.portfolio;
+    contactNav.textContent = navs.en.contact;
+    // about section
+    aboutme.textContent = aboutSection.en.aboutMe;
+    aboutsub.textContent = aboutSection.en.aboutDesc;
+    aboutcontent.textContent = aboutSection.en.aboutContent;
+    aboutexperience.textContent = aboutSection.en.aboutExperience;
+    aboutproject.textContent = aboutSection.en.aboutProject;
+    aboutcompany.textContent = aboutSection.en.aboutCompany;
+    aboutcv.textContent = aboutSection.en.aboutCv;
+    // skills section
+    skill.textContent = skillSection.en.skills;
+    skilltitle.textContent = skillSection.en.skillsTitle;
+    frontRole.textContent = skillSection.en.frontRole;
+    skillExperience1.textContent = skillSection.en.skillExperience1;
+    frameworks.textContent = skillSection.en.frameworks;
+    skillExperience2.textContent = skillSection.en.skillExperience2;
+     backRole.textContent = skillSection.en.backRole;
+    skillExperience3.textContent = skillSection.en.skillExperience3
+    // qualification section
+    qualification.textContent = qualificationSection.en.qualification;
+    qualificationtitle.textContent = qualificationSection.en.qualificationTitle;
+    academy.textContent = qualificationSection.en.academystudy;
+    worktitle.textContent = qualificationSection.en.work;
+    // qualification (training)
+    training1.textContent = training.en.training1;
+    training1Place.textContent = training.en.training1Place;
+    training2.textContent = training.en.training2;
+    training2Place.textContent = training.en.training2Place;
+    training3.textContent = training.en.training3;
+    training3Place.textContent = training.en.training3Place;
+    training4.textContent = training.en.training4;
+    training4Place.textContent = training.en.training4Place;
+    // qualification (work)
+    work1.textContent = work.en.work1;
+    work2.textContent = work.en.work2;
+    work2Place.textContent = work.en.work2Place;
+    work3.textContent = work.en.work3;
+    work4.textContent = work.en.work4;
+    // service section
+    serviceTitle.textContent = service.en.serviceTitle;
+    serviceSubTitle.textContent = service.en.servicesSubTitle;
+    // service 1
+    // service1.textContent = service.en.service1;
+    // service1Plus.textContent = service.en.service1Plus;
+    // service1Sub.textContent = service.en.service1Sub;
+    // service1Task1.textContent = service.en.service1Task1;
+    // service1Task2.textContent = service.en.service1Task2;
+    // service1Task3.textContent = service.en.service1Task3;
+    // service1Task4.textContent = service.en.service1Task4;
+    // service 2
+    // service2.textContent = service.en.service2;
+    // service2Plus.textContent = service.en.service2Plus;
+    // service2Sub.textContent = service.en.service2Sub;
+    // service2Task1.textContent = service.en.service2Task1;
+    // service2Task2.textContent = service.en.service2Task2;
+    // service2Task3.textContent = service.en.service2Task3;
+    // service2Task4.textContent = service.en.service2Task4;
+    // portfolio
+    portfolioTitle.textContent = portfolio.en.title; 
+    secSubtitle.textContent = portfolio.en.subtitle;
+    portfolioDemo.textContent = portfolio.en.portfolioDemo;
+    portfolioCode.textContent = portfolio.en.portfolioCode;
+    portfolioDesc1.textContent = portfolio.en.portfoliodescri1;
+    portfolioDesc2.textContent = portfolio.en.portfoliodescri2;
+    portfolioDesc3.textContent = portfolio.en.portfoliodescri3;
+    portfolioDesc4.textContent = portfolio.en.portfoliodescri4;
+    portfolioDesc5.textContent = portfolio.en.portfoliodescri5;
+    portfolioDesc6.textContent = portfolio.en.portfoliodescri6;
+    // contact
+    contactMe.textContent = contact.en.contactme;
+    getInTouch.textContent = contact.en.getintouch;
+    // callMe.textContent = contact.en.callme;
+    // email.textContent = contact.en.email;
+    // myLocation.textContent = contact.en.location;
+    // myMessage.textContent = contact.en.message;
+    // myProject.textContent = contact.en.project;
+    // myName.textContent = contact.en.theName;
+    // sendbtn.textContent = contact.en.sendBtn;
+    // footer
+    footerRole.textContent = footer.en.role;
+    footerReservedRights.textContent = footer.en.reservedRights;
+  }
+// }
+
+
 /*==================== PORTFOLIO SWIPER  ====================*/
 
 let swiper = new Swiper(".portfolio__container", {
@@ -502,624 +1161,6 @@ document.addEventListener("keydown", (event) => {
 
 });
 
-// ============================ translation =========================== //
-
-// Create a function to change
-// the hash value of the page
-function changeLanguage(lang) {
-  location.hash = lang;
-  location.reload();
-}
-
-let languageSwitcher = document.getElementById("languageSwitcher");
-
-
-// language variables
-let profileInfos = {
-  en: {
-    description:
-      "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
-    profileName: "I'm Rachid",
-    profileRole: "Frontend developer",
-    contactBtn: "contact me",
-    scrollDown: "scroll down",
-  },
-  it: {
-    description:
-      "Sviluppatore frontend energico abile nello scrivere codice ben progettato e siti Web reattivi con un approccio mobile-first.",
-    profileName: "sono Rachid",
-    profileRole: "Sviluppatore frontend",
-    contactBtn: "contattami",
-    scrollDown: "scorrere verso il basso",
-  },
-  de: {
-    description:
-      "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.",
-    profileName: "Ich bin Rachid",
-    profileRole: "Frontend-Entwickler",
-    contactBtn: "Kontaktieren Sie mich",
-    scrollDown: "Runterscrollen",
-  },
-};
-
-let navs = {
-  en: {
-    home: "home",
-    about: "about",
-    skills: "skills",
-    services: "services",
-    portfolio: "portfolio",
-    contact: "contact",
-  },
-  it: {
-    home: "home",
-    about: "Di",
-    skills: "competenze",
-    services: "servizi",
-    portfolio: "portfolio",
-    contact: "contatto",
-  },
-  de: {
-    home: "starteseite",
-    about: "über",
-    skills: "Fähigkeiten",
-    services: "Dienstleistungen",
-    portfolio: "portfolio",
-    contact: "Kontakt",
-  },
-};
-
-let aboutSection = {
-  en: {
-    aboutMe: "a litte about me",
-    aboutDesc: "My introduction",
-    aboutContent:
-      "Frontend developer with experience in building websites and web applications. I specialize in JavaScript, HTML5, CSS3, TailwindCSS, Reactjs, Nextjs and Typescript. My job is to write and style the frontend components and deliver quality work at all levels.",
-    aboutExperience: "years of experience",
-    aboutProject: "completed projects",
-    aboutCompany: "companies worked",
-    aboutCv: "Download resume",
-  },
-  it: {
-    aboutMe: "un po' di me",
-    aboutDesc: "La mia introduzione",
-    aboutContent:
-      "Sviluppatore frontend con esperienza nella realizzazione di siti e applicazioni web. Sono specializzato in JavaScript, HTML5, CSS3, TailwindCSS, Reactjs, Nextjs e Typescript. Il mio lavoro è scrivere e modellare i componenti del frontend e fornire un lavoro di qualità a tutti i livelli.",
-    aboutExperience: "anni di esperienza",
-    aboutProject: "completa i progetti",
-    aboutCompany: "le aziende lavoravano",
-    aboutCv: "Scarica curriculum",
-  },
-  de: {
-    aboutMe: "ein wenig über mich",
-    aboutDesc: "Meine Einleitung",
-    aboutContent:
-      "Frontend-Entwickler mit Erfahrung in der Erstellung von Websites und Webanwendungen. Ich bin auf JavaScript, HTML5, CSS3, TailwindCSS, Reactjs, Nextjs und Typescript spezialisiert. Meine Aufgabe ist es, zu schreiben und zu stylen die Frontend-Komponenten und liefern Qualitätsarbeit auf allen Ebenen.",
-    aboutExperience: "jahre erfahrung",
-    aboutProject: "vollendet projekte",
-    aboutCompany: "firmen gearbeitet",
-    aboutCv: "Lebenslauf herunterladen",
-  },
-};
-
-let skillSection = {
-  en: {
-    skills: "skills",
-    skillsTitle: "My technical level",
-    frontRole: "frontend developer",
-    skillExperience1: "more than 3 year",
-    frameworks: "frameworks",
-    skillExperience2: "more than 3 year",
-    backRole: "backend developer",
-    skillExperience3: "more than 1 year"
-  },
-  it: {
-    skills: "competenze",
-    skillsTitle: "Il mio livello tecnico",
-    frontRole: "Sviluppatore frontend",
-    skillExperience1: "più di 3 anno",
-    frameworks: "Quadri",
-    skillExperience2: "più di 3 anno",
-    backRole: "Sviluppatore backend",
-    skillExperience3: "più di 1 anno"
-  },
-  de: {
-    skills: "Fähigkeiten",
-    skillsTitle: "Mein technisches Niveau",
-    frontRole: "Frontend Entwickler",
-    skillExperience1: "Mehr als 3 Jahr",
-    frameworks: "Rahmenwerke",
-    skillExperience2: "Mehr als 3 Jahr",
-    backRole: "backend Entwickler",
-    skillExperience3: "Mehr als 1 Jahr"
-  },
-};
-
-let qualificationSection = {
-  en: {
-    qualification: "qualification",
-    qualificationTitle: "My personal path",
-    academystudy: "Training",
-    work: "work",
-  },
-  it: {
-    qualification: "qualificazione",
-    qualificationTitle: "Il mio percorso personale",
-    academystudy: "Formazione",
-    work: "Lavoro",
-  },
-  de: {
-    qualification: "Qualifikation",
-    qualificationTitle: "Mein persönlicher Weg",
-    academystudy: "Ausbildung",
-    work: "arbeiten",
-  },
-};
-
-let training = {
-  en: {
-    training1: "Englich studies department",
-    training1Place: "Languages & cultures university",
-    training2: "Technical basics in Javascript",
-    training2Place: "private programming institut",
-    training3: "German intermediate level certificate B1+",
-    training3Place: "German Goethe Institut",
-    training4: "Abitur degree in literature and human sciences",
-    training4Place: "Omar EL Khiyam High School - Morocco",
-  },
-  it: {
-    training1: "Dipartimento di studi inglesi",
-    training1Place: "Università di Lingue e Culture",
-    training2: "Nozioni di base tecniche in Javascript",
-    training2Place: "istituto di programmazione privato",
-    training3: "Certificato di livello intermedio tedesco B1+",
-    training3Place: "Goethe-Institut tedesco",
-    training4: "Laurea magistrale in lettere e scienze umane",
-    training4Place: "Scuola Superiore Omar EL Khiyam - Marocco",
-  },
-  de: {
-    training1: "Abteilung für Anglistik",
-    training1Place: "Universität für Sprachen und Kulturen",
-    training2: "Technische Grundlagen in Javascript",
-    training2Place: "privates Programmierinstitut",
-    training3: "Deutsch-Mittelstufe-Zertifikat B1+",
-    training3Place: "Deutsches Goethe-Institut",
-    training4: "Abitur-Abschluss in Literatur und Humanwissenschaften",
-    training4Place: "Omar EL Khayam Gymnasium – Marokko",
-  },
-};
-
-let work = {
-  en: {
-    work1: "web development internship",
-    work2: "local freelance",
-    work2Place: "self-independent",
-    work3: "Frontend developer internship",
-    work4: "Frontend developer Fulll-Time"
-  },
-  it: {
-    work1: "tirocinio di sviluppo web",
-    work2: "libero professionista locale",
-    work2Place: "auto-indipendente",
-    work3: "Stage di sviluppatore frontend",
-    work4: "Frontend developer a tempo pieno", // Italian translation
-  },
-  de: {
-    work1: "Praktikum in der Webentwicklung",
-    work2: "lokaler Freiberufler",
-    work2Place: "selbständig",
-    work3: "Praktikum als Frontend-Entwickler",
-    work4: "Frontend-Entwickler Vollzeit", // German translation
-  },
-};
-
-let service = {
-  en: {
-    serviceTitle: "Services",
-    servicesSubTitle: "What I offer",
-    // service 1
-    service1: "frontend developer",
-    service1Plus: "frontend developer",
-    service1Sub: "See more",
-    service1Task1: "Using ReactJs & NextJs to develop UI interfaces.",
-    service1Task2: "Managing the state of the application with Redux",
-    service1Task3: "Implement the entire app using React hooks",
-    service1Task4: "Consume API(s).",
-    // service 2
-    service2: "ui/ux Designer",
-    service2Plus: "ui/ux Designer",
-    service2Sub: "See more",
-    service2Task1: "User interface development",
-    service2Task2: "Creating a responsive website with TailwindCSS",
-    service2Task3: "Creating usage plans and flowcharts",
-    service2Task4: "Animate your website with CSS and TailwindCSS",
-  },
-  it: {
-    serviceTitle: "Servizi",
-    servicesSubTitle: "Cosa offro",
-    service1: "sviluppatore frontend",
-    service1Plus: "sviluppatore frontend",
-    service1Sub: "Vedi di più",
-    service1Task1: "Utilizzo ReactJs & NextJs per sviluppare interfacce utente.",
-    service1Task2: "Gestisco lo stato dell'applicazione con Redux",
-    service1Task3: "Implemento l'intera app utilizzando hook di React",
-    service1Task4: "Consumo API.",
-    // service 2
-    service2: "Progettista UI/UX",
-    service2Plus: "Progettista UI/UX",
-    service2Sub: "Vedi di più",
-    service2Task1: "Sviluppo dell'interfaccia utente",
-    service2Task2: "Creo un sito web responsivo con TailwindCSS",
-    service2Task3: "Creo piani di utilizzo e diagrammi di flusso",
-    service2Task4: "Animazione del sito web con CSS e TailwindCSS",
-  },
-  de: {
-    serviceTitle: "Dienstleistungen",
-    servicesSubTitle: "Was ich anbiete",
-    service1: "Frontend-Entwickler",
-    service1Plus: "Frontend-Entwickler",
-    service1Sub: "mehr sehen",
-    service1Task1: "Verwende ReactJs & NextJs, um Benutzeroberflächen zu entwickeln.",
-    service1Task2: "Verwalte den Zustand der Anwendung mit Redux",
-    service1Task3: "Implementiere die gesamte App mit React Hooks",
-    service1Task4: "Verbrauche API.",
-    // service 2
-    service2: "UI/UX-Designer",
-    service2Plus: "UI/UX-Designer",
-    service2Sub: "Mehr sehen",
-    service2Task1: "Entwicklung der Benutzeroberfläche",
-    service2Task2: "Erstelle ein responsives Website mit TailwindCSS",
-    service2Task3: "Erstelle Nutzungspläne und Flussdiagramme",
-    service2Task4: "Animiere deine Website mit CSS und TailwindCSS",
-  },
-};
-
-let portfolio = {
-  en: {
-    title: "portfolio",
-    subtitle: "Latest work",
-    portfoliodescri1: "A customizable, responsive website for all devices, made with ReactJS, Firebase. It has different pages and switchable Animation movements.",
-    portfolioDemo: "demo",
-  },
-  it: {
-    title: "portfolio",
-    subtitle: "Ultimi lavori",
-    portfoliodescri1: "Un sito web personalizzabile e responsive per tutti i dispositivi, realizzato con ReactJS e Firebase. Presenta diverse pagine e animazioni intercambiabili.",
-    portfolioDemo: "demo"
-  },
-  de: {
-    title: "portfolio",
-    subtitle: "Neueste Arbeiten",
-    portfoliodescri1: "Eine anpassbare, responsiv gestaltete Website für alle Geräte, erstellt mit ReactJS und Firebase. Sie verfügt über verschiedene Seiten und umschaltbare Animationen.",
-    portfolioDemo: "demo"
-  },
-};
-
-let contact = {
-  en: {
-    contactme: "contact me",
-    getintouch: "Get in touch",
-    callme: "call me",
-    email: "email",
-    location: "location",
-    message: "message",
-    project: "project",
-    theName: "name",
-    sendBtn: "Send Message",
-  },
-  it: {
-    contactme: "Contattami",
-    getintouch: "Entrare in contatto",
-    callme: "Chiamami",
-    email: "email",
-    location: "luogo",
-    message: "messaggio",
-    project: "progetto",
-    theName: "nome",
-    sendBtn: "Invia messaggio",
-  },
-  de: {
-    contactme: "Kontaktiere mich",
-    getintouch: "Kommen Sie mit mir in Kontakt",
-    callme: "Rufen Sie mich an",
-    email: "E-Mail",
-    location: "Ort",
-    message: "nachricht",
-    project: "projekt",
-    theName: "name",
-    sendBtn: "nachricht senden",
-  },
-};
-
-let footer = {
-  en: {
-    role: "frontend developer",
-    reservedRights: "All rights reserved",
-  },
-  it: {
-    role: "sviluppatore frontend",
-    reservedRights: "tutti i diritti riservati",
-  },
-  de: {
-    role: "Frontend-Entwickler",
-    reservedRights: "Alle Rechte vorbehalten",
-  },
-};
-
-// Check if a hash value exists in the URL
-// if (window.location.hash) {
-  // Set the content of the webpage
-  // depending on the hash value
-  if (window.location.hash == "#it") {
-    // profile infos
-
-    languageSwitcher.value = "it";
-    profileDesc.textContent = profileInfos.it.description;
-    profileInformation.textContent = profileInfos.it.profileName;
-    role.textContent = profileInfos.it.profileRole;
-    contactButtonText.textContent = profileInfos.it.contactBtn;
-    scrollBtn.textContent = profileInfos.it.scrollDown;
-    // navbar items
-    homeNav.textContent = navs.it.home;
-    aboutNav.textContent = navs.it.about;
-    skillsNav.textContent = navs.it.skills;
-    serviceNav.textContent = navs.it.services;
-    portfolioNav.textContent = navs.it.portfolio;
-    contactNav.textContent = navs.it.contact;
-    // about section
-    aboutme.textContent = aboutSection.it.aboutMe;
-    aboutsub.textContent = aboutSection.it.aboutDesc;
-    aboutcontent.textContent = aboutSection.it.aboutContent;
-    aboutexperience.textContent = aboutSection.it.aboutExperience;
-    aboutproject.textContent = aboutSection.it.aboutProject;
-    aboutcompany.textContent = aboutSection.it.aboutCompany;
-    aboutcv.textContent = aboutSection.it.aboutCv;
-    // skills section
-    skill.textContent = skillSection.it.skills;
-    skilltitle.textContent = skillSection.it.skillsTitle;
-    frontRole.textContent = skillSection.it.frontRole;
-    skillExperience1.textContent = skillSection.it.skillExperience1;
-    frameworks.textContent = skillSection.it.frameworks;
-    skillExperience2.textContent = skillSection.it.skillExperience2;
-    backRole.textContent = skillSection.it.backRole;
-    skillExperience3.textContent = skillSection.it.skillExperience3
-    // qualification section
-    qualification.textContent = qualificationSection.it.qualification;
-    qualificationtitle.textContent = qualificationSection.it.qualificationTitle;
-    academy.textContent = qualificationSection.it.academystudy;
-    worktitle.textContent = qualificationSection.it.work;
-    // qualification (training)
-    training1.textContent = training.it.training1;
-    training1Place.textContent = training.it.training1Place;
-    training2.textContent = training.it.training2;
-    training2Place.textContent = training.it.training2Place;
-    training3.textContent = training.it.training3;
-    training3Place.textContent = training.it.training3Place;
-    training4.textContent = training.it.training4;
-    training4Place.textContent = training.it.training4Place;
-    // qualification (work)
-    work1.textContent = work.it.work1;
-    work2.textContent = work.it.work2;
-    work2Place.textContent = work.it.work2Place;
-    work3.textContent = work.it.work3;
-    work4.textContent = work.it.work4;
-    // service section
-    serviceTitle.textContent = service.it.serviceTitle;
-    serviceSubTitle.textContent = service.it.servicesSubTitle;
-    // service 1
-    // service1.textContent = service.it.service1;
-    // service1Plus.textContent = service.it.service1Plus;
-    // service1Sub.textContent = service.it.service1Sub;
-    // service1Task1.textContent = service.it.service1Task1;
-    // service1Task2.textContent = service.it.service1Task2;
-    // service1Task3.textContent = service.it.service1Task3;
-    // service1Task4.textContent = service.it.service1Task4;
-    // service 2
-    // service2.textContent = service.it.service2;
-    // service2Plus.textContent = service.it.service2Plus;
-    // service2Sub.textContent = service.it.service2Sub;
-    // service2Task1.textContent = service.it.service2Task1;
-    // service2Task2.textContent = service.it.service2Task2;
-    // service2Task3.textContent = service.it.service2Task3;
-    // service2Task4.textContent = service.it.service2Task4;
-    // portfolio
-    portfolioTitle.textContent = portfolio.it.title; 
-    secSubtitle.textContent = portfolio.it.subtitle;
-    portfolioDesc1.textContent = portfolio.it.portfoliodescri1;
-    portfolioDemo.textContent = portfolio.it.portfolioDemo;
-    // contact
-    contactMe.textContent = contact.it.contactme;
-    getInTouch.textContent = contact.it.getintouch;
-    // callMe.textContent = contact.it.callme;
-    // email.textContent = contact.it.email;
-    // myLocation.textContent = contact.it.location;
-    // myMessage.textContent = contact.it.message;
-    // myProject.textContent = contact.it.project;
-    // myName.textContent = contact.it.theName;
-    // sendbtn.textContent = contact.it.sendBtn;
-    // footer
-    footerRole.textContent = footer.it.role;
-    footerReservedRights.textContent = footer.it.reservedRights;
-  } else if (window.location.hash == "#de") {
-    languageSwitcher.value = "de";
-    // profile infos
-    profileDesc.textContent = profileInfos.de.description;
-    profileInformation.textContent = profileInfos.de.profileName;
-    role.textContent = profileInfos.de.profileRole;
-    contactButtonText.textContent = profileInfos.de.contactBtn;
-    scrollBtn.textContent = profileInfos.de.scrollDown;
-    // navbar items
-    homeNav.textContent = navs.de.home;
-    aboutNav.textContent = navs.de.about;
-    skillsNav.textContent = navs.de.skills;
-    serviceNav.textContent = navs.de.services;
-    portfolioNav.textContent = navs.de.portfolio;
-    contactNav.textContent = navs.de.contact;
-    // about section
-    aboutme.textContent = aboutSection.de.aboutMe;
-    aboutsub.textContent = aboutSection.de.aboutDesc;
-    aboutcontent.textContent = aboutSection.de.aboutContent;
-    aboutexperience.textContent = aboutSection.de.aboutExperience;
-    aboutproject.textContent = aboutSection.de.aboutProject;
-    aboutcompany.textContent = aboutSection.de.aboutCompany;
-    aboutcv.textContent = aboutSection.de.aboutCv;
-    // skills section
-    skill.textContent = skillSection.de.skills;
-    skilltitle.textContent = skillSection.de.skillsTitle;
-    frontRole.textContent = skillSection.de.frontRole;
-    skillExperience1.textContent = skillSection.de.skillExperience1;
-    frameworks.textContent = skillSection.de.frameworks;
-    skillExperience2.textContent = skillSection.de.skillExperience2;
-    backRole.textContent = skillSection.de.backRole;
-    skillExperience3.textContent = skillSection.de.skillExperience3
-    // qualification section
-    qualification.textContent = qualificationSection.de.qualification;
-    qualificationtitle.textContent = qualificationSection.de.qualificationTitle;
-    academy.textContent = qualificationSection.de.academystudy;
-    worktitle.textContent = qualificationSection.de.work;
-    // qualification (training)
-    training1.textContent = training.de.training1;
-    training1Place.textContent = training.de.training1Place;
-    training2.textContent = training.de.training2;
-    training2Place.textContent = training.de.training2Place;
-    training3.textContent = training.de.training3;
-    training3Place.textContent = training.de.training3Place;
-    training4.textContent = training.de.training4;
-    training4Place.textContent = training.de.training4Place;
-    // qualification (work)
-    work1.textContent = work.de.work1;
-    work2.textContent = work.de.work2;
-    work2Place.textContent = work.de.work2Place;
-    work3.textContent = work.de.work3;
-    work4.textContent = work.de.work4;
-    // service section
-    serviceTitle.textContent = service.de.serviceTitle;
-    serviceSubTitle.textContent = service.de.servicesSubTitle;
-    // service 2
-    // service1.textContent = service.de.service1;
-    // service1Plus.textContent = service.de.service1Plus;
-    // service1Sub.textContent = service.de.service1Sub;
-    // service1Task1.textContent = service.de.service1Task1;
-    // service1Task2.textContent = service.de.service1Task2;
-    // service1Task3.textContent = service.de.service1Task3;
-    // service1Task4.textContent = service.de.service1Task4;
-    // service 2
-    // service2.textContent = service.de.service2;
-    // service2Plus.textContent = service.de.service2Plus;
-    // service2Sub.textContent = service.de.service2Sub;
-    // service2Task1.textContent = service.de.service2Task1;
-    // service2Task2.textContent = service.de.service2Task2;
-    // service2Task3.textContent = service.de.service2Task3;
-    // service2Task4.textContent = service.de.service2Task4;
-    // portfolio
-    portfolioTitle.textContent = portfolio.de.title; 
-    secSubtitle.textContent = portfolio.de.subtitle;
-    portfolioDesc1.textContent = portfolio.de.portfoliodescri1;
-    portfolioDemo.textContent = portfolio.de.portfolioDemo;
-    // contact
-    contactMe.textContent = contact.de.contactme;
-    getInTouch.textContent = contact.de.getintouch;
-    // callMe.textContent = contact.de.callme;
-    // email.textContent = contact.de.email;
-    // myLocation.textContent = contact.de.location;
-    // myMessage.textContent = contact.de.message;
-    // myProject.textContent = contact.de.project;
-    // myName.textContent = contact.de.theName;
-    // sendbtn.textContent = contact.de.sendBtn;
-    // footer
-    footerRole.textContent = footer.de.role;
-    footerReservedRights.textContent = footer.de.reservedRights;
-  } else {
-    languageSwitcher.value = "en";
-    // profile infos
-    profileDesc.textContent = profileInfos.en.description;
-    profileInformation.textContent = profileInfos.en.profileName;
-    role.textContent = profileInfos.en.profileRole;
-    contactButtonText.textContent = profileInfos.en.contactBtn;
-    scrollBtn.textContent = profileInfos.en.scrollDown;
-    // navbar items
-    homeNav.textContent = navs.en.home;
-    aboutNav.textContent = navs.en.about;
-    skillsNav.textContent = navs.en.skills;
-    serviceNav.textContent = navs.en.services;
-    portfolioNav.textContent = navs.en.portfolio;
-    contactNav.textContent = navs.en.contact;
-    // about section
-    aboutme.textContent = aboutSection.en.aboutMe;
-    aboutsub.textContent = aboutSection.en.aboutDesc;
-    aboutcontent.textContent = aboutSection.en.aboutContent;
-    aboutexperience.textContent = aboutSection.en.aboutExperience;
-    aboutproject.textContent = aboutSection.en.aboutProject;
-    aboutcompany.textContent = aboutSection.en.aboutCompany;
-    aboutcv.textContent = aboutSection.en.aboutCv;
-    // skills section
-    skill.textContent = skillSection.en.skills;
-    skilltitle.textContent = skillSection.en.skillsTitle;
-    frontRole.textContent = skillSection.en.frontRole;
-    skillExperience1.textContent = skillSection.en.skillExperience1;
-    frameworks.textContent = skillSection.en.frameworks;
-    skillExperience2.textContent = skillSection.en.skillExperience2;
-     backRole.textContent = skillSection.en.backRole;
-    skillExperience3.textContent = skillSection.en.skillExperience3
-    // qualification section
-    qualification.textContent = qualificationSection.en.qualification;
-    qualificationtitle.textContent = qualificationSection.en.qualificationTitle;
-    academy.textContent = qualificationSection.en.academystudy;
-    worktitle.textContent = qualificationSection.en.work;
-    // qualification (training)
-    training1.textContent = training.en.training1;
-    training1Place.textContent = training.en.training1Place;
-    training2.textContent = training.en.training2;
-    training2Place.textContent = training.en.training2Place;
-    training3.textContent = training.en.training3;
-    training3Place.textContent = training.en.training3Place;
-    training4.textContent = training.en.training4;
-    training4Place.textContent = training.en.training4Place;
-    // qualification (work)
-    work1.textContent = work.en.work1;
-    work2.textContent = work.en.work2;
-    work2Place.textContent = work.en.work2Place;
-    work3.textContent = work.en.work3;
-    work4.textContent = work.en.work4;
-    // service section
-    serviceTitle.textContent = service.en.serviceTitle;
-    serviceSubTitle.textContent = service.en.servicesSubTitle;
-    // service 1
-    // service1.textContent = service.en.service1;
-    // service1Plus.textContent = service.en.service1Plus;
-    // service1Sub.textContent = service.en.service1Sub;
-    // service1Task1.textContent = service.en.service1Task1;
-    // service1Task2.textContent = service.en.service1Task2;
-    // service1Task3.textContent = service.en.service1Task3;
-    // service1Task4.textContent = service.en.service1Task4;
-    // service 2
-    // service2.textContent = service.en.service2;
-    // service2Plus.textContent = service.en.service2Plus;
-    // service2Sub.textContent = service.en.service2Sub;
-    // service2Task1.textContent = service.en.service2Task1;
-    // service2Task2.textContent = service.en.service2Task2;
-    // service2Task3.textContent = service.en.service2Task3;
-    // service2Task4.textContent = service.en.service2Task4;
-    // portfolio
-    portfolioTitle.textContent = portfolio.en.title; 
-    secSubtitle.textContent = portfolio.en.subtitle;
-    portfolioDesc1.textContent = portfolio.en.portfoliodescri1
-    portfolioDemo.textContent = portfolio.en.portfolioDemo;
-    // contact
-    contactMe.textContent = contact.en.contactme;
-    getInTouch.textContent = contact.en.getintouch;
-    // callMe.textContent = contact.en.callme;
-    // email.textContent = contact.en.email;
-    // myLocation.textContent = contact.en.location;
-    // myMessage.textContent = contact.en.message;
-    // myProject.textContent = contact.en.project;
-    // myName.textContent = contact.en.theName;
-    // sendbtn.textContent = contact.en.sendBtn;
-    // footer
-    footerRole.textContent = footer.en.role;
-    footerReservedRights.textContent = footer.en.reservedRights;
-  }
-// }
 
 /* ================ CURRENT DATE ================= */
 function currentDate() {
