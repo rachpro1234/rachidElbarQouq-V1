@@ -297,14 +297,14 @@ let work = {
     work2: "libero professionista locale",
     work2Place: "auto-indipendente",
     work3: "Stage di sviluppatore frontend",
-    work4: "Frontend developer a tempo pieno", // Italian translation
+    work4: "Frontend developer a tempo pieno", 
   },
   de: {
     work1: "Praktikum in der Webentwicklung",
     work2: "lokaler Freiberufler",
     work2Place: "selbständig",
     work3: "Praktikum als Frontend-Entwickler",
-    work4: "Frontend-Entwickler Vollzeit", // German translation
+    work4: "Frontend-Entwickler Vollzeit",
   },
 };
 
@@ -375,36 +375,43 @@ let portfolio = {
     subtitle: "Latest work",
     portfolioDemo: "demo",
     portfolioCode: "Source code",
-    portfoliodescri1: "A customizable, responsive website for all devices, made with ReactJS, Firebase. It has different pages and switchable Animation movements.",
+    portfolioDesc1: "A customizable, responsive website for all devices, made with ReactJS, Firebase. It has different pages and switchable Animation movements.",
     portfolioDesc2: "A clothing website made with NextJS and Typescript that interacts with all screen types.",
     portfolioDesc3: "A Dice Game made with <span>ReactJS</span>, that interacts with all screen types, smooth while playing with many other features.",
     portfolioDesc4: "A Web Page made logically with <span>JS</span>, that allows users to calculate a ride from point A to B, then to get the ride info like the price, distance and duration.",
     portfolioDesc5: "An Antique App made with <span>NextJS</span>, that is like a store for Sellers and Dealers who are presenting their Antique Products (Th App is not fully complete, still working on it)",
     portfolioDesc6: "Anaia.ma is a professional moving and relocation service based in France with branches in Morocco, focused on providing secure and high-quality residential and commercial moves, especially around Marrakech and other major cities.",
+    portfolioDesc7: "Gourmand is a modern Restaurant website made with next js containing many features like translation to many languages and a booking system sychnonized with Google calendar and many more features.",
+    portfolioDesc8: "Key To Marrakech is a property management and concierge service based in Marrakech, focused on short-term rentals (Airbnb...). The whole website is made with Next js with many features like swiping between popular languages as well as featuring the Services provided in a clean and modern design."
   },
   it: {
     title: "portfolio",
     subtitle: "Ultimi lavori",
-    portfoliodescri1: "Un sito web personalizzabile e responsive per tutti i dispositivi, realizzato con ReactJS e Firebase. Presenta diverse pagine e animazioni intercambiabili.",
     portfolioDemo: "demo",
     portfolioCode: "Codice sorgente",
+    portfolioDesc1: "Un sito web personalizzabile e responsive per tutti i dispositivi, realizzato con ReactJS e Firebase. Presenta diverse pagine e animazioni intercambiabili.",
     portfolioDesc2: "Un sito web dedicato all'abbigliamento, realizzato con Next.js e TypeScript, che si adatta a tutti i tipi di schermo.",
     portfolioDesc3: "Un gioco di dadi realizzato con <span>ReactJS</span>, che si adatta a tutti i tipi di schermo, garantisce un'esperienza di gioco fluida e offre numerose altre funzionalità.",
     portfolioDesc4: "Una pagina web realizzata in modo logico con <span>JS</span>, che permette agli utenti di calcolare un tragitto dal punto A al punto B e di ottenere poi le informazioni relative al tragitto, quali il prezzo, la distanza e la durata.",
     portfolioDesc5: "Un'app dedicata all'antiquariato realizzata con <span>NextJS</span>, che funge da vetrina per venditori e commercianti che presentano i propri prodotti d'antiquariato (l'app non è ancora del tutto completa, ci stiamo ancora lavorando)",
-    portfolioDesc6: "Anaia.ma è un’azienda specializzata in traslochi e trasferimenti con sede in Francia e filiali in Marocco, che si occupa di fornire servizi di trasloco residenziale e commerciale sicuri e di alta qualità, in particolare nella zona di Marrakech e in altre grandi città."
+    portfolioDesc6: "Anaia.ma è un’azienda specializzata in traslochi e trasferimenti con sede in Francia e filiali in Marocco, che si occupa di fornire servizi di trasloco residenziale e commerciale sicuri e di alta qualità, in particolare nella zona di Marrakech e in altre grandi città.",
+    portfolioDesc7: "Gourmand è un sito web moderno dedicato a un ristorante, realizzato con Next.js, che offre numerose funzionalità, tra cui la traduzione in diverse lingue e un sistema di prenotazione sincronizzato con Google Calendar, oltre a molte altre funzionalità.",
+    portfolioDesc8: "Key To Marrakech è un servizio di gestione immobiliare e concierge con sede a Marrakech, specializzato in affitti a breve termine (Airbnb...). L'intero sito web è realizzato con Next.js e offre numerose funzionalità, tra cui la possibilità di passare da una lingua all'altra con un semplice scorrimento, oltre a presentare i servizi offerti con un design pulito e moderno."
+
   },
   de: {
     title: "portfolio",
     subtitle: "Neueste Arbeiten",
-    portfoliodescri1: "Eine anpassbare, responsiv gestaltete Website für alle Geräte, erstellt mit ReactJS und Firebase. Sie verfügt über verschiedene Seiten und umschaltbare Animationen.",
     portfolioDemo: "demo",
     portfolioCode: "quellecode",
+    portfolioDesc1: "Eine anpassbare, responsiv gestaltete Website für alle Geräte, erstellt mit ReactJS und Firebase. Sie verfügt über verschiedene Seiten und umschaltbare Animationen.",
     portfolioDesc2: "Eine Website zum Thema Bekleidung, die mit Next.js und TypeScript erstellt wurde und sich an alle Bildschirmgrößen anpasst.",
     portfolioDesc3: "Ein Würfelspiel, das mit <span>ReactJS</span> entwickelt wurde, das mit allen Bildschirmtypen kompatibel ist, flüssig läuft und viele weitere Funktionen bietet.",
     portfolioDesc4: "Eine logisch aufgebaute Webseite mit <span>JS</span>, auf der Nutzer eine Fahrt von Punkt A nach B berechnen und anschließend Informationen zur Fahrt wie Preis, Entfernung und Dauer abrufen können.",
     portfolioDesc5: "Eine Antiquitäten-App, die mit <span>NextJS</span> erstellt wurde und wie ein Shop für Verkäufer und Händler funktioniert, die ihre Antiquitäten präsentieren (die App ist noch nicht ganz fertig, wir arbeiten noch daran)",
     portfolioDesc6: "Anaia.ma è un’azienda specializzata in traslochi e trasferimenti con sede in Francia e filiali in Marocco, che si occupa di fornire servizi di trasloco residenziale e commerciale sicuri e di alta qualità, in particolare nella zona di Marrakech e in altre grandi città.",
+    portfolioDesc7: "Gourmand ist eine moderne Restaurant-Website, die mit Next.js erstellt wurde und zahlreiche Funktionen bietet, darunter die Übersetzung in viele Sprachen sowie ein mit Google Kalender synchronisiertes Buchungssystem und viele weitere Funktionen.",
+    portfolioDesc8: "Key To Marrakech“ ist ein in Marrakesch ansässiger Immobilienverwaltungs- und Concierge-Service, der sich auf Kurzzeitvermietungen (Airbnb...) spezialisiert hat. Die gesamte Website wurde mit Next.js erstellt und bietet zahlreiche Funktionen, darunter das Umschalten zwischen gängigen Sprachen sowie die Präsentation der angebotenen Dienstleistungen in einem übersichtlichen und modernen Design." 
   },
 };
 
@@ -538,14 +545,20 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.it.title; 
     secSubtitle.textContent = portfolio.it.subtitle;
-    portfolioDemo.textContent = portfolio.it.portfolioDemo;
-    portfolioCode.textContent = portfolio.it.portfolioCode;
-    portfolioDesc1.textContent = portfolio.it.portfoliodescri1;
-    portfolioDesc2.textContent = portfolio.it.portfoliodescri2;
-    portfolioDesc3.textContent = portfolio.it.portfoliodescri3;
-    portfolioDesc4.textContent = portfolio.it.portfoliodescri4;
-    portfolioDesc5.textContent = portfolio.it.portfoliodescri5;
-    portfolioDesc6.textContent = portfolio.it.portfoliodescri6;
+    document.querySelectorAll("portfolioDemo").forEach((demo) => {
+      demo.textContent = portfolio.it.portfolioDemo;
+    })
+    document.querySelectorAll("portfolioCode").forEach((source) => {
+      source.textContent = portfolio.it.portfolioCode;
+    })
+    portfolioDesc1.textContent = portfolio.it.portfolioDesc1;
+    portfolioDesc2.textContent = portfolio.it.portfolioDesc2;
+    portfolioDesc3.textContent = portfolio.it.portfolioDesc3;
+    portfolioDesc4.textContent = portfolio.it.portfolioDesc4;
+    portfolioDesc5.textContent = portfolio.it.portfolioDesc5;
+    portfolioDesc6.textContent = portfolio.it.portfolioDesc6;
+    portfolioDesc7.textContent = portfolio.it.portfolioDesc7;
+    portfolioDesc8.textContent = portfolio.it.portfolioDesc8;
 
     // contact
     contactMe.textContent = contact.it.contactme;
@@ -634,15 +647,20 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.de.title; 
     secSubtitle.textContent = portfolio.de.subtitle;
-    portfolioDemo.textContent = portfolio.de.portfolioDemo;
-    portfolioCode.textContent = portfolio.de.portfolioCode;
-    portfolioDesc1.textContent = portfolio.de.portfoliodescri1;
-    portfolioDesc1.textContent = portfolio.de.portfoliodescri1;
-    portfolioDesc2.textContent = portfolio.de.portfoliodescri2;
-    portfolioDesc3.textContent = portfolio.de.portfoliodescri3;
-    portfolioDesc4.textContent = portfolio.de.portfoliodescri4;
-    portfolioDesc5.textContent = portfolio.de.portfoliodescri5;
-    portfolioDesc6.textContent = portfolio.de.portfoliodescri6;
+     document.querySelectorAll("portfolioDemo").forEach((demo) => {
+      demo.textContent = portfolio.de.portfolioDemo;
+    })
+    document.querySelectorAll("portfolioCode").forEach((source) => {
+      source.textContent = portfolio.de.portfolioCode;
+    })
+    portfolioDesc1.textContent = portfolio.de.portfolioDesc1;
+    portfolioDesc2.textContent = portfolio.de.portfolioDesc2;
+    portfolioDesc3.textContent = portfolio.de.portfolioDesc3;
+    portfolioDesc4.textContent = portfolio.de.portfolioDesc4;
+    portfolioDesc5.textContent = portfolio.de.portfolioDesc5;
+    portfolioDesc6.textContent = portfolio.de.portfolioDesc6;
+    portfolioDesc7.textContent = portfolio.de.portfolioDesc7;
+    portfolioDesc8.textContent = portfolio.de.portfolioDesc8;
 
     // contact
     contactMe.textContent = contact.de.contactme;
@@ -731,24 +749,24 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.en.title; 
     secSubtitle.textContent = portfolio.en.subtitle;
-    portfolioDemo.textContent = portfolio.en.portfolioDemo;
-    portfolioCode.textContent = portfolio.en.portfolioCode;
-    portfolioDesc1.textContent = portfolio.en.portfoliodescri1;
-    portfolioDesc2.textContent = portfolio.en.portfoliodescri2;
-    portfolioDesc3.textContent = portfolio.en.portfoliodescri3;
-    portfolioDesc4.textContent = portfolio.en.portfoliodescri4;
-    portfolioDesc5.textContent = portfolio.en.portfoliodescri5;
-    portfolioDesc6.textContent = portfolio.en.portfoliodescri6;
+     document.querySelectorAll("portfolioDemo").forEach((demo) => {
+      demo.textContent = portfolio.en.portfolioDemo;
+    })
+    document.querySelectorAll("portfolioCode").forEach((source) => {
+      source.textContent = portfolio.en.portfolioCode;
+    })
+    portfolioDesc1.textContent = portfolio.en.portfolioDesc1;
+    portfolioDesc2.textContent = portfolio.en.portfolioDesc2;
+    portfolioDesc3.textContent = portfolio.en.portfolioDesc3;
+    portfolioDesc4.textContent = portfolio.en.portfolioDesc4;
+    portfolioDesc5.textContent = portfolio.en.portfolioDesc5;
+    portfolioDesc6.textContent = portfolio.en.portfolioDesc6;
+    portfolioDesc7.textContent = portfolio.en.portfolioDesc7;
+    portfolioDesc8.textContent = portfolio.en.portfolioDesc8;
+
     // contact
     contactMe.textContent = contact.en.contactme;
     getInTouch.textContent = contact.en.getintouch;
-    // callMe.textContent = contact.en.callme;
-    // email.textContent = contact.en.email;
-    // myLocation.textContent = contact.en.location;
-    // myMessage.textContent = contact.en.message;
-    // myProject.textContent = contact.en.project;
-    // myName.textContent = contact.en.theName;
-    // sendbtn.textContent = contact.en.sendBtn;
     // footer
     footerRole.textContent = footer.en.role;
     footerReservedRights.textContent = footer.en.reservedRights;
@@ -760,7 +778,7 @@ let footer = {
 
 let swiper = new Swiper(".portfolio__container", {
   cssMode: true,
-  loop: true,
+  // loop: true,
 
   navigation: {
     nextEl: ".swiper-button-next",

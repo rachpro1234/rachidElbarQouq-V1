@@ -1177,6 +1177,10 @@ border-radius: 0.25rem;
   margin-top: auto;
 }
 
+.portfolio__btns a span{
+  margin-right: 5px;
+}
+
 .portfolio__button:hover .button__icon {
   transform: translateX(0.25rem);
 }
