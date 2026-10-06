@@ -326,10 +326,10 @@ let service = {
     service2Task4: "Animate your website with CSS and TailwindCSS",
     // service 3
     service3Role: "backend developer",
-    service2Task1: "build RESTful APIs and integrate MySQL databases.",
-    service2Task2: "handle authentication, and data management. test, troubleshoot",
-    service2Task3: "implement server-side logic & optimize backend systems",
-    service2Task4: "focus on building reliable and maintainable systems.",
+    service3Task1: "build RESTful APIs and integrate MySQL databases.",
+    service3Task2: "handle authentication, and data management. test, troubleshoot",
+    service3Task3: "implement server-side logic & optimize backend systems",
+    service3Task4: "focus on building reliable and maintainable systems.",
   },
   it: {
     serviceTitle: "Servizi",
@@ -535,22 +535,23 @@ let footer = {
     serviceTitle.textContent = service.it.serviceTitle;
     serviceSubTitle.textContent = service.it.servicesSubTitle;
     // service 1
-    // service1.textContent = service.it.service1;
-    // service1Plus.textContent = service.it.service1Plus;
-    // service1Sub.textContent = service.it.service1Sub;
     service1Role.textContent = service.it.service1Role;
     service1Task1.textContent = service.it.service1Task1;
-    // service1Task2.textContent = service.it.service1Task2;
-    // service1Task3.textContent = service.it.service1Task3;
-    // service1Task4.textContent = service.it.service1Task4;
+    service1Task2.textContent = service.it.service1Task2;
+    service1Task3.textContent = service.it.service1Task3;
+    service1Task4.textContent = service.it.service1Task4;
     // service 2
-    // service2.textContent = service.it.service2;
-    // service2Plus.textContent = service.it.service2Plus;
-    // service2Sub.textContent = service.it.service2Sub;
-    // service2Task1.textContent = service.it.service2Task1;
-    // service2Task2.textContent = service.it.service2Task2;
-    // service2Task3.textContent = service.it.service2Task3;
-    // service2Task4.textContent = service.it.service2Task4;
+    service2Role.textContent = service.it.service2Role;
+    service2Task1.textContent = service.it.service2Task1;
+    service2Task2.textContent = service.it.service2Task2;
+    service2Task3.textContent = service.it.service2Task3;
+    service2Task4.textContent = service.it.service2Task4;
+     // service 3
+    service3Role.textContent = service.it.service3Role;
+    service3Task1.textContent = service.it.service3Task1;
+    service3Task2.textContent = service.it.service3Task2;
+    service3Task3.textContent = service.it.service3Task3;
+    service3Task4.textContent = service.it.service3Task4;
     // portfolio
     portfolioTitle.textContent = portfolio.it.title; 
     secSubtitle.textContent = portfolio.it.subtitle;
@@ -572,13 +573,6 @@ let footer = {
     // contact
     contactMe.textContent = contact.it.contactme;
     getInTouch.textContent = contact.it.getintouch;
-    // callMe.textContent = contact.it.callme;
-    // email.textContent = contact.it.email;
-    // myLocation.textContent = contact.it.location;
-    // myMessage.textContent = contact.it.message;
-    // myProject.textContent = contact.it.project;
-    // myName.textContent = contact.it.theName;
-    // sendbtn.textContent = contact.it.sendBtn;
     // footer
     footerRole.textContent = footer.it.role;
     footerReservedRights.textContent = footer.it.reservedRights;
@@ -637,23 +631,24 @@ let footer = {
     // service section
     serviceTitle.textContent = service.de.serviceTitle;
     serviceSubTitle.textContent = service.de.servicesSubTitle;
-    // service 2
-    // service1.textContent = service.de.service1;
-    // service1Plus.textContent = service.de.service1Plus;
-    // service1Sub.textContent = service.de.service1Sub;
+    // service 1
     service1Role.textContent = service.de.service1Role;
     service1Task1.textContent = service.de.service1Task1;
-    // service1Task2.textContent = service.de.service1Task2;
-    // service1Task3.textContent = service.de.service1Task3;
-    // service1Task4.textContent = service.de.service1Task4;
+    service1Task2.textContent = service.de.service1Task2;
+    service1Task3.textContent = service.de.service1Task3;
+    service1Task4.textContent = service.de.service1Task4;
     // service 2
-    // service2.textContent = service.de.service2;
-    // service2Plus.textContent = service.de.service2Plus;
-    // service2Sub.textContent = service.de.service2Sub;
-    // service2Task1.textContent = service.de.service2Task1;
-    // service2Task2.textContent = service.de.service2Task2;
-    // service2Task3.textContent = service.de.service2Task3;
-    // service2Task4.textContent = service.de.service2Task4;
+    service2Role.textContent = service.de.service2Role;
+    service2Task1.textContent = service.de.service2Task1;
+    service2Task2.textContent = service.de.service2Task2;
+    service2Task3.textContent = service.de.service2Task3;
+    service2Task4.textContent = service.de.service2Task4;
+    // service 3
+    service3Role.textContent = service.de.service3Role;
+    service3Task1.textContent = service.de.service3Task1;
+    service3Task2.textContent = service.de.service3Task2;
+    service3Task3.textContent = service.de.service3Task3;
+    service3Task4.textContent = service.de.service3Task4;
     // portfolio
     portfolioTitle.textContent = portfolio.de.title; 
     secSubtitle.textContent = portfolio.de.subtitle;
@@ -671,17 +666,9 @@ let footer = {
     portfolioDesc6.textContent = portfolio.de.portfolioDesc6;
     portfolioDesc7.textContent = portfolio.de.portfolioDesc7;
     portfolioDesc8.textContent = portfolio.de.portfolioDesc8;
-
     // contact
     contactMe.textContent = contact.de.contactme;
     getInTouch.textContent = contact.de.getintouch;
-    // callMe.textContent = contact.de.callme;
-    // email.textContent = contact.de.email;
-    // myLocation.textContent = contact.de.location;
-    // myMessage.textContent = contact.de.message;
-    // myProject.textContent = contact.de.project;
-    // myName.textContent = contact.de.theName;
-    // sendbtn.textContent = contact.de.sendBtn;
     // footer
     footerRole.textContent = footer.de.role;
     footerReservedRights.textContent = footer.de.reservedRights;
@@ -741,22 +728,23 @@ let footer = {
     serviceTitle.textContent = service.en.serviceTitle;
     serviceSubTitle.textContent = service.en.servicesSubTitle;
     // service 1
-    // service1.textContent = service.en.service1;
-    // service1Plus.textContent = service.en.service1Plus;
-    // service1Sub.textContent = service.en.service1Sub;
-     service1Role.textContent = service.en.service1Role;
+    service1Role.textContent = service.en.service1Role;
     service1Task1.textContent = service.en.service1Task1;
-    // service1Task2.textContent = service.en.service1Task2;
-    // service1Task3.textContent = service.en.service1Task3;
-    // service1Task4.textContent = service.en.service1Task4;
+    service1Task2.textContent = service.en.service1Task2;
+    service1Task3.textContent = service.en.service1Task3;
+    service1Task4.textContent = service.en.service1Task4;
     // service 2
-    // service2.textContent = service.en.service2;
-    // service2Plus.textContent = service.en.service2Plus;
-    // service2Sub.textContent = service.en.service2Sub;
-    // service2Task1.textContent = service.en.service2Task1;
-    // service2Task2.textContent = service.en.service2Task2;
-    // service2Task3.textContent = service.en.service2Task3;
-    // service2Task4.textContent = service.en.service2Task4;
+    service2Role.textContent = service.en.service2Role;
+    service2Task1.textContent = service.en.service2Task1;
+    service2Task2.textContent = service.en.service2Task2;
+    service2Task3.textContent = service.en.service2Task3;
+    service2Task4.textContent = service.en.service2Task4;
+    // service 3
+    service3Role.textContent = service.en.service3Role;
+    service3Task1.textContent = service.en.service3Task1;
+    service3Task2.textContent = service.en.service3Task2;
+    service3Task3.textContent = service.en.service3Task3;
+    service3Task4.textContent = service.en.service3Task4;
     // portfolio
     portfolioTitle.textContent = portfolio.en.title; 
     secSubtitle.textContent = portfolio.en.subtitle;
