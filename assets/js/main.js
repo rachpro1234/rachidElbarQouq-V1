@@ -313,59 +313,67 @@ let service = {
     serviceTitle: "Services",
     servicesSubTitle: "What I offer",
     // service 1
-    service1: "frontend developer",
-    service1Plus: "frontend developer",
-    service1Sub: "See more",
+    service1Role: "frontend developer",
     service1Task1: "Using ReactJs & NextJs to develop UI interfaces.",
     service1Task2: "Managing the state of the application with Redux",
     service1Task3: "Implement the entire app using React hooks",
     service1Task4: "Consume API(s).",
     // service 2
-    service2: "ui/ux Designer",
-    service2Plus: "ui/ux Designer",
-    service2Sub: "See more",
+    service2Role: "ui/ux Designer",
     service2Task1: "User interface development",
     service2Task2: "Creating a responsive website with TailwindCSS",
     service2Task3: "Creating usage plans and flowcharts",
     service2Task4: "Animate your website with CSS and TailwindCSS",
+    // service 3
+    service3Role: "backend developer",
+    service2Task1: "build RESTful APIs and integrate MySQL databases.",
+    service2Task2: "handle authentication, and data management. test, troubleshoot",
+    service2Task3: "implement server-side logic & optimize backend systems",
+    service2Task4: "focus on building reliable and maintainable systems.",
   },
   it: {
     serviceTitle: "Servizi",
     servicesSubTitle: "Cosa offro",
-    service1: "sviluppatore frontend",
-    service1Plus: "sviluppatore frontend",
-    service1Sub: "Vedi di più",
-    service1Task1: "Utilizzo ReactJs & NextJs per sviluppare interfacce utente.",
-    service1Task2: "Gestisco lo stato dell'applicazione con Redux",
-    service1Task3: "Implemento l'intera app utilizzando hook di React",
-    service1Task4: "Consumo API.",
+    // service 1
+    service1Role: "sviluppatore frontend",
+    service1Task1: "Sviluppare interfacce utente con React.js e Next.js.",
+    service1Task2: "Gestire lo stato dell'applicazione con Redux.",
+    service1Task3: "Implementare l'intera applicazione utilizzando gli hook di React.",
+    service1Task4: "Consumare API.",
     // service 2
-    service2: "Progettista UI/UX",
-    service2Plus: "Progettista UI/UX",
-    service2Sub: "Vedi di più",
-    service2Task1: "Sviluppo dell'interfaccia utente",
-    service2Task2: "Creo un sito web responsivo con TailwindCSS",
-    service2Task3: "Creo piani di utilizzo e diagrammi di flusso",
-    service2Task4: "Animazione del sito web con CSS e TailwindCSS",
+    service2Role: "designer UI/UX",
+    service2Task1: "Sviluppo di interfacce utente.",
+    service2Task2: "Creare siti web responsive con Tailwind CSS.",
+    service2Task3: "Creare piani di utilizzo e diagrammi di flusso.",
+    service2Task4: "Animare i siti web con CSS e Tailwind CSS.",
+    // service 3
+    service3Role: "sviluppatore backend",
+    service3Task1: "Sviluppare API RESTful e integrare database MySQL.",
+    service3Task2: "Gestire l'autenticazione e i dati, eseguire test e risolvere problemi.",
+    service3Task3: "Implementare la logica lato server e ottimizzare i sistemi backend.",
+    service3Task4: "Concentrarsi sulla creazione di sistemi affidabili e facilmente manutenibili."
   },
   de: {
     serviceTitle: "Dienstleistungen",
     servicesSubTitle: "Was ich anbiete",
-    service1: "Frontend-Entwickler",
-    service1Plus: "Frontend-Entwickler",
-    service1Sub: "mehr sehen",
-    service1Task1: "Verwende ReactJs & NextJs, um Benutzeroberflächen zu entwickeln.",
-    service1Task2: "Verwalte den Zustand der Anwendung mit Redux",
-    service1Task3: "Implementiere die gesamte App mit React Hooks",
-    service1Task4: "Verbrauche API.",
+    // service 1
+    service1Role: "Frontend-Entwickler",
+    service1Task1: "Benutzeroberflächen mit React.js und Next.js entwickeln.",
+    service1Task2: "Den Anwendungsstatus mit Redux verwalten.",
+    service1Task3: "Die gesamte Anwendung mithilfe von React Hooks implementieren.",
+    service1Task4: "APIs konsumieren.",
     // service 2
-    service2: "UI/UX-Designer",
-    service2Plus: "UI/UX-Designer",
-    service2Sub: "Mehr sehen",
-    service2Task1: "Entwicklung der Benutzeroberfläche",
-    service2Task2: "Erstelle ein responsives Website mit TailwindCSS",
-    service2Task3: "Erstelle Nutzungspläne und Flussdiagramme",
-    service2Task4: "Animiere deine Website mit CSS und TailwindCSS",
+    service2Role: "UI/UX-Designer",
+    service2Task1: "Entwicklung von Benutzeroberflächen.",
+    service2Task2: "Responsive Websites mit Tailwind CSS erstellen.",
+    service2Task3: "Nutzungskonzepte und Flussdiagramme erstellen.",
+    service2Task4: "Websites mit CSS und Tailwind CSS animieren.",
+    // service 3
+    service3Role: "Backend-Entwickler",
+    service3Task1: "RESTful APIs entwickeln und MySQL-Datenbanken integrieren.",
+    service3Task2: "Authentifizierung und Datenverwaltung übernehmen, Tests durchführen und Probleme beheben.",
+    service3Task3: "Serverseitige Logik implementieren und Backend-Systeme optimieren.",
+    service3Task4: "Zuverlässige und wartbare Systeme entwickeln."
   },
 };
 
@@ -530,7 +538,8 @@ let footer = {
     // service1.textContent = service.it.service1;
     // service1Plus.textContent = service.it.service1Plus;
     // service1Sub.textContent = service.it.service1Sub;
-    // service1Task1.textContent = service.it.service1Task1;
+    service1Role.textContent = service.it.service1Role;
+    service1Task1.textContent = service.it.service1Task1;
     // service1Task2.textContent = service.it.service1Task2;
     // service1Task3.textContent = service.it.service1Task3;
     // service1Task4.textContent = service.it.service1Task4;
@@ -545,10 +554,10 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.it.title; 
     secSubtitle.textContent = portfolio.it.subtitle;
-    document.querySelectorAll("portfolioDemo").forEach((demo) => {
+    document.querySelectorAll("#portfolioDemo").forEach((demo) => {
       demo.textContent = portfolio.it.portfolioDemo;
     })
-    document.querySelectorAll("portfolioCode").forEach((source) => {
+    document.querySelectorAll("#portfolioCode").forEach((source) => {
       source.textContent = portfolio.it.portfolioCode;
     })
     portfolioDesc1.textContent = portfolio.it.portfolioDesc1;
@@ -632,7 +641,8 @@ let footer = {
     // service1.textContent = service.de.service1;
     // service1Plus.textContent = service.de.service1Plus;
     // service1Sub.textContent = service.de.service1Sub;
-    // service1Task1.textContent = service.de.service1Task1;
+    service1Role.textContent = service.de.service1Role;
+    service1Task1.textContent = service.de.service1Task1;
     // service1Task2.textContent = service.de.service1Task2;
     // service1Task3.textContent = service.de.service1Task3;
     // service1Task4.textContent = service.de.service1Task4;
@@ -647,10 +657,10 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.de.title; 
     secSubtitle.textContent = portfolio.de.subtitle;
-     document.querySelectorAll("portfolioDemo").forEach((demo) => {
+     document.querySelectorAll("#portfolioDemo").forEach((demo) => {
       demo.textContent = portfolio.de.portfolioDemo;
     })
-    document.querySelectorAll("portfolioCode").forEach((source) => {
+    document.querySelectorAll("#portfolioCode").forEach((source) => {
       source.textContent = portfolio.de.portfolioCode;
     })
     portfolioDesc1.textContent = portfolio.de.portfolioDesc1;
@@ -734,7 +744,8 @@ let footer = {
     // service1.textContent = service.en.service1;
     // service1Plus.textContent = service.en.service1Plus;
     // service1Sub.textContent = service.en.service1Sub;
-    // service1Task1.textContent = service.en.service1Task1;
+     service1Role.textContent = service.en.service1Role;
+    service1Task1.textContent = service.en.service1Task1;
     // service1Task2.textContent = service.en.service1Task2;
     // service1Task3.textContent = service.en.service1Task3;
     // service1Task4.textContent = service.en.service1Task4;
@@ -749,10 +760,10 @@ let footer = {
     // portfolio
     portfolioTitle.textContent = portfolio.en.title; 
     secSubtitle.textContent = portfolio.en.subtitle;
-     document.querySelectorAll("portfolioDemo").forEach((demo) => {
+     document.querySelectorAll("#portfolioDemo").forEach((demo) => {
       demo.textContent = portfolio.en.portfolioDemo;
     })
-    document.querySelectorAll("portfolioCode").forEach((source) => {
+    document.querySelectorAll("#portfolioCode").forEach((source) => {
       source.textContent = portfolio.en.portfolioCode;
     })
     portfolioDesc1.textContent = portfolio.en.portfolioDesc1;
