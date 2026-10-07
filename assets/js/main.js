@@ -385,11 +385,11 @@ let portfolio = {
     portfolioCode: "Source code",
     portfolioDesc1: "A customizable, responsive website for all devices, made with ReactJS, Firebase. It has different pages and switchable Animation movements.",
     portfolioDesc2: "A clothing website made with NextJS and Typescript that interacts with all screen types.",
-    portfolioDesc3: "A Dice Game made with <span>ReactJS</span>, that interacts with all screen types, smooth while playing with many other features.",
-    portfolioDesc4: "A Web Page made logically with <span>JS</span>, that allows users to calculate a ride from point A to B, then to get the ride info like the price, distance and duration.",
-    portfolioDesc5: "An Antique App made with <span>NextJS</span>, that is like a store for Sellers and Dealers who are presenting their Antique Products (Th App is not fully complete, still working on it)",
+    portfolioDesc3: "A Dice Game made with ReactJS. the point of this game is to flip the dice and switch between different faces of the dice",
+    portfolioDesc4: "A Web Page made logically with Javascript, that allows users to calculate a ride from point A to B, then to get the ride info like the price, distance and duration.",
+    portfolioDesc5: "An Antique App made with Nextjs, that is like a store for Sellers and Dealers who are presenting their Antique Products (Th App is not fully complete, still working on it)",
     portfolioDesc6: "Anaia.ma is a professional moving and relocation service based in France with branches in Morocco, focused on providing secure and high-quality residential and commercial moves, especially around Marrakech and other major cities.",
-    portfolioDesc7: "Gourmand is a modern Restaurant website made with next js containing many features like translation to many languages and a booking system sychnonized with Google calendar and many more features.",
+    portfolioDesc7: "Gourmand is a modern Restaurant website made with Next js containing many features like translation to many languages and a booking system sychnonized with Google calendar and many more features.",
     portfolioDesc8: "Key To Marrakech is a property management and concierge service based in Marrakech, focused on short-term rentals (Airbnb...). The whole website is made with Next js with many features like swiping between popular languages as well as featuring the Services provided in a clean and modern design."
   },
   it: {
@@ -399,9 +399,9 @@ let portfolio = {
     portfolioCode: "Codice sorgente",
     portfolioDesc1: "Un sito web personalizzabile e responsive per tutti i dispositivi, realizzato con ReactJS e Firebase. Presenta diverse pagine e animazioni intercambiabili.",
     portfolioDesc2: "Un sito web dedicato all'abbigliamento, realizzato con Next.js e TypeScript, che si adatta a tutti i tipi di schermo.",
-    portfolioDesc3: "Un gioco di dadi realizzato con <span>ReactJS</span>, che si adatta a tutti i tipi di schermo, garantisce un'esperienza di gioco fluida e offre numerose altre funzionalità.",
-    portfolioDesc4: "Una pagina web realizzata in modo logico con <span>JS</span>, che permette agli utenti di calcolare un tragitto dal punto A al punto B e di ottenere poi le informazioni relative al tragitto, quali il prezzo, la distanza e la durata.",
-    portfolioDesc5: "Un'app dedicata all'antiquariato realizzata con <span>NextJS</span>, che funge da vetrina per venditori e commercianti che presentano i propri prodotti d'antiquariato (l'app non è ancora del tutto completa, ci stiamo ancora lavorando)",
+    portfolioDesc3: "Un gioco di dadi realizzato con ReactJS, Lo scopo di questo gioco è lanciare i dadi e passare tra le diverse facce dei dadi",
+    portfolioDesc4: "Una pagina web realizzata in modo logico con Javascript, che permette agli utenti di calcolare un tragitto dal punto A al punto B e di ottenere poi le informazioni relative al tragitto, quali il prezzo, la distanza e la durata.",
+    portfolioDesc5: "Un'app dedicata all'antiquariato realizzata con NextJS, che funge da vetrina per venditori e commercianti che presentano i propri prodotti d'antiquariato (l'app non è ancora del tutto completa, ci stiamo ancora lavorando)",
     portfolioDesc6: "Anaia.ma è un’azienda specializzata in traslochi e trasferimenti con sede in Francia e filiali in Marocco, che si occupa di fornire servizi di trasloco residenziale e commerciale sicuri e di alta qualità, in particolare nella zona di Marrakech e in altre grandi città.",
     portfolioDesc7: "Gourmand è un sito web moderno dedicato a un ristorante, realizzato con Next.js, che offre numerose funzionalità, tra cui la traduzione in diverse lingue e un sistema di prenotazione sincronizzato con Google Calendar, oltre a molte altre funzionalità.",
     portfolioDesc8: "Key To Marrakech è un servizio di gestione immobiliare e concierge con sede a Marrakech, specializzato in affitti a breve termine (Airbnb...). L'intero sito web è realizzato con Next.js e offre numerose funzionalità, tra cui la possibilità di passare da una lingua all'altra con un semplice scorrimento, oltre a presentare i servizi offerti con un design pulito e moderno."
@@ -414,7 +414,7 @@ let portfolio = {
     portfolioCode: "quellecode",
     portfolioDesc1: "Eine anpassbare, responsiv gestaltete Website für alle Geräte, erstellt mit ReactJS und Firebase. Sie verfügt über verschiedene Seiten und umschaltbare Animationen.",
     portfolioDesc2: "Eine Website zum Thema Bekleidung, die mit Next.js und TypeScript erstellt wurde und sich an alle Bildschirmgrößen anpasst.",
-    portfolioDesc3: "Ein Würfelspiel, das mit <span>ReactJS</span> entwickelt wurde, das mit allen Bildschirmtypen kompatibel ist, flüssig läuft und viele weitere Funktionen bietet.",
+    portfolioDesc3: "Ein Würfelspiel, das mit ReactJS entwickelt wurde, Der Punkt dieses Spiels ist es, die Würfel zu drehen und zwischen den verschiedenen Seiten der Würfel zu wechseln.",
     portfolioDesc4: "Eine logisch aufgebaute Webseite mit <span>JS</span>, auf der Nutzer eine Fahrt von Punkt A nach B berechnen und anschließend Informationen zur Fahrt wie Preis, Entfernung und Dauer abrufen können.",
     portfolioDesc5: "Eine Antiquitäten-App, die mit <span>NextJS</span> erstellt wurde und wie ein Shop für Verkäufer und Händler funktioniert, die ihre Antiquitäten präsentieren (die App ist noch nicht ganz fertig, wir arbeiten noch daran)",
     portfolioDesc6: "Anaia.ma è un’azienda specializzata in traslochi e trasferimenti con sede in Francia e filiali in Marocco, che si occupa di fornire servizi di trasloco residenziale e commerciale sicuri e di alta qualità, in particolare nella zona di Marrakech e in altre grandi città.",
@@ -1187,12 +1187,6 @@ function currentDate() {
 
 window.addEventListener("DOMContentLoaded", currentDate);
 
-
-/* =============== EMAIL SEND ==================== */
-// function getInTouch() {
-//   location.href="mailto:elbarqouqyrachid@gmail.com";
-// }
-
 /* ============================== GSAP ANIMATION ============================= */
 
 // split text animation
@@ -1234,9 +1228,13 @@ function setup() {
   splitLines && splitLines.revert();
 
   animation && animation.revert();
+  // home content
   splitChars = SplitText.create("#role", {type:"chars"});
   splitWords = SplitText.create("#profileInformation", {type:"words"});
   splitLines = SplitText.create("#profileDesc", {type:"lines"});
+  // about content
+  splitChars = SplitText.create("#aboutsub", { type: "chars" });
+  splitWords = SplitText.create("#aboutcontent", { type: "words" });
 }
 setup();
 playAnimation();
@@ -1270,16 +1268,3 @@ const headerSvgObserver = new IntersectionObserver(
 
 headerSvgObserver.observe(svg);
 
-
-
-// ================== HIGHLIGHT EFFECT ================== //
-// gsap.registerPlugin(ScrollTrigger);
-// gsap.utils.toArray(".home__subtitle").forEach((h3) => {
-//   ScrollTrigger.create({
-//     trigger: h3,
-//     start: "top center",
-//     toggleClass: "active",
-//      markers: true,
-//     onEnter: () => span.classList.add("active"),
-//   });
-// }); 

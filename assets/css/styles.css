@@ -84,6 +84,10 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+
+
+  /* =========== Gradient Background =========== */
+  --main-gradient-bg: linear-gradient(135deg, var(--first-color) 35%,  #767171 100%)
 }
 
 /* Font size for large devices */
@@ -93,6 +97,7 @@
     --h1-font-size: 6rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
+    --sub-title: 1.3rem;
     --normal-font-size: 1rem;
     --large-font-size: 2.5rem;
     --small-font-size: 0.875rem;
@@ -109,6 +114,10 @@ body.dark-theme {
   --input-color: hsl(var(--hue-color), 29%, 16%);
   --body-color: hsl(var(--hue-color), 28%, 12%);
   --container-color: hsl(var(--hue-color), 29%, 16%);
+
+  /* gradient color #302525 */
+  --main-gradient-bg: linear-gradient(135deg, var(--first-color) 35%,  #716666 100%)
+
 }
 
 
@@ -283,7 +292,7 @@ img {
   text-transform: capitalize;
 
   /* gradient effect */
-  background: linear-gradient(135deg, var(--first-color) 35%, #f7f7f7 100%);
+  background: var(--main-gradient-bg);
 color: transparent;
 -webkit-background-clip: text;
 background-clip: text;
@@ -322,9 +331,6 @@ text-fill-color: transparent;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  /* background-color: var(--body-color); */
-
-  /* glass effect */
 }
 
 /*==================== NAV ====================*/
@@ -335,13 +341,6 @@ text-fill-color: transparent;
   justify-content: space-between;
   align-items: center;
   transition: padding 0.3s ease-in-out, background 0.4s ease-in-out;
- /* padding: 0 1.5rem;
-     background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(7px);
-  -webkit-backdrop-filter: blur(7px);
-  border-radius: 50px;
-  border: 1px solid rgba(255, 255, 255, 0.82);
-  box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.3); */
 }
 
 .portfolio__logo {
@@ -379,9 +378,7 @@ text-fill-color: transparent;
 
 
 .nav__list {
-  /* grid-template-columns: repeat(3, 1fr); */
   display: flex;
-  /* flex-direction: column; */
   align-items: flex-start;
   justify-content: center;
   gap: 2rem;
@@ -391,11 +388,7 @@ text-fill-color: transparent;
 .nav__link {
   display: flex;
   gap: 5px;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* font-size: var(--small-font-size); */
   color: var(--title-color);
-  /* font-weight: var(--font-medium); */
   text-transform: capitalize;
   transition: color .3s ease-in-out;
 }
@@ -412,26 +405,16 @@ text-fill-color: transparent;
   margin-left: auto;
 }
 
-/* .nav__close {
-  position: absolute;
-  right: 1.3rem;
-  bottom: 0.5rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--first-color);
-} */
 
 .nav__close:hover {
   color: var(--first-color-alt);
 }
-/* show menu */
-/* .show-menu {
-  top: 76px;
-} */
 
 /* Active link */
 .active-link {
   color: var(--first-color);
+
+  font-weight: 600;
 }
 
 /* animate text  */
@@ -576,9 +559,12 @@ text-fill-color: transparent;
 .home__description {
   margin-bottom: var(--mb-2);
   line-height: 1.5rem;
+  font-size: var(--normal-font-size);
 }
 
 .home__scroll-button {
+  display: flex;
+  align-items: center;
   color: var(--first-color);
   transition: 0.3s;
 }
@@ -609,6 +595,7 @@ text-fill-color: transparent;
 .main-button {
   display: inline-block;
   background-color: var(--first-color);
+      background: var(--main-gradient-bg);
   color: #fff;
   padding: .7rem 2rem;
   border-radius: 1.5rem;
@@ -766,7 +753,7 @@ text-fill-color: transparent;
 }
 
 .skills__subtitle {
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   color: var(--text-color-light);
 }
 
@@ -791,6 +778,7 @@ text-fill-color: transparent;
 .skills__title {
   display: flex;
   justify-content: space-between;
+  text-transform: capitalize;
   margin-bottom: var(--mb-0-5);
 }
 
@@ -877,7 +865,7 @@ text-fill-color: transparent;
 }
 
 .qualification__title {
-  font-size: var(--normal-font-size);
+  font-size: var(--sub-title);
   font-weight: var(--font-medium);
   border-left: 4px solid var(--first-color);
   padding-left: 4px;
@@ -885,7 +873,7 @@ text-fill-color: transparent;
 
 .qualification__subtitle {
   display: inline-block;
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   margin-bottom: var(--mb-1);
 }
 
@@ -941,6 +929,7 @@ text-fill-color: transparent;
   font-weight: var(--font-medium);
   width: 20px;
   color: var(--title-color);
+  text-transform: capitalize;
 }
 
 .services__button:hover {
@@ -1105,17 +1094,7 @@ text-fill-color: transparent;
 }
 
 .button {
-  /* height: 30%;
-  width: 50%; */
-
-       /* position: relative; */
-    /* background-color: var(--container-color);
-    padding: 3.5rem 0.5rem 1.25rem 1.5rem;
-    border-radius: 0.25rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-    transition: 0.4s; */
-
-        background-color: var(--container-color);
+background-color: var(--container-color);
 padding: 3rem 0.5rem 2rem 1.5rem;    
 border-radius: 0.25rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
@@ -1174,6 +1153,8 @@ border-radius: 0.25rem;
 }
 
 .portfolio__btns {
+  display: flex;
+  gap: 10px;
   margin-top: auto;
 }
 
@@ -1314,7 +1295,6 @@ border-radius: 0.25rem;
 }
 
 .footer__bg {
-  /* background-color: var(--first-color-second); */
   padding: 2rem 0 3rem;
    background: var(--body-color);
   backdrop-filter: blur(7px);
@@ -1368,13 +1348,7 @@ border-radius: 0.25rem;
   color: var(--text-color-light);
   margin-top: var(--mb-3);
 }
-/* 
-.footer__title,
-.footer__subtitle,
-.footer__link,
-.footer__social {
-  color: #fff;
-} */
+
 
 /*========== SCROLL UP ==========*/
 .scrollup {
@@ -1580,6 +1554,7 @@ border-radius: 0.25rem;
 
     .about__description {
       text-align: initial;
+      font-size: var(--sub-title);
     }
 
     .about__info {
@@ -1659,19 +1634,6 @@ border-radius: 0.25rem;
 
 
 @media screen and (max-width: 767px) {
-  
-  /* .nav__menu {
-    position: fixed;
-    top: -500%;
-    left: 0;
-    width: 100%;
-    background-color: var(--body-color);
-    padding: 2rem 1.5rem 4rem;
-    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 1.5rem 1.5rem 0 0;
-    transition: top 0.5s ease-in-out;
-    z-index: 999;
-  } */
 
   .nav__menu {
     position: fixed;

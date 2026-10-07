@@ -45,6 +45,7 @@
   display: flex;
   transition-property: transform;
   box-sizing: content-box;
+  gap: 30px;
 }
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
@@ -174,7 +175,7 @@
 .swiper-button-next.swiper-button-disabled,
 .swiper-button-prev.swiper-button-disabled {
   opacity: 0.35;
-  cursor: auto;
+  cursor: no-drop;
   pointer-events: none;
 }
 .swiper-button-next:after,
