@@ -1,7 +1,6 @@
 # Responsive Portfolio Website Rachid
 ### Portfolio Website Rachid
 
-![Screenshot 2024-09-21 234012](https://rach-dev.vercel.app/assets/portfolio-interface.png)
 
 This Portfolio was designed and developed by Rachid-ELBarqouqy(https://x.com/rachelbarqouqy) using @vanilla javascript and hosted on Vercel. I hope you like it.
 
