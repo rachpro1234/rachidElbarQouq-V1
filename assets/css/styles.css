@@ -1817,3 +1817,17 @@ border-radius: 0.25rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* fade in-out animation */
+@keyframes fadeInOut {
+  from {
+    transform: translateX(-100%);
+  } 
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.skills__content:first-child {
+  animation: fadeInOut 1000ms;
+}
