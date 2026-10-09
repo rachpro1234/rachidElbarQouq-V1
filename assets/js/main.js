@@ -97,6 +97,23 @@ tabs.forEach((tab) => {
   });
 });
 
+/* ========================== LOADER ====================== */
+
+function hideLoader() {
+  const loader = document.getElementById("loader");
+
+  if (loader) {
+    loader.style.display = "none";
+  }
+}
+
+if (document.readyState === "complete") {
+  hideLoader();
+} else {
+  window.addEventListener("load", hideLoader, { once: true });
+}
+
+
 // ============================ translation =========================== //
 
 // Create a function to change
@@ -475,9 +492,6 @@ let footer = {
 };
 
 // Check if a hash value exists in the URL
-// if (window.location.hash) {
-  // Set the content of the webpage
-  // depending on the hash value
   if (window.location.hash == "#it") {
     // profile infos
 
@@ -770,7 +784,7 @@ let footer = {
     footerRole.textContent = footer.en.role;
     footerReservedRights.textContent = footer.en.reservedRights;
   }
-// }
+
 
 
 /*==================== PORTFOLIO SWIPER  ====================*/

@@ -194,20 +194,6 @@
           </select>
          </div>
 
-        <!--  
-          <div class="language-switcher-wrapper">
-            <div class="language-switcher" id="languageSwitcher" onchange="changeLanguage(this.value)">
-              <i class="ph ph-globe language-switch-icon"></i>
-              <div class="language-menu absolute right-0 mt-2 w-[7.7rem] border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg z-50">
-                <button class="capitalize" value="en">en</button>
-                <button class="capitalize" value="de">de</button>
-                <button class="capitalize" value="it">it</button>
-              </div>
-            </div>
-          </div>
-          
-          -->
-
         <!-- btn -->
         <div class="nav__btns">
           <!-- theme-button -->
@@ -219,12 +205,14 @@
       </nav>
     </header>
 
-    <article id="loader"></article>
+    <div id="loader" class="loader-overlay">
+      <span class="spinner"></span>
+    </div>
 
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HOME ====================-->
-      <section class="home section" id="home">
+      <section class="home section fade" id="home">
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__social">
@@ -371,7 +359,7 @@
       </section>
 
       <!--==================== SKILLS ====================-->
-      <section class="skills section" id="skills">
+      <section class="skills section fade" id="skills">
         <h2 class="section__title">
           <span id="skill"></span>
         </h2>
