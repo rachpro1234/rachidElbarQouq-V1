@@ -208,6 +208,19 @@ body.dark-theme {
   }
 }
 
+/* =============== PROGRESS ================ */
+ .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-color: var(--first-color);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    z-index: 9999
+    ;
+  }
 /*========== Button Dark/Light ==========*/
 .nav__btns {
   display: flex;
@@ -229,7 +242,6 @@ body.dark-theme {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  /* outline: 1px solid purple; */
 }
 
 html {
@@ -452,7 +464,6 @@ text-fill-color: transparent;
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
   border-bottom: 1px solid white;
   padding: 0 1.5rem;
-  /* background: rgba(255, 255, 255, 0); */
   background: hsl(250deg 18.73% 38.07% / 44%);
   backdrop-filter: blur(7px);
   -webkit-backdrop-filter: blur(7px);
@@ -483,7 +494,6 @@ text-fill-color: transparent;
   color: var(--title-color);
   padding: 10px 7px;
   cursor: pointer;
-  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='292.4' height='292.4'%3E%3Cpath fill='%23333' d='M287 69.4a17.6 17.6 0 0 0-13-5.4H18.4c-5 0-9.3 1.8-12.9 5.4A17.6 17.6 0 0 0 0 82.2c0 5 1.8 9.3 5.4 12.9l128 127.9c3.6 3.6 7.8 5.4 12.8 5.4s9.2-1.8 12.8-5.4L287 95c3.5-3.5 5.4-7.8 5.4-12.8 0-5-1.9-9.2-5.5-12.8z'/%3E%3C/svg%3E"); */
   background-repeat: no-repeat;
   background-position: right 8px center;
   background-size: 9px;
@@ -587,8 +597,6 @@ text-fill-color: transparent;
   font-size: 1.25rem;
 }
 
-/* highlight effect */
-
 
 /*==================== BUTTONS ====================*/
 .main-button {
@@ -625,7 +633,6 @@ text-fill-color: transparent;
 }
 
 .button--flex {
-  /* display: inline-flex; */
   display: -webkit-inline-box;
   align-items: center;
   gap: 7px;
@@ -669,15 +676,8 @@ text-fill-color: transparent;
   margin-bottom: var(--mb-2-5);
 }
 
-/* .section__title {
-  font-size: var(--h1-font-size);
-  text-shadow: 0 9px 20px #ffffff1f;
-  text-transform: capitalize;
-      letter-spacing: -.3rem;
-} */
 
 .section__title .dot {
-  /* color: var(--first-color); */
   font-size: 4rem;
   margin-left: -30px;  
   display: inline-block;
@@ -685,7 +685,6 @@ text-fill-color: transparent;
   width: 10px;
   background-color: var(--first-color);
   border-radius: 50%;
-  /* margin-top: 50px; */
 }
 
 .about__info {
@@ -719,14 +718,13 @@ text-fill-color: transparent;
   row-gap: 0;
 }
 
-.skills_list {
+/* .skills_list {
   display: grid;
   grid-template-columns: repeat(1fr, 3);
-}
+} */
 
 .skills__header {
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   margin-bottom: var(--mb-2-5);
   cursor: pointer;
@@ -762,10 +760,12 @@ text-fill-color: transparent;
 }
 
 .skills__list {
+   display: grid;
+  grid-template-columns: repeat(1fr, 3);
   row-gap: 1.5rem;
-  transition: max-height 0.5s ease, margin-bottom 0.5s ease;
   margin-bottom: 0;
   padding-left: 2.7rem;
+  transition: max-height 0.5s ease, margin-bottom 0.5s ease-in-out;
 }
 
 .skill-icons {
@@ -791,35 +791,6 @@ text-fill-color: transparent;
   height: 5px;
   border-radius: 0.2rem;
 }
-
-/* .skills__bar {
-  background-color: var(--first-color-lighter);
-}
-
-.skills__percentage {
-  display: block;
-  background-color: var(--first-color);
-}
-
-.skills__html {
-  width: 90%;
-}
-
-.skills__css {
-  width: 80%;
-}
-
-.skills__js {
-  width: 60%;
-}
-
-.skills__bootstrap {
-  width: 85%;
-}
-
-.skills__react {
-  width: 60%;
-} */
 
 .skills__close .skills__list {
   max-height: 0;
@@ -1057,36 +1028,19 @@ text-fill-color: transparent;
   visibility: visible;
 }
 
-/* #layout-dialog .item h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  will-change: font-size;
-  text-wrap: nowrap;
-}
-
-#layout-dialog .item h3 {
-  position: absolute;
-  top: 2.9rem;
-  right: 2rem;
-} */
-
 #layout-usage-animate-modal-dialog .item {
   cursor: pointer;
 }
 
 #layout-usage-animate-modal-dialog .item.is-open {
   visibility: hidden;
-      /* background: #898989; */
 }
 
 #layout-usage-animate-modal-dialog .item article {
   text-align: left;
   display: none;
 }
-/* #layout-dialog .item p {
-  padding-top: 1rem;
-  border-top: 1px solid currentColor;  
-} */
+
 
 #layout-dialog[open] .item article {
   display: block;
