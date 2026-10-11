@@ -587,14 +587,25 @@ text-fill-color: transparent;
 }
 
 .home__scroll-name {
-  font-size: var(--small-font-size);
+  font-size: var(--font-medium);
   color: var(--title-color);
   font-weight: var(--font-medium);
   margin-right: var(--mb-0-25);
+  font-style: italic;
 }
 
 .home__scroll-arrow {
   font-size: 1.25rem;
+  animation: arrowMove 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrowMove {
+  0% {
+     transform: translateY(0);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }
 
 
@@ -845,6 +856,9 @@ text-fill-color: transparent;
   display: inline-block;
   font-size: var(--normal-font-size);
   margin-bottom: var(--mb-1);
+  margin-left: 10px;
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 .qualification__calendar {
@@ -1482,7 +1496,7 @@ border-radius: 0.25rem;
 
     .home__content {
       padding-top: 5.5rem;
-      column-gap: 2rem;
+      /* column-gap: 2rem; */
     }
 
     .home__blob {

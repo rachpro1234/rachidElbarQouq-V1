@@ -132,7 +132,7 @@ let profileInfos = {
     description:
       "Energetic frontend developer adept at writing well-designed code and responsive websites with a mobile-first approach.",
     profileName: "I'm Rachid",
-    profileRole: "Frontend developer",
+    profileRole: "Software web developer",
     contactBtn: "contact me",
     scrollDown: "scroll down",
   },
@@ -140,7 +140,7 @@ let profileInfos = {
     description:
       "Sviluppatore frontend energico abile nello scrivere codice ben progettato e siti Web reattivi con un approccio mobile-first.",
     profileName: "sono Rachid",
-    profileRole: "Sviluppatore frontend",
+    profileRole: "Sviluppatore di software web",
     contactBtn: "contattami",
     scrollDown: "scorrere verso il basso",
   },
@@ -148,7 +148,7 @@ let profileInfos = {
     description:
       "Energischer Frontend-Entwickler, der sich mit dem Schreiben von gut gestaltetem Code und reaktionsfähigen Websites mit Mobile-First-Ansatz auskennt.",
     profileName: "Ich bin Rachid",
-    profileRole: "Frontend-Entwickler",
+    profileRole: "Software-Webentwickler",
     contactBtn: "Kontaktieren Sie mich",
     scrollDown: "Runterscrollen",
   },
