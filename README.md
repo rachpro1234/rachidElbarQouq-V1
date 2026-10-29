@@ -12,8 +12,10 @@ This Portfolio was designed and developed by Rachid-ELBarqouqy(https://x.com/rac
 - Smooth scrolling in each section.
 - Includes a light and dark mode.
 - Swiper-js for a modern carousel layout.
-- Developed first with the Mobile First methodology, then for desktop.
+- Developed first with the Mobile First methodology.
 - Compatible with all mobile devices and with a beautiful and pleasant user interface.
 - customizable sections and easy to use throughout the project
 - GSAP smooth animations
 - Phosphor icons throughtout the project
+- Main color switch options
+- Languages supported; Englich - German - Italian
